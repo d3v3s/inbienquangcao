@@ -1,0 +1,14 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<section class="page-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center">
+				<h1>404</h1>
+				<h2 class="upper"><?php echo trans("page_not_found"); ?></h2>
+				<p><?php echo trans("page_not_found_sub"); ?></p>
+				<a class="btn btn-primary btn-error-back btn-custom btn-go-home" href="<?php echo lang_base_url(); ?>"><?php echo trans("go_to_home"); ?></a>
+			</div>
+		</div>
+	</div>
+</section>
+
