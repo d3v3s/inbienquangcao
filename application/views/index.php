@@ -21,10 +21,6 @@
 				<img src="<?php echo base_url(); ?>assets/img/sections/slider/slide5.png" alt="" data-bgfit="cover" data-bgposition="center top"
 					 data-bgrepeat="no-repeat" />
 			</li>
-			<li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
-				<img src="<?php echo base_url(); ?>assets/img/sections/slider/slide8.jpg" alt="" data-bgfit="cover" data-bgposition="center top"
-					 data-bgrepeat="no-repeat" />
-			</li>
 		</ul>
 		<div class="tp-bannertimer"></div>
 	</div>
