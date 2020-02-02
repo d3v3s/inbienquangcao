@@ -895,8 +895,8 @@
 <div id="get-quote" class="bg-color black text-center">
 	<div class="container">
 		<div class="row get-a-quote">
-			<div class="col-md-12">Get A Free Quote / Need a Help ?
-				<a class="black" href="#">Contact Us</a></div>
+			<div class="col-md-12">Nhận báo giá miễn phí / Cần giúp đỡ ?
+				<a class="black" href="#">Liên hệ với chúng tôi</a></div>
 		</div>
 		<div class="move-top bg-color page-scroll">
 			<a href="#page">
