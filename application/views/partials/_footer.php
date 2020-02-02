@@ -19,7 +19,7 @@
 					</a>
 					<!-- Phone -->
 					<p>
-						<strong>Call Us:</strong> +<?php echo html_escape($settings->contact_phone); ?>
+						<strong>Gọi cho chúng tôi:</strong> +<?php echo html_escape($settings->contact_phone); ?>
 					</p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
