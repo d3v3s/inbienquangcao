@@ -18,17 +18,11 @@
 					 data-bgrepeat="no-repeat" />
 			</li>
 			<li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
-<!--				<div class="container">-->
-<!--					<h2 class="tp-caption tp-resizeme lft skewtotop title bold white" data-x="02" data-y="181" data-speed="1000"-->
-<!--						data-start="1700" data-easing="Power4.easeOut" data-endspeed="500" data-endeasing="Power1.easeIn">-->
-<!--						<strong>We are the Leaders</strong>-->
-<!--					</h2>-->
-<!--					<h2 class="tp-caption tp-resizeme lft skewtotop title bold white" data-x="02" data-y="241" data-speed="1200"-->
-<!--						data-start="1900" data-easing="Power4.easeOut" data-endspeed="500" data-endeasing="Power1.easeIn">-->
-<!--						<strong>In Construction Company</strong>-->
-<!--					</h2>-->
-<!--				</div>-->
-				<img src="<?php echo base_url(); ?>assets/img/sections/slider/slide2.png" alt="" data-bgfit="cover" data-bgposition="center top"
+				<img src="<?php echo base_url(); ?>assets/img/sections/slider/slide5.png" alt="" data-bgfit="cover" data-bgposition="center top"
+					 data-bgrepeat="no-repeat" />
+			</li>
+			<li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
+				<img src="<?php echo base_url(); ?>assets/img/sections/slider/slide8.jpg" alt="" data-bgfit="cover" data-bgposition="center top"
 					 data-bgrepeat="no-repeat" />
 			</li>
 		</ul>
