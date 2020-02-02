@@ -194,6 +194,9 @@ if ($language->id == $site_lang->id):?>
 										<a href="<?php echo lang_base_url().'tin-tuc'; ?>">Tin tức</a>
 									</li>
 									<li>
+										<a href="<?php echo lang_base_url().'hinh-anh'; ?>">Hình ảnh</a>
+									</li>
+									<li>
 										<a href="<?php echo lang_base_url().'lien-he'; ?>">Liên hệ</a>
 									</li>
 									<li class="hidden-767">
