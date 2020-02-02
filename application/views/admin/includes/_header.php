@@ -202,14 +202,53 @@
 <!--                            <li>-->
 <!--                                <a href="--><?php //echo base_url(); ?><!--admin_post/slider_posts"><i class="fa fa-circle-o"></i> --><?php //echo trans("slider_posts"); ?><!--</a>-->
 <!--                            </li>-->
-                            <li>
-                                <a href="<?php echo base_url(); ?>admin_post/our_picks"><i class="fa fa-circle-o"></i> <?php echo trans("our_picks"); ?></a>
-                            </li>
+<!--                            <li>-->
+<!--                                <a href="--><?php //echo base_url(); ?><!--admin_post/our_picks"><i class="fa fa-circle-o"></i> --><?php //echo trans("our_picks"); ?><!--</a>-->
+<!--                            </li>-->
 <!--                            <li>-->
 <!--                                <a href="--><?php //echo base_url(); ?><!--admin_post/pending_posts"><i class="fa fa-circle-o"></i> --><?php //echo trans("pending_posts"); ?><!--</a>-->
 <!--                            </li>-->
                         </ul>
                     </li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-asterisk"></i> <span><?php echo trans("projects"); ?></span> <i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li class="active">
+								<a href="<?php echo base_url(); ?>admin_project/add_project"> <i class="fa fa-circle-o"></i> <?php echo trans("add_project"); ?></a>
+							</li>
+							<li>
+								<a href="<?php echo base_url(); ?>admin_project/projects"><i class="fa fa-circle-o"></i> <?php echo trans("projects"); ?></a>
+							</li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-american-sign-language-interpreting"></i> <span><?php echo trans("services"); ?></span> <i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li class="active">
+								<a href="<?php echo base_url(); ?>admin_service/add_service"> <i class="fa fa-circle-o"></i> <?php echo trans("add_service"); ?></a>
+							</li>
+							<li>
+								<a href="<?php echo base_url(); ?>admin_service/services"><i class="fa fa-circle-o"></i> <?php echo trans("services"); ?></a>
+							</li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-font"></i> <span><?php echo trans("typography"); ?></span> <i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li class="active">
+								<a href="<?php echo base_url(); ?>admin_typography/add_typography"> <i class="fa fa-circle-o"></i> <?php echo trans("add_typography"); ?></a>
+							</li>
+							<li>
+								<a href="<?php echo base_url(); ?>admin_typography/typography"><i class="fa fa-circle-o"></i> <?php echo trans("typography"); ?></a>
+							</li>
+						</ul>
+					</li>
 <!--                    <li>-->
 <!--                        <a href="--><?php //echo base_url(); ?><!--admin_post/drafts">-->
 <!--                            <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>--><?php //echo trans("drafts"); ?><!--</span>-->

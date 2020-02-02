@@ -245,7 +245,7 @@
 						prevImage = new Image();
 						if(isSet && pp_images[set_position - 1]) prevImage.src = pp_images[set_position - 1];
 
-						$pp_pic_holder.find('#pp_full_res')[0].innerHTML = settings.image_markup.replace(/{path}/g,pp_images[set_position]);
+						$pp_pic_holder.find('#pp_full_res')[0].innerHTML = 'img/sections/portfolio/8.jpg'// settings.image_markup.replace(/{path}/g,pp_images[set_position]);
 
 						imgPreloader.onload = function(){
 							// Fit item to viewport
@@ -255,7 +255,8 @@
 						};
 
 						imgPreloader.onerror = function(){
-							alert('Image cannot be loaded. Make sure the path is correct and image exist.');
+							alert($pp_pic_holder.find('#pp_full_res')[0].innerHTML);
+							// alert('Image cannot be loaded. Make sure the path is correct and image exist.');
 							$.prettyPhoto.close();
 						};
 					

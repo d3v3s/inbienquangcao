@@ -272,6 +272,36 @@ function delete_selected_posts($message) {
 
 };
 
+//delete selected projects
+function delete_selected_projects($message) {
+
+	if (confirm($message)) {
+
+		var project_ids = [];
+
+		$("input[name='checkbox-table']:checked").each(function () {
+			project_ids.push(this.value);
+		});
+		console.log(project_ids)
+		var data = {
+			'project_ids': project_ids,
+		};
+
+		data[csfr_token_name] = $.cookie(csfr_cookie_name);
+
+		$.ajax({
+			type: "POST",
+			url: base_url + "admin_project/delete_selected_projects",
+			data: data,
+			success: function (response) {
+				console.log('response ==>:', response)
+				location.reload();
+			}
+		});
+	}
+
+};
+
 //delete selected comments
 function delete_selected_comments(message) {
     if (confirm(message)) {

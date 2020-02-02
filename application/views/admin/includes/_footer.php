@@ -56,7 +56,7 @@
 <script src="<?php echo base_url(); ?>assets/js/jquery.cookie.js"></script>
 
 <!-- Custom js -->
-<script src="<?php echo base_url();?>assets/admin/js/custom.min.js"></script>
+<script src="<?php echo base_url();?>assets/admin/js/custom.js"></script>
 
 <!-- Ckeditor -->
 <script>
@@ -115,7 +115,7 @@
             "aLengthMenu": [[15, 30, 60, 100], [15, 30, 60, 100, "All"]]
         });
         //insert a label
-        $('<label class="table-label"><label/>').text('Language').appendTo('#table_dropdown');
+        $('<label class="table-label"><label/>').text('Ngôn ngữ').appendTo('#table_dropdown');
 
         //insert the select and some options
         $select = $('<select class="form-control input-sm"><select/>').appendTo('#table_dropdown');

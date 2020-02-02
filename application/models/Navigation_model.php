@@ -212,24 +212,24 @@ class Navigation_model extends CI_Model
             }
         }
 
-        $categories = $this->category_model->get_categories_by_lang($lang_id);
-        if (!empty($categories)) {
-            foreach ($categories as $category) {
-                $item = array(
-                    'order' => $category->category_order,
-                    'id' => $category->id,
-                    'lang_id' => $category->lang_id,
-                    'parent_id' => $category->parent_id,
-                    'title' => $category->name,
-                    'slug' => $category->slug,
-                    'link' => base_url() . "category/" . $category->slug,
-                    'type' => "category",
-                    'location' => "header",
-                    'visibility' => $category->show_on_menu,
-                );
-                array_push($menu, $item);
-            }
-        }
+//        $categories = $this->category_model->get_categories_by_lang($lang_id);
+//        if (!empty($categories)) {
+//            foreach ($categories as $category) {
+//                $item = array(
+//                    'order' => $category->category_order,
+//                    'id' => $category->id,
+//                    'lang_id' => $category->lang_id,
+//                    'parent_id' => $category->parent_id,
+//                    'title' => $category->name,
+//                    'slug' => $category->slug,
+//                    'link' => base_url() . "category/" . $category->slug,
+//                    'type' => "category",
+//                    'location' => "header",
+//                    'visibility' => $category->show_on_menu,
+//                );
+//                array_push($menu, $item);
+//            }
+//        }
 
         sort($menu);
         return $menu;
