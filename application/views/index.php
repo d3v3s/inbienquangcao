@@ -896,7 +896,7 @@
 	<div class="container">
 		<div class="row get-a-quote">
 			<div class="col-md-12">Nhận báo giá miễn phí / Cần giúp đỡ ?
-				<a class="black" href="#">Liên hệ với chúng tôi</a></div>
+				<a class="black" href="<?php echo lang_base_url().'lien-he'; ?>">Liên hệ với chúng tôi</a></div>
 		</div>
 		<div class="move-top bg-color page-scroll">
 			<a href="#page">
