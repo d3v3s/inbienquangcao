@@ -46,7 +46,7 @@
                                 <td><input type="checkbox" name="checkbox-table" class="checkbox-table" value="<?php echo $item->id; ?>"></td>
                                 <td><?php echo html_escape($item->id); ?></td>
                                 <td class="td-project">
-                                    <img style="max-height: 150px !important; max-width: 200px !important;" src="<?php echo base_url().$item->image_small; ?>" alt="" class="img-responsive"/>
+                                    <img style="max-height: 100px !important; max-width: 150px !important;" src="<?php echo base_url().$item->image_small; ?>" alt="" class="img-responsive"/>
                                     <?php echo html_escape($item->title); ?>
                                 </td>
                                 <td>
