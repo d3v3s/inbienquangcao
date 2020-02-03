@@ -43,8 +43,6 @@
         <!-- RTL -->
         <link href="<?php echo base_url(); ?>assets/admin/css/rtl.min.css" rel="stylesheet"/>
     <?php endif; ?>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -83,22 +81,27 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="<?php echo base_url(); ?>assets/admin/img/user.jpg" class="user-image"
-                                 alt="User Image">
+							<?php if (!empty (user()->avatar)): ?>
+								<img src="<?php echo base_url().html_escape(user()->avatar); ?>" alt="User Image" class="user-image">
+							<?php else: ?>
+								<img src="<?php echo base_url(); ?>assets/admin/img/user.jpg" class="user-image" alt="User Image">
+							<?php endif; ?>
                             <span class="hidden-xs"><?php echo html_escape(user()->username); ?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="<?php echo base_url(); ?>assets/admin/img/user.jpg" class="img-circle"
-                                     alt="User Image">
+								<?php if (!empty (user()->avatar)): ?>
+									<img src="<?php echo base_url().html_escape(user()->avatar); ?>" alt="User Image" class="img-circle">
+								<?php else: ?>
+									<img src="<?php echo base_url(); ?>assets/admin/img/user.jpg" class="img-circle" alt="User Image">
+								<?php endif; ?>
                                 <p>
                                     <?php echo html_escape(user()->username); ?>
                                 </p>
                             </li>
                             <!-- Menu Body -->
-                            <li class="user-body">
-                            </li>
+                            <li class="user-body"></li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-right">
@@ -136,7 +139,11 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="<?php echo base_url(); ?>assets/admin/img/user.jpg" class="img-circle" alt="User Image">
+					<?php if (!empty (user()->avatar)): ?>
+						<img src="<?php echo base_url().html_escape(user()->avatar); ?>" alt="User Image" class="img-circle">
+					<?php else: ?>
+						<img src="<?php echo base_url(); ?>assets/admin/img/user.jpg" class="img-circle" alt="User Image">
+					<?php endif; ?>
                 </div>
                 <div class="pull-left info">
                     <p><?php echo html_escape(user()->username); ?></p>

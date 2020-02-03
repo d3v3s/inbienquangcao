@@ -39,12 +39,12 @@
                 <div class="small-box bg-green">
                     <div class="inner">
                         <h3><?php echo html_escape($comment_count); ?></h3>
-                        <p><?php echo trans("comments"); ?></p>
+                        <p><?php echo trans("projects"); ?></p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-comments"></i>
                     </div>
-                    <a href="<?php echo base_url(); ?>admin/comments" class="small-box-footer"><?php echo trans("more_info"); ?> <i
+                    <a href="<?php echo base_url(); ?>admin_project/projects" class="small-box-footer"><?php echo trans("more_info"); ?> <i
                                 class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div><!-- ./col -->
