@@ -4,7 +4,7 @@
     <div class="col-sm-12">
 
         <!-- form start -->
-        <?php echo form_open_multipart('admin_post/add_post_post'); ?>
+        <?php echo form_open_multipart('admin_project/add_project'); ?>
 
         <div class="row">
             <div class="col-sm-12 form-header">
