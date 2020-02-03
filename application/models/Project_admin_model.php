@@ -8,19 +8,11 @@ class Project_admin_model extends CI_Model
     public function input_values()
     {
         $data = array(
-            'lang_id' => $this->input->project('lang_id', true),
-            'title' => $this->input->project('title', true),
-            'title_slug' => $this->input->project('title_slug', true),
-            'summary' => $this->input->project('summary', true),
-            'keywords' => $this->input->project('keywords', true),
-            'category_id' => $this->input->project('category_id', true),
-            'subcategory_id' => $this->input->project('subcategory_id', true),
-            'content' => $this->input->project('content', false),
-            'optional_url' => $this->input->project('optional_url', true),
-            'need_auth' => $this->input->project('need_auth', true),
-            'is_slider' => $this->input->project('is_slider', true),
-            'is_picked' => $this->input->project('is_picked', true),
-            'visibility' => $this->input->project('visibility', true),
+            'lang_id' => $this->input->post('lang_id', true),
+            'title' => $this->input->post('title', true),
+            'summary' => $this->input->post('summary', true),
+            'keywords' => $this->input->post('keywords', true),
+            'content' => $this->input->post('content', false),
         );
         return $data;
     }
@@ -30,13 +22,13 @@ class Project_admin_model extends CI_Model
     {
         $data = $this->set_data();
 
-        $date_published = $this->input->project('date_published', true);
+        $date_published = $this->input->post('date_published', true);
         if (!empty($date_published)) {
             $data["created_at"] = $date_published;
         }
 
         $data['user_id'] = user()->id;
-        $data['status'] = $this->input->project('status', true);
+        $data['status'] = $this->input->post('status', true);
 
         return $this->db->insert('projects', $data);
     }
@@ -46,16 +38,11 @@ class Project_admin_model extends CI_Model
     {
         $data = $this->set_data();
 
-        $data["created_at"] = $this->input->project('date_published', true);
+        $data["created_at"] = $this->input->post('date_published', true);
 
-        $publish = $this->input->project('publish', true);
+        $publish = $this->input->post('publish', true);
         if (!empty($publish) && $publish == 1) {
             $data["status"] = 1;
-        }
-
-        //if author set visibility
-        if (is_author()) {
-            $data['visibility'] = 0;
         }
 
         $this->db->where('id', $id);
@@ -67,22 +54,9 @@ class Project_admin_model extends CI_Model
     {
         $data = $this->input_values();
 
-        if (!isset($data['is_slider'])) {
-            $data['is_slider'] = 0;
-        }
-        if (!isset($data['is_picked'])) {
-            $data['is_picked'] = 0;
-        }
-        if (!isset($data['need_auth'])) {
-            $data['need_auth'] = 0;
-        }
-        if (empty($data["title_slug"])) {
-            //slug for title
-            $data["title_slug"] = str_slug(trim($data["title"]));
-        }
-        if (empty($this->input->project('image_url', true))):
+        if (empty($this->input->post('image_url', true))):
             //add project image
-            $image = $this->file_model->get_image($this->input->project('project_image_id', true));
+            $image = $this->file_model->get_image($this->input->post('post_image_id', true));
 
             if (!empty($image)) {
                 $data["image_big"] = $image->image_big;
@@ -124,7 +98,6 @@ class Project_admin_model extends CI_Model
             $this->db->where('projects.user_id', $user_id);
         endif;
 
-        $this->db->where('projects.visibility', 1);
         $this->db->where('projects.status', 1);
         $query = $this->db->get('projects');
         return $query->num_rows();
@@ -136,8 +109,6 @@ class Project_admin_model extends CI_Model
         $data = array(
             'lang_id' => $this->input->get('lang_id', true),
             'author' => $this->input->get('author', true),
-            'category' => $this->input->get('category', true),
-            'subcategory' => $this->input->get('subcategory', true),
             'q' => $this->input->get('q', true),
         );
 
@@ -156,12 +127,6 @@ class Project_admin_model extends CI_Model
         if (!empty($data['lang_id'])) {
             $this->db->where('projects.lang_id', $data['lang_id']);
         }
-        if (!empty($data['category'])) {
-            $this->db->where('projects.category_id', $data['category']);
-        }
-        if (!empty($data['subcategory'])) {
-            $this->db->where('projects.subcategory_id', $data['subcategory']);
-        }
         if (!empty($data['q'])) {
             $this->db->like('projects.title', $data['q']);
         }
@@ -170,25 +135,10 @@ class Project_admin_model extends CI_Model
         }
     }
 
-    //filter by list
-    public function filter_projects_list($list)
-    {
-        if (!empty($list)) {
-            if ($list == "slider_projects") {
-                $this->db->where('projects.is_slider', 1);
-            }
-            if ($list == "our_picks") {
-                $this->db->where('projects.is_picked', 1);
-            }
-        }
-    }
-
     //get paginated projects
     public function get_paginated_projects($per_page, $offset, $list)
     {
         $this->filter_projects();
-        $this->filter_projects_list($list);
-        $this->db->where('projects.visibility', 1);
         $this->db->where('projects.status', 1);
         $this->db->order_by('projects.created_at', 'DESC');
         $this->db->limit($per_page, $offset);
@@ -200,39 +150,9 @@ class Project_admin_model extends CI_Model
     public function get_paginated_projects_count($list)
     {
         $this->filter_projects();
-        $this->filter_projects_list($list);
-        $this->db->where('projects.visibility', 1);
         $this->db->where('projects.status', 1);
         $query = $this->db->get('projects');
         return $query->num_rows();
-    }
-
-    //add or remove project from picked
-    public function project_add_remove_picked($id)
-    {
-        //get project
-        $project = $this->get_project($id);
-
-        if (!empty($project)) {
-            $result = "";
-            if ($project->is_picked == 1) {
-                //remove from picked
-                $data = array(
-                    'is_picked' => 0,
-                );
-                $result = "removed";
-            } else {
-                //add to picked
-                $data = array(
-                    'is_picked' => 1,
-                );
-                $result = "added";
-            }
-
-            $this->db->where('id', $id);
-            $this->db->update('projects', $data);
-            return $result;
-        }
     }
 
     //delete project

@@ -4,14 +4,14 @@
     <div class="col-sm-12">
 
         <!-- form start -->
-        <?php echo form_open_multipart('admin_project/add_project'); ?>
+        <?php echo form_open_multipart('admin_project/add_project_post'); ?>
 
         <div class="row">
             <div class="col-sm-12 form-header">
-                <h1 class="form-title"><?php echo trans('add_post'); ?></h1>
-                <a href="<?php echo base_url(); ?>admin_post/posts" class="btn btn-sm btn-success btn-add-new pull-right">
+                <h1 class="form-title"><?php echo trans('add_project'); ?></h1>
+                <a href="<?php echo base_url(); ?>admin_project/projects" class="btn btn-sm btn-success btn-add-new pull-right">
                     <i class="fa fa-bars"></i>
-                    <?php echo trans('posts'); ?>
+                    <?php echo trans('projects'); ?>
                 </a>
             </div>
         </div>
@@ -21,7 +21,7 @@
                 <div class="form-post">
 
                     <div class="form-post-left">
-                        <?php $this->load->view("admin/includes/_form_add_post_left"); ?>
+                        <?php $this->load->view("admin/includes/_form_add_project_left"); ?>
                     </div>
 
                     <div class="form-post-right">
@@ -29,7 +29,7 @@
                         <div class="row">
 
                             <div class="col-sm-12">
-                                <?php $this->load->view('admin/includes/_post_image_upload_box'); ?>
+                                <?php $this->load->view('admin/includes/_project_image_upload_box'); ?>
                             </div>
                             <div class="col-sm-12">
                                 <div class="box">
@@ -89,7 +89,7 @@
                             </div>
 
                             <div class="col-sm-12">
-                                <?php $this->load->view('admin/includes/_post_publish_box'); ?>
+                                <?php $this->load->view('admin/includes/_project_publish_box'); ?>
                             </div>
 
                         </div>

@@ -21,12 +21,42 @@ class Admin_project extends Admin_Core_Controller
     public function add_project()
     {
         $data['title'] = trans("add_project");
-        $data['top_categories'] = $this->category_model->get_categories();
 
         $this->load->view('admin/includes/_header', $data);
         $this->load->view('admin/project/add_project', $data);
         $this->load->view('admin/includes/_footer');
     }
+
+	/**
+	 * Add project post
+	 */
+	public function add_project_post()
+	{
+		//validate inputs
+		$this->form_validation->set_rules('title', trans("title"), 'required|xss_clean|max_length[500]');
+		$this->form_validation->set_rules('summary', trans("summary"), 'xss_clean|max_length[5000]');
+		$this->form_validation->set_rules('optional_url', trans("optional_url"), 'xss_clean|max_length[1000]');
+
+		if ($this->form_validation->run() === false) {
+			$this->session->set_flashdata('errors', validation_errors());
+			$this->session->set_flashdata('form_data', $this->project_admin_model->input_values());
+			redirect($this->agent->referrer());
+		} else {
+			//if project added
+			if ($this->project_admin_model->add_project()) {
+				//last id
+				$last_id = $this->db->insert_id();
+
+				$this->session->set_flashdata('success', trans("project") . " " . trans("msg_suc_added"));
+
+				redirect($this->agent->referrer());
+			} else {
+				$this->session->set_flashdata('form_data', $this->project_admin_model->input_values());
+				$this->session->set_flashdata('error', trans("msg_error"));
+				redirect($this->agent->referrer());
+			}
+		}
+	}
 
     /**
      * Projects
@@ -68,29 +98,94 @@ class Admin_project extends Admin_Core_Controller
             endif;
         }
 
-        //combine project tags
-        $tags = "";
-        $count = 0;
-        $tags_array = $this->tag_model->get_project_tags($id);
-        foreach ($tags_array as $item) {
-            if ($count > 0) {
-                $tags .= ",";
-            }
-            $tags .= $item->tag;
-            $count++;
-        }
-
-        $data['tags'] = $tags;
         $data['project_images'] = $this->project_file_model->get_project_additional_images($id);
-        $data['categories'] = $this->category_model->get_categories_by_lang($data['project']->lang_id);
-        $data['subcategories'] = $this->category_model->get_subcategories_by_parent_id($data['project']->category_id);
 
         $this->load->view('admin/includes/_header', $data);
         $this->load->view('admin/project/update_project', $data);
         $this->load->view('admin/includes/_footer');
     }
 
-    /**
+	/**
+	 * Update project post
+	 */
+	public function update_project_post()
+	{
+		//validate inputs
+		$this->form_validation->set_rules('title', trans("title"), 'required|xss_clean|max_length[500]');
+		$this->form_validation->set_rules('summary', trans("summary"), 'xss_clean|max_length[5000]');
+
+		if ($this->form_validation->run() === false) {
+			$this->session->set_flashdata('errors', validation_errors());
+			$this->session->set_flashdata('form_data', $this->project_admin_model->input_values());
+			redirect($this->agent->referrer());
+		} else {
+			//project id
+			$project_id = $this->input->post('id', true);
+
+			if ($this->project_admin_model->update_project($project_id)) {
+
+				$this->project_file_model->add_project_additional_images($project_id);
+
+				$this->session->set_flashdata('success', trans("project") . " " . trans("msg_suc_updated"));
+
+				$referrer = $this->input->post("referrer");
+				if (!empty($referrer)) {
+					redirect($referrer);
+				} else {
+					redirect('admin_project/projects');
+				}
+
+			} else {
+				$this->session->set_flashdata('form_data', $this->project_admin_model->input_values());
+				$this->session->set_flashdata('error', trans("msg_error"));
+				redirect($this->agent->referrer());
+			}
+		}
+	}
+
+	/**
+	 * project Options Post
+	 */
+	public function project_options_post()
+	{
+		$option = $this->input->post('option', true);
+		$id = $this->input->post('id', true);
+
+		$data["project"] = $this->project_admin_model->get_project($id);
+
+		//check if exists
+		if (empty($data['project'])) {
+			redirect($this->agent->referrer());
+		}
+
+		//if option publish
+		if ($option == 'publish') {
+
+			if ($this->post_admin_model->publish_post($id)) {
+				$this->session->set_flashdata('success', trans("msg_published"));
+			} else {
+				$this->session->set_flashdata('error', trans("msg_error"));
+			}
+
+			redirect($this->agent->referrer());
+		}
+
+		//if option delete
+		if ($option == 'delete') {
+
+			if ($this->project_admin_model->delete_project($id)) {
+				$this->session->set_flashdata('success', trans("project") . " " . trans("msg_suc_deleted"));
+				redirect($this->agent->referrer());
+			} else {
+				$this->session->set_flashdata('error', trans("msg_error"));
+				redirect($this->agent->referrer());
+			}
+
+		}
+	}
+
+
+	/**
      * Delete Selected Projects
      */
     public function delete_selected_projects()

@@ -4,16 +4,13 @@
     <div class="col-sm-12">
 
         <!-- form start -->
-        <?php echo form_open_multipart('admin_post/update_post_post'); ?>
-
-        <input type="hidden" name="post_type" value="post">
-
+        <?php echo form_open_multipart('admin_project/update_project_post'); ?>
         <div class="row">
             <div class="col-sm-12 form-header">
-                <h1 class="form-title"><?php echo trans('update_post'); ?></h1>
-                <a href="<?php echo base_url(); ?>admin_post/posts" class="btn btn-sm btn-success btn-add-new pull-right">
+                <h1 class="form-title"><?php echo trans('update_project'); ?></h1>
+                <a href="<?php echo base_url(); ?>admin_project/projects" class="btn btn-sm btn-success btn-add-new pull-right">
                     <i class="fa fa-bars"></i>
-                    <?php echo trans('posts'); ?>
+                    <?php echo trans('projects'); ?>
                 </a>
             </div>
         </div>
@@ -23,7 +20,7 @@
                 <div class="form-post">
 
                     <div class="form-post-left">
-                        <?php $this->load->view("admin/includes/_form_update_post_left"); ?>
+                        <?php $this->load->view("admin/includes/_form_update_project_left"); ?>
                     </div>
 
                     <div class="form-post-right">
@@ -31,7 +28,7 @@
                         <div class="row">
 
                             <div class="col-sm-12">
-                                <?php $this->load->view('admin/includes/_post_image_edit_box'); ?>
+                                <?php $this->load->view('admin/includes/_project_image_edit_box'); ?>
                             </div>
 
                             <div class="col-sm-12">
@@ -62,7 +59,7 @@
                                                 <div class="col-sm-12 m-b-15">
                                                     <div class="additional-image-list">
 
-                                                        <?php $additional_images = get_post_additional_images($post->id); ?>
+                                                        <?php $additional_images = get_project_additional_images($project->id); ?>
 
                                                         <?php if (!empty($additional_images)): ?>
                                                             <?php foreach ($additional_images as $image): ?>
@@ -97,7 +94,7 @@
                                             <label><?php echo trans("language"); ?></label>
                                             <select name="lang_id" class="form-control" onchange="get_categories_by_lang(this.value);">
                                                 <?php foreach ($languages as $language): ?>
-                                                    <option value="<?php echo $language->id; ?>" <?php echo ($post->lang_id == $language->id) ? 'selected' : ''; ?>><?php echo $language->name; ?></option>
+                                                    <option value="<?php echo $language->id; ?>" <?php echo ($project->lang_id == $language->id) ? 'selected' : ''; ?>><?php echo $language->name; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
@@ -106,7 +103,7 @@
                             </div>
 
                             <div class="col-sm-12">
-                                <?php $this->load->view('admin/includes/_post_publish_edit_box'); ?>
+                                <?php $this->load->view('admin/includes/_project_publish_edit_box'); ?>
                             </div>
 
                         </div>

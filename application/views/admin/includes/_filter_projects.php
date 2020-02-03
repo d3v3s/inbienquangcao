@@ -38,41 +38,6 @@
         <?php endif; ?>
 
         <div class="item-table-filter">
-            <label><?php echo trans('category'); ?></label>
-            <select id="categories" name="category" class="form-control" onchange="get_sub_categories(this.value);">
-                <option value=""><?php echo trans("all"); ?></option>
-                <?php
-                if (!empty($this->input->get('lang_id', true))):
-                    $categories = $this->category_model->get_categories_by_lang($this->input->get('lang_id', true));
-                    foreach ($categories as $item): ?>
-                        <option value="<?php echo $item->id; ?>" <?php echo ($this->input->get('category', true) == $item->id) ? 'selected' : ''; ?>>
-                            <?php echo html_escape($item->name); ?>
-                        </option>
-                    <?php endforeach;
-                endif; ?>
-            </select>
-        </div>
-
-        <div class="item-table-filter">
-            <div class="form-group">
-                <label class="control-label"><?php echo trans('subcategory'); ?></label>
-                <select id="subcategories" name="subcategory" class="form-control">
-                    <option value=""><?php echo trans("all"); ?></option>
-                    <?php
-                    if (!empty($this->input->get('category', true))):
-                        $subcategories = helper_get_subcategories($this->input->get('category', true));
-                        if (!empty($subcategories)) {
-                            foreach ($subcategories as $item):?>
-                                <option value="<?php echo $item->id; ?>" <?php echo ($this->input->get('subcategory', true) == $item->id) ? 'selected' : ''; ?>><?php echo $item->name; ?></option>
-                            <?php endforeach;
-                        }
-                    endif;
-                    ?>
-                </select>
-            </div>
-        </div>
-
-        <div class="item-table-filter">
             <label><?php echo trans("search"); ?></label>
             <input name="q" class="form-control" placeholder="Search" type="search" value="<?php echo html_escape($this->input->get('q', true)); ?>" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
         </div>

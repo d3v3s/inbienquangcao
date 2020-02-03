@@ -443,6 +443,32 @@ LOCK TABLES `post_images` WRITE;
 /*!40000 ALTER TABLE `post_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
+
+--
+-- Table structure for table `project_images`
+--
+
+DROP TABLE IF EXISTS `project_images`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `project_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `project_id` int(11) DEFAULT NULL,
+  `image_path` varchar(500) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `project_images`
+--
+
+LOCK TABLES `project_images` WRITE;
+/*!40000 ALTER TABLE `project_images` DISABLE KEYS */;
+/*!40000 ALTER TABLE `project_images` ENABLE KEYS */;
+UNLOCK TABLES;
+
 --
 -- Table structure for table `posts`
 --

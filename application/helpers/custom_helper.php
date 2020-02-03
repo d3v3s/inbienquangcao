@@ -431,6 +431,15 @@ if (!function_exists('get_post_additional_images')) {
     }
 }
 
+//get project images
+if (!function_exists('get_project_additional_images')) {
+	function get_project_additional_images($project_id)
+	{
+		$ci =& get_instance();
+		return $ci->project_file_model->get_project_additional_images($project_id);
+	}
+}
+
 //is reaction voted
 if (!function_exists('is_reaction_voted')) {
     function is_reaction_voted($post_id, $reaction)

@@ -23,17 +23,17 @@
 
             <div class="row">
                 <div class="col-sm-12 m-t-15">
-                    <img id="selected_image_file" name="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" class="img-responsive"/>
+                    <img id="selected_image_file" name="" src="<?php echo base_url() . $project->image_mid; ?>" alt="" class="img-responsive"/>
                     <input type="hidden" name="post_image_id">
                 </div>
             </div>
+
         </div>
     </div>
 
 </div>
 
 <?php $this->load->view("admin/includes/_file_manager_image"); ?>
-
 
 
 
