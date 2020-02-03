@@ -165,12 +165,12 @@
 <!--                        </a>-->
 <!--                    </li>-->
 
-                    <li>
-                        <a href="<?php echo base_url(); ?>admin/navigation">
-                            <i class="fa fa-th"></i>
-                            <span><?php echo trans("navigation"); ?></span>
-                        </a>
-                    </li>
+<!--                    <li>-->
+<!--                        <a href="--><?php //echo base_url(); ?><!--admin/navigation">-->
+<!--                            <i class="fa fa-th"></i>-->
+<!--                            <span>--><?php //echo trans("navigation"); ?><!--</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
 
 <!--                    <li class="treeview">-->
 <!--                        <a href="#">-->
