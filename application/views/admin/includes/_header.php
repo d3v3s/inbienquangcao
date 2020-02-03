@@ -205,9 +205,9 @@
 <!--                            <li>-->
 <!--                                <a href="--><?php //echo base_url(); ?><!--admin_post/our_picks"><i class="fa fa-circle-o"></i> --><?php //echo trans("our_picks"); ?><!--</a>-->
 <!--                            </li>-->
-<!--                            <li>-->
-<!--                                <a href="--><?php //echo base_url(); ?><!--admin_post/pending_posts"><i class="fa fa-circle-o"></i> --><?php //echo trans("pending_posts"); ?><!--</a>-->
-<!--                            </li>-->
+                            <li>
+                                <a href="<?php echo base_url(); ?>admin_post/pending_posts"><i class="fa fa-circle-o"></i> <?php echo trans("pending_posts"); ?></a>
+                            </li>
                         </ul>
                     </li>
 					<li class="treeview">
