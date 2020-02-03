@@ -172,22 +172,22 @@
                         </a>
                     </li>
 
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-leaf"></i> <span><?php echo trans("pages"); ?></span> <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="active">
-                                <a href="<?php echo base_url(); ?>page/add_page">
-                                    <i class="fa fa-circle-o"></i> <?php echo trans("add_page"); ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url(); ?>page/pages"><i class="fa fa-circle-o"></i> <?php echo trans("pages"); ?>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+<!--                    <li class="treeview">-->
+<!--                        <a href="#">-->
+<!--                            <i class="fa fa-leaf"></i> <span>--><?php //echo trans("pages"); ?><!--</span> <i class="fa fa-angle-left pull-right"></i>-->
+<!--                        </a>-->
+<!--                        <ul class="treeview-menu">-->
+<!--                            <li class="active">-->
+<!--                                <a href="--><?php //echo base_url(); ?><!--page/add_page">-->
+<!--                                    <i class="fa fa-circle-o"></i> --><?php //echo trans("add_page"); ?>
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="--><?php //echo base_url(); ?><!--page/pages"><i class="fa fa-circle-o"></i> --><?php //echo trans("pages"); ?>
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
 
                     <li class="treeview">
                         <a href="#">
