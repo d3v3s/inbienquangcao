@@ -66,7 +66,6 @@ class Auth extends Home_Core_Controller
 		$this->load->view('auth/admin_login');
 	}
 
-
     /**
      * Login Post
      */
@@ -96,8 +95,10 @@ class Auth extends Home_Core_Controller
                 redirect($this->agent->referrer());
 
             } elseif ($result == "success") {
-                $redirect = $this->input->post('redirect_url', true);
-				redirect(lang_base_url() + '/admin');
+//                $redirect = $this->input->post('redirect_url', true);
+//				redirect(lang_base_url() + '/admin');
+				$redirect = $this->input->post('redirect_url', true);
+				redirect($redirect);
             } else {
                 //error
                 $this->session->set_flashdata('form_data', $this->auth_model->input_values());

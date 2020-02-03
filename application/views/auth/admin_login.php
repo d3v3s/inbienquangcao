@@ -42,7 +42,7 @@
 
         <!-- form start -->
 		<?php echo form_open('auth/login_post'); ?>
-		<input type="hidden" name="redirect_url" value="<?php echo lang_base_url(); ?>">
+		<input type="hidden" name="redirect_url" value="<?php echo lang_base_url().'admin'; ?>">
 		<div class="form-group has-feedback">
 			<input type="text" name="username" class="form-control"
 				   placeholder="<?php echo html_escape(trans("username")); ?>"
