@@ -32,7 +32,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="<?php echo base_url(); ?>admin/login"><b><?php echo html_escape($settings->application_name); ?></b>&nbsp;<?php echo trans("panel"); ?></a>
+        <a href="<?php echo base_url(); ?>admin/login"><b><?php echo trans("admin_panel"); ?></a>
     </div><!-- /.login-logo -->
     <div class="login-box-body">
         <h4 class="login-box-msg"><?php echo trans("login"); ?></h4>
