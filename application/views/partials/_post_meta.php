@@ -10,19 +10,19 @@
         <span>
         <i class="fa fa-calendar"></i>&nbsp;
             <?php echo helper_date_format($item->created_at); ?>
-    </span>
+		</span>
         <?php if ($general_settings->comment_system == 1) : ?>
             <span>
-        <i class="fa fa-comments"></i>&nbsp;
+				<i class="fa fa-comments"></i>&nbsp;
                 <?php echo helper_get_comment_count($item->id); ?>
-    </span>
+			</span>
         <?php endif; ?>
         <!--Show if enabled-->
         <?php if ($general_settings->show_pageviews == 1) : ?>
-            <span>
-        <i class="fa fa-eye"></i>&nbsp;
+			<span>
+				<i class="fa fa-eye"></i>&nbsp;
                 <?php echo $item->hit; ?>
-    </span>
+			</span>
         <?php endif; ?>
     </p>
 </div>

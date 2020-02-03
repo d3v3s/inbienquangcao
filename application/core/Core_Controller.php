@@ -83,6 +83,33 @@ class Core_Controller extends CI_Controller
         $this->load->vars($global_data);
     }
 
+	public function paginate($url, $total_rows)
+	{
+		//initialize pagination
+		$page = $this->security->xss_clean($this->input->get('page'));
+		$per_page = $this->input->get('show', true);
+		if (empty($page)) {
+			$page = 0;
+		}
+
+		if ($page != 0) {
+			$page = $page - 1;
+		}
+
+		if (empty($per_page)) {
+			$per_page = 15;
+		}
+
+		$config['num_links'] = 4;
+		$config['base_url'] = $url;
+		$config['total_rows'] = $total_rows;
+		$config['per_page'] = $per_page;
+		$config['reuse_query_string'] = true;
+		$this->pagination->initialize($config);
+
+		return array('per_page' => $per_page, 'offset' => $page * $per_page);
+	}
+
 }
 
 class Home_Core_Controller extends Core_Controller
@@ -153,33 +180,6 @@ class Admin_Core_Controller extends Core_Controller
         $global_data['images'] = $this->file_model->get_images(48);
         $this->load->vars($global_data);
 
-    }
-
-    public function paginate($url, $total_rows)
-    {
-        //initialize pagination
-        $page = $this->security->xss_clean($this->input->get('page'));
-        $per_page = $this->input->get('show', true);
-        if (empty($page)) {
-            $page = 0;
-        }
-
-        if ($page != 0) {
-            $page = $page - 1;
-        }
-
-        if (empty($per_page)) {
-            $per_page = 15;
-        }
-
-        $config['num_links'] = 4;
-        $config['base_url'] = $url;
-        $config['total_rows'] = $total_rows;
-        $config['per_page'] = $per_page;
-        $config['reuse_query_string'] = true;
-        $this->pagination->initialize($config);
-
-        return array('per_page' => $per_page, 'offset' => $page * $per_page);
     }
 }
 

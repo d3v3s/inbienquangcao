@@ -76,17 +76,16 @@ if ($language->id == $site_lang->id):?>
 	<link href="<?php echo base_url(); ?>assets/css/prettyPhoto.css" rel="stylesheet" />
 	<!-- Custom Style -->
 	<link href="<?php echo base_url(); ?>assets/css/style1.css" rel="stylesheet" />
-	<link href="<?php echo base_url(); ?>assets/css/responsive.css" rel="stylesheet" />
+	<link href="<?php echo base_url(); ?>assets/css/responsive.min.css" rel="stylesheet"/>
 	<!-- Color Scheme -->
 	<link href="<?php echo base_url(); ?>assets/css/color.css" rel="stylesheet" />
 
+	<!-- Custom Style -->
 <?php if ($general_settings->site_color == '') : ?>
-    <link href="<?php echo base_url(); ?>assets/css/colors/default.min.css" rel="stylesheet"/>
 <?php else : ?>
     <link href="<?php echo base_url(); ?>assets/css/colors/<?php echo html_escape($general_settings->site_color); ?>.min.css" rel="stylesheet"/>
 <?php endif; ?>
     <!-- Responsive CSS -->
-    <link href="<?php echo base_url(); ?>assets/css/responsive.min.css" rel="stylesheet"/>
 <?php if ($selected_lang->text_direction == "rtl"): ?>
     <!-- RTL -->
     <link href="<?php echo base_url(); ?>assets/css/rtl.min.css" rel="stylesheet"/>
@@ -193,9 +192,9 @@ if ($language->id == $site_lang->id):?>
 									<li>
 										<a href="<?php echo lang_base_url().'tin-tuc'; ?>">Tin tức</a>
 									</li>
-									<li>
-										<a href="<?php echo lang_base_url().'hinh-anh'; ?>">Hình ảnh</a>
-									</li>
+<!--									<li>-->
+<!--										<a href="--><?php //echo lang_base_url().'hinh-anh'; ?><!--">Hình ảnh</a>-->
+<!--									</li>-->
 									<li>
 										<a href="<?php echo lang_base_url().'lien-he'; ?>">Liên hệ</a>
 									</li>

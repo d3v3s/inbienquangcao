@@ -11,7 +11,8 @@ class Gallery_model extends CI_Model
             'title' => $this->input->post('title', true),
             'category_id' => $this->input->post('category_id', true),
             'path_big' => $this->input->post('path_big', true),
-            'path_small' => $this->input->post('path_small', true)
+            'path_small' => $this->input->post('path_small', true),
+			'visibility' => $this->input->post('visibility', true)
         );
         return $data;
     }
@@ -35,6 +36,25 @@ class Gallery_model extends CI_Model
         return $this->db->insert('photos', $data);
     }
 
+	//add image
+	public function add_banner($type)
+	{
+		$data = $this->input_values();
+		$data["type"] = $type;
+		//get file
+		$file = $_FILES['file'];
+		if (!empty($file['name'])) {
+			//upload images
+			$data["path_big"] = $this->upload_model->gallery_big_image_upload($file);
+			$data["path_small"] = $this->upload_model->gallery_small_image_upload($file);
+		} else {
+			$data['path_big'] = "";
+			$data['path_small'] = "";
+		}
+
+		return $this->db->insert('photos', $data);
+	}
+
     //get gallery images
     public function get_images()
     {
@@ -45,6 +65,19 @@ class Gallery_model extends CI_Model
         $query = $this->db->get('photos');
         return $query->result();
     }
+
+	//get gallery images
+	public function get_banners()
+	{
+		$this->db->join('gallery_categories', 'photos.category_id = gallery_categories.id');
+		$this->db->select('photos.* , gallery_categories.name as category_name');
+		$this->db->where('photos.lang_id', $this->selected_lang->id);
+		$this->db->where('photos.type', "banner");
+		$this->db->where('photos.visibility', 1);
+		$this->db->order_by('photos.id', 'DESC');
+		$query = $this->db->get('photos');
+		return $query->result();
+	}
 
     //get all gallery images
     public function get_all_images()

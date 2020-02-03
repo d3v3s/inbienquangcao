@@ -14,7 +14,7 @@ class Home extends Home_Core_Controller
      * config/routes.php, it's displayed at http://example.com/
      *
      * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
+     * map to /index2.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
 
@@ -55,7 +55,7 @@ class Home extends Home_Core_Controller
 
         $data['slider_posts'] = $this->post_model->get_slider_posts();
         $data['posts'] = $this->post_model->get_paginated_posts($config['per_page'], $page * $config['per_page']);
-
+		$data['banners'] = $this->gallery_model->get_banners();
         $this->load->view('partials/_header', $data);
         $this->load->view('index', $data);
         $this->load->view('partials/_footer');
@@ -67,7 +67,7 @@ class Home extends Home_Core_Controller
      */
     public function gallery()
     {
-        $data['page'] = $this->page_model->get_page('gallery');
+        $data['page'] = $this->page_model->get_page('hinh-anh');
         //check page auth
         $this->checkPageAuth($data['page']);
 
@@ -144,11 +144,47 @@ class Home extends Home_Core_Controller
 	}
 
 	/**
+	 * project detail
+	 */
+	public function duan($id)
+	{
+
+		//get project
+		$data['project'] = $this->project_admin_model->get_project($id);
+
+		$data['page'] = $this->page_model->get_page('du-an');
+		$data['authors'] = $this->auth_model->get_authors();
+		$pagination = $this->paginate(base_url() . 'du-an', $this->project_admin_model->get_paginated_projects_count('projects'));
+		$data['projects'] = $this->project_admin_model->get_paginated_projects($pagination['per_page'], $pagination['offset'], 'projects');
+		//check page auth
+		$this->checkPageAuth($data['page']);
+
+		if ($data['page']->page_active == 0) {
+			$this->error_404();
+		} else {
+			if ($this->recaptcha_status) {
+				$this->load->library('recaptcha');
+				$data['recaptcha_widget'] = $this->recaptcha->getWidget();
+				$data['recaptcha_script'] = $this->recaptcha->getScriptTag();
+			}
+			$data['title'] = get_page_title($data['page']);
+			$data['description'] = get_page_description($data['page']);
+			$data['keywords'] = get_page_keywords($data['page']);
+
+			$this->load->view('partials/_header', $data);
+			$this->load->view('project_detail', $data);
+		}
+	}
+
+	/**
 	 * project Page
 	 */
 	public function project()
 	{
 		$data['page'] = $this->page_model->get_page('du-an');
+		$data['authors'] = $this->auth_model->get_authors();
+		$pagination = $this->paginate(base_url() . 'du-an', $this->project_admin_model->get_paginated_projects_count('projects'));
+		$data['projects'] = $this->project_admin_model->get_paginated_projects($pagination['per_page'], $pagination['offset'], 'projects');
 		//check page auth
 		$this->checkPageAuth($data['page']);
 
@@ -202,26 +238,35 @@ class Home extends Home_Core_Controller
 	 */
 	public function news()
 	{
+		//initialize pagination
+		$page = $this->security->xss_clean($this->input->get('page'));
+		if (empty($page)) {
+			$page = 0;
+		}
+
+		if ($page != 0) {
+			$page = $page - 1;
+		}
+		$config['base_url'] = lang_base_url();
+		$config['total_rows'] = $this->post_model->get_post_count();
+		$config['per_page'] = $this->general_settings->pagination_per_page;
+		$this->pagination->initialize($config);
+
 		$data['page'] = $this->page_model->get_page('tin-tuc');
+
 		//check page auth
 		$this->checkPageAuth($data['page']);
 
-		if ($data['page']->page_active == 0) {
-			$this->error_404();
-		} else {
-			if ($this->recaptcha_status) {
-				$this->load->library('recaptcha');
-				$data['recaptcha_widget'] = $this->recaptcha->getWidget();
-				$data['recaptcha_script'] = $this->recaptcha->getScriptTag();
-			}
-			$data['title'] = get_page_title($data['page']);
-			$data['description'] = get_page_description($data['page']);
-			$data['keywords'] = get_page_keywords($data['page']);
+		$data['title'] = get_page_title($data['page']);
+		$data['description'] = get_page_description($data['page']);
+		$data['keywords'] = get_page_keywords($data['page']);
 
-			$this->load->view('partials/_header', $data);
-			$this->load->view('news', $data);
-			$this->load->view('partials/_footer');
-		}
+		$data['posts'] = $this->post_model->get_paginated_posts($config['per_page'], $page * $config['per_page']);
+		$data['tags'] = $this->tag_model->get_tags();
+		$this->load->view('partials/_header', $data);
+		$this->load->view('news', $data);
+		$this->load->view('partials/_footer');
+
 	}
 
 	/**
@@ -570,7 +615,7 @@ class Home extends Home_Core_Controller
         $this->reaction_model->set_voted_reactions_session($id);
         $data["reactions"] = $this->reaction_model->get_reaction($id);
         $data["emoji_lang"] = $this->selected_lang->folder_name;
-
+		$data['tags'] = $this->tag_model->get_tags();
         $this->load->view('partials/_header', $data);
         $this->load->view('post', $data);
         $this->load->view('partials/_footer', $data);
@@ -706,8 +751,7 @@ class Home extends Home_Core_Controller
         $this->load->view('partials/_comments', $data);
     }
 
-
-    /**
+	/**
      * Add to Newsletter
      */
     public function add_to_newsletter()

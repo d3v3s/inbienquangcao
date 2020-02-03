@@ -99,7 +99,7 @@ class Tag_model extends CI_Model
         $this->db->join('posts', 'posts.id = tags.post_id');
         $this->db->join('users', 'posts.user_id = users.id');
         $this->db->select('tags.tag_slug, tags.tag, tags.post_id');
-        $this->db->group_by('tag_slug, tags.tag');
+        // $this->db->group_by('tag_slug, tags.tag');
         $this->db->order_by('tags.tag');
         $this->db->where('posts.status', 1);
         $this->db->where('posts.visibility', 1);

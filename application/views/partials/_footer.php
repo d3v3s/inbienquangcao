@@ -136,11 +136,8 @@
 		<div class="container">
 			<div class="row">
 				<!-- Copyrights -->
-				<div class="col-xs-12 col-sm-6 col-md-6">Copyright &copy; zozothemes.com., 2015
+				<div class="col-xs-12 col-sm-6 col-md-6">Copyright &copy; Quảng cáo Tân Thái Dương
 					<br />
-					<!-- Terms Link -->
-					<a href="#">Terms of Use</a> /
-					<a href="#">Privacy Policy</a></div>
 				<div class="col-xs-12 text-center visible-xs-block page-scroll gray-bg icons-circle i-3x">
 					<!-- Goto Top -->
 					<a href="#page">
@@ -154,6 +151,7 @@
 </footer>
 </div>
 <!-- End Footer Section -->
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
 
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
@@ -180,6 +178,18 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/effect.js"></script>
 <!-- Owl Carousel Slider -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/owl.carousel.min.js"></script>
+<!-- Lazy js -->
+<script src="<?php echo base_url(); ?>assets/js/lazysizes.min.js"></script>
+<!-- iCheck js -->
+<script src="<?php echo base_url(); ?>assets/plugins/icheck/icheck.min.js"></script>
+<!-- Jquery Confirm js -->
+<script src="<?php echo base_url(); ?>assets/plugins/jquery-confirm/jquery-confirm.min.js"></script>
+<!-- Gallery js -->
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/imagesloaded.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/masonry-3.1.4.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/masonry.filter.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.cookie.js"></script>
 <!-- Pretty Photo Popup -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.prettyPhoto.js"></script>
 <!-- Parallax BG -->
@@ -196,7 +206,7 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/isotope.min.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/custom.js"></script>
-
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/script.js"></script>
 <?php if (isset($page_type)):
     echo $general_settings->facebook_comment;
 endif; ?>

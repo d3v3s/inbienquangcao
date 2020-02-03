@@ -438,7 +438,7 @@ class CI_Pagination {
 
 		// Put together our base and first URLs.
 		// Note: DO NOT append to the properties as that would break successive calls
-		$base_url = trim($this->base_url);
+		$base_url = trim($this->base_url).'tin-tuc';
 		$first_url = $this->first_url;
 
 		$query_string = '';

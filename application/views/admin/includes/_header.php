@@ -291,26 +291,42 @@
 <!--                            </li>-->
 <!--                        </ul>-->
 <!--                    </li>-->
-
-
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-image"></i> <span><?php echo trans("gallery"); ?></span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li>
-                                <a href="<?php echo base_url(); ?>admin_category/gallery_categories">
-                                    <i class="fa fa-circle-o"></i> <?php echo trans("categories"); ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url(); ?>gallery/photo_gallery">
-                                    <i class="fa fa-circle-o"></i> <?php echo trans("images"); ?>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+<!--                    <li class="treeview">-->
+<!--                        <a href="#">-->
+<!--                            <i class="fa fa-image"></i> <span>--><?php //echo trans("gallery"); ?><!--</span>-->
+<!--                            <i class="fa fa-angle-left pull-right"></i>-->
+<!--                        </a>-->
+<!--                        <ul class="treeview-menu">-->
+<!--                            <li>-->
+<!--                                <a href="--><?php //echo base_url(); ?><!--admin_category/gallery_categories">-->
+<!--                                    <i class="fa fa-circle-o"></i> --><?php //echo trans("categories"); ?>
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="--><?php //echo base_url(); ?><!--gallery/photo_gallery">-->
+<!--                                    <i class="fa fa-circle-o"></i> --><?php //echo trans("images"); ?>
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-image"></i> <span><?php echo trans("banner"); ?></span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="<?php echo base_url(); ?>admin_category/gallery_categories">
+									<i class="fa fa-circle-o"></i> <?php echo trans("categories"); ?>
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url(); ?>banner/photo_banner">
+									<i class="fa fa-circle-o"></i> <?php echo trans("images"); ?>
+								</a>
+							</li>
+						</ul>
+					</li>
 
                     <li>
                         <a href="<?php echo base_url(); ?>admin/comments">

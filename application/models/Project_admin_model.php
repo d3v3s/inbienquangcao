@@ -113,16 +113,14 @@ class Project_admin_model extends CI_Model
         );
 
         $data['q'] = trim($data['q']);
-        $data['user_id'] = "";
-
         //check if author
-        if (user()->role == "author"):
-            $data['user_id'] = user()->id;
-        else:
-            if (!empty($data['author'])) {
-                $data['user_id'] = $data['author'];
-            }
-        endif;
+//        if (user()->role == "author"):
+//            $data['user_id'] = user()->id;
+//        else:
+//            if (!empty($data['author'])) {
+//                $data['user_id'] = $data['author'];
+//            }
+//        endif;
 
         if (!empty($data['lang_id'])) {
             $this->db->where('projects.lang_id', $data['lang_id']);
@@ -130,9 +128,9 @@ class Project_admin_model extends CI_Model
         if (!empty($data['q'])) {
             $this->db->like('projects.title', $data['q']);
         }
-        if (!empty($data['user_id'])) {
-            $this->db->where('projects.user_id', $data['user_id']);
-        }
+//        if (!empty($data['user_id'])) {
+//            $this->db->where('projects.user_id', $data['user_id']);
+//        }
     }
 
     //get paginated projects
@@ -145,6 +143,18 @@ class Project_admin_model extends CI_Model
         $query = $this->db->get('projects');
         return $query->result();
     }
+
+	//get paginated projects
+	public function get_projects_by_type($per_page, $offset, $list)
+	{
+		$this->filter_projects();
+		$this->db->where('projects.status', 1);
+		$this->db->where('projects.project_type', 1);
+		$this->db->order_by('projects.created_at', 'DESC');
+		$this->db->limit($per_page, $offset);
+		$query = $this->db->get('projects');
+		return $query->result();
+	}
 
     //get paginated projects count
     public function get_paginated_projects_count($list)

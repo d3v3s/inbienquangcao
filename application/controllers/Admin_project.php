@@ -64,7 +64,7 @@ class Admin_project extends Admin_Core_Controller
     public function projects()
     {
         $data['title'] = trans('projects');
-        $data['authors'] = $this->auth_model->get_authors();
+
         $data['form_action'] = "admin_project/projects";
         $data['list_type'] = "projects";
         //get paginated projects

@@ -24,7 +24,9 @@ class Gallery extends Admin_Core_Controller
         $data['images'] = $this->gallery_model->get_all_images();
         $data['categories'] = $this->gallery_category_model->get_categories();
         $data['lang_search_column'] = 3;
-
+//		$arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+//		header('Content-Type: application/json');
+//		echo json_encode( $project_ids );
         $this->load->view('admin/includes/_header', $data);
         $this->load->view('admin/gallery/gallery', $data);
         $this->load->view('admin/includes/_footer');

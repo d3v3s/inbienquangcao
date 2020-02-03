@@ -3,104 +3,16 @@
 <section class="slider border-bottom line tp-banner-fullscreen-container">
 	<div class="tp-banner">
 		<ul>
-			<li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
-<!--				<div class="container">-->
-<!--					<h2 class="tp-caption tp-resizeme lft skewtotop title bold white" data-x="02" data-y="181" data-speed="1000"-->
-<!--						data-start="1700" data-easing="Power4.easeOut" data-endspeed="500" data-endeasing="Power1.easeIn">-->
-<!--						<strong>We are Creative</strong>-->
-<!--					</h2>-->
-<!--					<h2 class="tp-caption tp-resizeme lft skewtotop title bold white" data-x="02" data-y="241" data-speed="1200"-->
-<!--						data-start="1900" data-easing="Power4.easeOut" data-endspeed="500" data-endeasing="Power1.easeIn">-->
-<!--						<strong>Construction Company</strong>-->
-<!--					</h2>-->
-<!--				</div>-->
-				<img src="<?php echo base_url(); ?>assets/img/sections/slider/slide1.png" alt="" data-bgfit="cover" data-bgposition="center top"
-					 data-bgrepeat="no-repeat" />
-			</li>
-			<li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
-				<img src="<?php echo base_url(); ?>assets/img/sections/slider/slide5.png" alt="" data-bgfit="cover" data-bgposition="center top"
-					 data-bgrepeat="no-repeat" />
-			</li>
+			<?php foreach ($banners as $item): ?>
+				<li data-delay="7000" data-transition="fade" data-slotamount="7" data-masterspeed="2000">
+					<img src="<?php echo base_url().$item->path_big; ?>" alt="" data-bgfit="cover" data-bgposition="center top"
+						 data-bgrepeat="no-repeat" />
+				</li>
+			<?php endforeach; ?>
 		</ul>
 		<div class="tp-bannertimer"></div>
 	</div>
 </section>
-<!-- slider -->
-<section id="features" class="page-section bottom-pad-0 transparent slider-block" data-animation="fadeInUp">
-	<div class="container">
-		<div class="row special-feature">
-			<!-- Special Feature Box 1 -->
-			<div class="col-md-3" data-animation="fadeInLeft">
-				<div class="s-feature-box text-center">
-					<div class="mask-top">
-						<!-- Icon -->
-						<i class="icon-magic-wand"></i>
-						<!-- Title -->
-						<h4>Uy tín</h4></div>
-					<div class="mask-bottom">
-						<!-- Icon -->
-						<i class="icon-magic-wand"></i>
-						<!-- Title -->
-						<h4>Uy tín</h4>
-						<!-- Text -->
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-				</div>
-			</div>
-			<!-- Special Feature Box 2 -->
-			<div class="col-md-3" data-animation="fadeInUp">
-				<div class="s-feature-box text-center">
-					<div class="mask-top">
-						<!-- Icon -->
-						<i class="icon-texture"></i>
-						<!-- Title -->
-						<h4>Chất lượng</h4></div>
-					<div class="mask-bottom">
-						<!-- Icon -->
-						<i class="icon-texture"></i>
-						<!-- Title -->
-						<h4>Chất lượng</h4>
-						<!-- Text -->
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-				</div>
-			</div>
-			<!-- Special Feature Box 3 -->
-			<div class="col-md-3" data-animation="fadeInRight">
-				<div class="s-feature-box text-center">
-					<div class="mask-top">
-						<!-- Icon -->
-						<i class="icon-user-check"></i>
-						<!-- Title -->
-						<h4>Chuyên nghiệp</h4></div>
-					<div class="mask-bottom">
-						<!-- Icon -->
-						<i class="icon-user-check"></i>
-						<!-- Title -->
-						<h4>Chuyên nghiệp</h4>
-						<!-- Text -->
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-				</div>
-			</div>
-			<!-- Special Feature Box 3 -->
-			<div class="col-md-3" data-animation="fadeInUp">
-				<div class="s-feature-box text-center">
-					<div class="mask-top">
-						<!-- Icon -->
-						<i class="icon-paint"></i>
-						<!-- Title -->
-						<h4>Bảo hành dài hạn</h4></div>
-					<div class="mask-bottom">
-						<!-- Icon -->
-						<i class="icon-paint"></i>
-						<!-- Title -->
-						<h4>Bảo hành dài hạn</h4>
-						<!-- Text -->
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- features -->
 <section id="services" class="page-section">
 	<div class="container">
 		<div class="row">

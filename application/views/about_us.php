@@ -1,13 +1,19 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php $this->load->view('partials/_breadcrumb'); ?>
 <!-- page-header -->
+<style>
+	#moreOne {display: none;}
+	#moreTwo {display: none;}
+	#moreThree {display: none;}
+	.readMore { cursor: pointer; color: #FDB734 !important;}
+</style>
 <section id="who-we-are" class="page-section border-tb">
 	<div class="container who-we-are">
 		<div class="row">
 			<div class="col-md-8">
 				<div class="section-title text-left">
 					<!-- Title -->
-					<h2 class="title">Who We Are</h2>
+					<h2 class="title">CHÚNG TÔi LÀ AI?</h2>
 				</div>
 				<p class="description upper">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio
 					ipsum. Suspendisse cursus malesuada facilisis.</p>
@@ -38,24 +44,53 @@
 						<i class="icon-file-pdf red"></i></a>
 				</h3>
 			</div>
+			<script>
+
+				function readMore(moreId, moreBtn, dotId) {
+					var dots = document.getElementById(dotId);
+					var moreText = document.getElementById(moreId);
+					var btnText = document.getElementById(moreBtn);
+
+					if (dots.style.display === "none") {
+						dots.style.display = "inline";
+						btnText.innerHTML = "Xem thêm";
+						moreText.style.display = "none";
+					} else {
+						dots.style.display = "none";
+						btnText.innerHTML = "Đóng";
+						moreText.style.display = "inline";
+					}
+				}
+			</script>
 			<div class="col-md-4">
 				<div class="item-box bottom-pad-10">
 					<a>
 						<i class="icon-star13 i-5x bg-color"></i>
-						<h4>What We Do?</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur elit. Vestibulum nec odio ipsum. Suspendisse cursus
-							malesuada facilisis.</p>
+						<h4>CHÚNG TA LÀM GÌ?</h4>
+						<p>Trải qua hơn 13 năm, nỗ lực không ngừng. Chúng tôi tự hào là đơn vị có kinh nghiệm trong lĩnh vực Thi công biển, bảng quảng cáo
+							<span id="dotOne">...</span>
+							<span id="moreOne">Cùng rất nhiều chất liệu khác nhau để mang đến những sản phẩm chất lương, tinh tế và đẹp mắt. Bên cạnh đó, giá cả từng sản phẩm của Chúng tôi phù hợp với từng quy mô, lĩnh vực kinh doanh và nhu cầu của quý khách hàng. Với tiêu chí “NÓI KHÔNG VỚI SẢN PHẨM KÉM CHẤT LƯỢNG” Luôn được đặt lên hàng đầu..</span>
+							<a class="readMore" id="moreBtnOne" onclick="readMore('moreOne', 'moreBtnOne', 'dotOne')">Xem thêm</a></p>
+
+
 					</a>
 					<a>
 						<i class="icon-heart18 i-5x bg-color"></i>
-						<h4>Why People Like Us?</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur elit. Vestibulum nec odio ipsum. Suspendisse cursus
-							malesuada facilisis.</p>
+						<h4>TẠI SAO MỌI NGƯỜI THÍCH CHÚNG TÔI?</h4>
+						<p>Trên chặng đường đã qua, Chúng tôi không ngừng mở rộng quy mô phát triển và củng cố hệ thống cơ sở vật chất. Bên cạnh đó, chúng tôi
+							<span id="dotTwo">...</span>
+							<span id="moreTwo">hội tụ đội ngũ nhân viên trẻ nhiệt huyết, sáng tạo. Đến nay, trở thành doanh nghiệp hàng đầu trong lĩnh vực dịch vụ quảng cáo.
+							Chúng tôi đã và đang là đối tác tin cậy, thường xuyên của nhiều tập đoàn, thương hiệu hàng đầu Việt Nam như: Tập đoàn Viettel, Công ty Xi măng Cẩm Phả, Đài truyền hình VTV, Tập đoàn Vingroup… Và rất nhiều đối tác khác.</span>
+							<a class="readMore" id="moreBtnTwo" onclick="readMore('moreTwo', 'moreBtnTwo', 'dotTwo')">Xem thêm</a></p>
+
 					</a>
 					<a>
 						<i class="icon-gift6 i-5x bg-color"></i>
-						<h4>What We Offer?</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur elit. Vestibulum nec odio ipsum.</p>
+						<h4>CHÚNG TÔI CUNG CẤP GÌ?</h4>
+						<p>Tập trung hoạt động trong lĩnh vực kinh doanh các sản phẩm Biển Hiệu, Biển Quảng Cáo với công nghệ sản xuất hiện đại, tiên tiến
+							<span id="dotThree">...</span>
+							<span id="moreThree">Hệ thống máy móc được nhập khẩu được nhập khẩu từ nhiều quốc gia trên thế giới. Chúng tôi không ngừng cập nhật hệ thống trang thiết bị hiện đại, máy móc, kỹ thuật tiên tiến. Nhằm mang đến những sản phẩm tốt nhất, chất lượng cao nhất đến với quý khách hàng.</span>
+							<a class="readMore" id="moreBtnThree" onclick="readMore('moreThree', 'moreBtnThree', 'dotThree')">Xem thêm</a></p>
 					</a></div>
 			</div>
 		</div>
