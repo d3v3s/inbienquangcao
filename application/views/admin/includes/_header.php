@@ -7,13 +7,14 @@
     <title><?php echo html_escape($title); ?> - <?php echo trans("admin"); ?> <?php echo html_escape($settings->application_name); ?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-    <?php if (empty($settings->favicon_path)): ?>
-        <link rel="shortcut icon" type="image/png"
-              href="<?php echo base_url(); ?>assets/img/favicon.png"/>
-    <?php else: ?>
-        <link rel="shortcut icon" type="image/png"
-              href="<?php echo base_url() . html_escape($settings->favicon_path); ?>"/>
+	<link rel="shortcut icon" type="image/png"
+		  href="<?php echo base_url(); ?>assets/img/favicon.png"/>
+<!--    --><?php //if (empty($settings->favicon_path)): ?>
+<!--		<link rel="shortcut icon" type="image/png"-->
+<!--			  href="--><?php //echo base_url(); ?><!--assets/img/favicon.png"/>-->
+<!--    --><?php //else: ?>
+<!--        <link rel="shortcut icon" type="image/png"-->
+<!--              href="--><?php //echo base_url() . html_escape($settings->favicon_path); ?><!--"/>-->
     <?php endif; ?>
 
     <!-- Bootstrap 3.3.7 -->
