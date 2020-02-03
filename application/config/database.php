@@ -35,12 +35,12 @@
 */
 
 // The following values will probably need to be changed.
-$db['default']['username'] = "root";
-$db['default']['password'] = "Quanghoa1993";
-$db['default']['database'] = "infinite";
+$db['default']['username'] = "uyhct61c92mhbxyy";
+$db['default']['password'] = "ar786gvodwm4fhbs";
+$db['default']['database'] = "u5bt0sg4yh2640yy";
 
 // The following values can probably stay the same.
-$db['default']['hostname'] = "localhost";
+$db['default']['hostname'] = "h2cwrn74535xdazj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
 $db['default']['dbdriver'] = "mysqli"; //Updated to latest driver.
 $db['default']['dbprefix'] = "";
 $db['default']['pconnect'] = FALSE;
