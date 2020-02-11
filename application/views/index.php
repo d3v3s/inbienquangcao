@@ -13,7 +13,26 @@
 		<div class="tp-bannertimer"></div>
 	</div>
 </section>
+<style type="text/css">
+	.title-index{
+		line-height: 1.5;
+		font-size: 32px;
+		font-weight: 700;
+		border-bottom: #46A67F 3px solid;
+		margin: 0px;
+		padding: 0px;
+		text-transform: uppercase;
+		text-align: left;
+	}
+</style>
 <section id="services" class="page-section">
+	<div class="container general-section" style="margin-bottom: 10px">
+		<div class="section-heading">
+			<div class="text-left">
+				<h2 class="title title-index">Dịch vụ</h2>
+			</div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="owl-carousel navigation-1 opacity text-left" data-pagination="false" data-items="3"
@@ -101,83 +120,14 @@
 	</div>
 </section>
 <!-- Services -->
-<section id="who-we-are" class="page-section light-bg border-tb">
-	<div class="container who-we-are">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="section-heading">
-					<div class="section-title text-left">
-						<!-- Title -->
-						<h2 class="title">Who We Are</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8">
-				<p class="description upper">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio
-					ipsum. Suspendisse cursus malesuada facilisis.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus
-					malesuada facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum.
-					Suspendisse cursus malesuada facilisis. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed
-					dolor tincidunt porttitor.</p>
-				<div class="row">
-					<div class="col-md-6">
-						<ul class="arrow-style">
-							<li>Lorem ipsum dolor sit amet.</li>
-							<li>Consectetur adipiscing elit.</li>
-							<li>Vestibulum nec odio ipsum.</li>
-							<li>Vestibulum nec odio ipsum.</li>
-						</ul>
-					</div>
-					<div class="col-md-6">
-						<ul class="arrow-style">
-							<li>Lorem ipsum dolor sit amet.</li>
-							<li>Consectetur adipiscing elit.</li>
-							<li>Vestibulum nec odio ipsum.</li>
-							<li>Vestibulum nec odio ipsum.</li>
-						</ul>
-					</div>
-				</div>
-				<h3>
-					<a href="#" class="hover">Download Our Brochure -
-						<i class="icon-file-pdf red"></i></a>
-				</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="item-box bottom-pad-10">
-					<a>
-						<i class="icon-star13 i-5x bg-color"></i>
-						<h4>What We Do?</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur elit. Vestibulum nec odio ipsum. Suspendisse cursus
-							malesuada facilisis.</p>
-					</a>
-					<a>
-						<i class="icon-heart18 i-5x bg-color"></i>
-						<h4>Why People Like Us?</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur elit. Vestibulum nec odio ipsum. Suspendisse cursus
-							malesuada facilisis.</p>
-					</a>
-					<a>
-						<i class="icon-gift6 i-5x bg-color"></i>
-						<h4>What We Offer?</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur elit. Vestibulum nec odio ipsum.</p>
-					</a></div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- who-we-are -->
 <section id="works" class="page-section">
-	<div class="container general-section">
+	<div class="container general-section" style="margin-bottom: 10px">
 		<div class="section-heading">
 			<div class="text-left">
-				<!-- Title -->
-				<h2 class="title">Dự án</h2>
+				<h2 class="title title-index">Dự án</h2>
 			</div>
 		</div>
 	</div>
-
 	<div class="container-fluid white general-section">
 		<div id="mix-container" class="portfolio-grid">
 			<?php foreach ($projects as $item): ?>
@@ -186,12 +136,8 @@
 						<img src="<?php echo base_url(); ?><?php echo $item->image_big; ?>" width="400" height="273" alt="<?php echo $item->title; ?>"
 							 class="img-responsive" />
 						<div class="figcaption">
-							<!-- Image Popup-->
-							<a href="<?php echo base_url().$item->image_big; ?>" data-rel="prettyPhoto[portfolio]">
-								<i class="fa fa-search"></i>
-							</a>
 							<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
-								<i class="fa fa-link"></i>
+								<i>Xem chi tiết</i>
 							</a></div>
 						<div class="caption-block">
 							<h4><?php echo $item->title; ?></h4>
@@ -205,13 +151,14 @@
 </section>
 <!-- works -->
 <section id="team" class="page-section light-bg border-tb">
-	<div class="container">
+	<div class="container general-section" style="margin-bottom: 10px">
 		<div class="section-heading">
 			<div class="text-left">
-				<!-- Title -->
-				<h2 class="title">Thành viên</h2>
+				<h2 class="title title-index">Thành viên</h2>
 			</div>
 		</div>
+	</div>
+	<div class="container">
 		<div class="row text-center">
 			<div class="owl-carousel navigation-1" data-pagination="false" data-items="4" data-autoplay="true"
 				 data-navigation="true">
@@ -419,13 +366,14 @@
 </section>
 <!-- fun-factor -->
 <section id="latest-news" class="page-section light-bg border-tb">
-	<div class="container">
+	<div class="container general-section" style="margin-bottom: 10px">
 		<div class="section-heading">
 			<div class="text-left">
-				<!-- Title -->
-				<h2 class="title">Tin tức mới </h2>
+				<h2 class="title title-index">Tin tức mới </h2>
 			</div>
 		</div>
+	</div>
+	<div class="container">
 		<div class="row">
 			<div class="owl-carousel navigation-1 opacity text-left" data-pagination="false" data-items="3"
 				 data-autoplay="true" data-navigation="true">
