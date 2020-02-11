@@ -247,7 +247,7 @@
                                 <div class="custom-checkbox">
                                     <input type="radio" name="site_color" id="color8" value="yellow"
                                            class="regular-checkbox" <?php echo ($general_settings->site_color === "yellow") ? "checked" : ""; ?>/>
-                                    <label for="color8" style=" background-color: #f2d438;"></label>
+                                    <label for="color8" style=" background-color: #182333;"></label>
                                 </div>
 
                                 <div class="custom-checkbox">

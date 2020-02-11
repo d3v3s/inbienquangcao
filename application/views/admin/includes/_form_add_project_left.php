@@ -15,16 +15,28 @@
                    value="<?php echo old('title'); ?>" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?> required>
         </div>
 
-        <div class="form-group">
-            <label class="control-label"><?php echo trans('summary'); ?> & <?php echo trans("description"); ?> (<?php echo trans('meta_tag'); ?>)</label>
-            <textarea class="form-control text-area"
-                      name="summary" placeholder="<?php echo trans('summary'); ?> & <?php echo trans("description"); ?> (<?php echo trans('meta_tag'); ?>)" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>><?php echo old('summary'); ?></textarea>
-        </div>
+		<div class="form-group">
+			<label class="control-label"> Khách hàng</label>
+			<input type="text" class="form-control" name="customer"
+				   placeholder="Khách hàng" value="<?php echo old('customer'); ?>" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label">Kinh phí</label>
+			<input type="number" class="form-control" name="estimation"
+				   placeholder="Kinh phí" value="<?php echo old('estimation'); ?>" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label"><?php echo trans('keywords'); ?> (<?php echo trans('meta_tag'); ?>)</label>
+			<input type="text" class="form-control" name="keywords"
+				   placeholder="<?php echo trans('keywords'); ?> (<?php echo trans('meta_tag'); ?>)" value="<?php echo old('keywords'); ?>" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
+		</div>
 
         <div class="form-group">
-            <label class="control-label"><?php echo trans('keywords'); ?> (<?php echo trans('meta_tag'); ?>)</label>
-            <input type="text" class="form-control" name="keywords"
-                   placeholder="<?php echo trans('keywords'); ?> (<?php echo trans('meta_tag'); ?>)" value="<?php echo old('keywords'); ?>" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
+            <label class="control-label"><?php echo trans('summary'); ?> & <?php echo trans("description"); ?></label>
+            <textarea class="form-control text-area"
+                      name="summary" placeholder="<?php echo trans('summary'); ?> & <?php echo trans("description"); ?>" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>><?php echo old('summary'); ?></textarea>
         </div>
 
         <div class="form-group">

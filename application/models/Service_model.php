@@ -190,4 +190,42 @@ class Service_model extends CI_Model
         }
     }
 
+	//filter by values
+	public function filter_services()
+	{
+		$data = array(
+			'lang_id' => $this->input->get('lang_id', true),
+			'author' => $this->input->get('author', true),
+			'q' => $this->input->get('q', true),
+		);
+
+		$data['q'] = trim($data['q']);
+
+		if (!empty($data['lang_id'])) {
+			$this->db->where('services.lang_id', $data['lang_id']);
+		}
+		if (!empty($data['q'])) {
+			$this->db->like('services.title', $data['q']);
+		}
+	}
+
+	//get paginated services
+	public function get_paginated_services($per_page, $offset, $list)
+	{
+		$this->filter_services();
+		$this->db->where('services.status', 1);
+		$this->db->order_by('services.created_at', 'DESC');
+		$this->db->limit($per_page, $offset);
+		$query = $this->db->get('services');
+		return $query->result();
+	}
+
+	//get paginated services count
+	public function get_paginated_services_count($list)
+	{
+		$this->filter_services();
+		$this->db->where('services.status', 1);
+		$query = $this->db->get('services');
+		return $query->num_rows();
+	}
 }

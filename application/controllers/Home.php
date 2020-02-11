@@ -52,9 +52,7 @@ class Home extends Home_Core_Controller
         $data['description'] = $this->settings->site_description;
         $data['keywords'] = $this->settings->keywords;
         $data['home_title'] = $this->settings->home_title;
-
-        $data['slider_posts'] = $this->post_model->get_slider_posts();
-        $data['posts'] = $this->post_model->get_paginated_posts($config['per_page'], $page * $config['per_page']);
+		$data['projects'] = $this->project_admin_model->get_projects_recent(8, 0, 'projects');
 		$data['banners'] = $this->gallery_model->get_banners();
         $this->load->view('partials/_header', $data);
         $this->load->view('index', $data);
@@ -151,13 +149,7 @@ class Home extends Home_Core_Controller
 
 		//get project
 		$data['project'] = $this->project_admin_model->get_project($id);
-
 		$data['page'] = $this->page_model->get_page('du-an');
-		$data['authors'] = $this->auth_model->get_authors();
-		$pagination = $this->paginate(base_url() . 'du-an', $this->project_admin_model->get_paginated_projects_count('projects'));
-		$data['projects'] = $this->project_admin_model->get_paginated_projects($pagination['per_page'], $pagination['offset'], 'projects');
-		//check page auth
-		$this->checkPageAuth($data['page']);
 
 		if ($data['page']->page_active == 0) {
 			$this->error_404();
@@ -170,9 +162,9 @@ class Home extends Home_Core_Controller
 			$data['title'] = get_page_title($data['page']);
 			$data['description'] = get_page_description($data['page']);
 			$data['keywords'] = get_page_keywords($data['page']);
-
 			$this->load->view('partials/_header', $data);
 			$this->load->view('project_detail', $data);
+			$this->load->view('partials/_footer', $data);
 		}
 	}
 

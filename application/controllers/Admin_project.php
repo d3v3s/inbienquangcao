@@ -174,7 +174,7 @@ class Admin_project extends Admin_Core_Controller
 		if ($option == 'delete') {
 
 			if ($this->project_admin_model->delete_project($id)) {
-				$this->session->set_flashdata('success', trans("project") . " " . trans("msg_suc_deleted"));
+				$this->session->set_flashdata('success', trans("projects") . " " . trans("msg_suc_deleted"));
 				redirect($this->agent->referrer());
 			} else {
 				$this->session->set_flashdata('error', trans("msg_error"));

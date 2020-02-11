@@ -53,7 +53,7 @@ a.read-more,
 .btn-transparent-white:hover,
 .btn-transparent-black:hover
 {
-	color: #feb600;
+	color: #46A67F;
 }
 
 
@@ -103,7 +103,7 @@ div.count-number:before,
 .mixed-grid .nav.b-color li.active,
 .mixed-grid .nav.b-color li:hover
 {
-	background-color: #feb600;
+	background-color: #46A67F;
 }
 
 .dropdown-menu,
@@ -121,15 +121,15 @@ div.count-number:before,
 .page-wrap .section-title,
 .request-quote .container
 {
-	border-color: #feb600;
+	border-color: #46A67F;
 }
 
 .bottom-arrow:before{
-	border-top-color: #feb600;
+	border-top-color: #46A67F;
 }
 .rightGrip, 
 .leftGrip{
-	border-bottom: 10px solid #feb600 !important;
+	border-bottom: 10px solid #46A67F !important;
 }
 
 
@@ -138,19 +138,19 @@ div.count-number:before,
 .color-switch .owl-controls .owl-page span,
 .tags li a,
 .slider-box h2{
- background-color: rgba(254,182,0,.8);
+ background-color: #8FD0BE !important;
 }
 .tparrows{
- background-color: rgba(254,182,0,.4) !important;
+ background-color:#8FD0BE !important;
 }
 ::-moz-selection {
-    background: #feb600;
+    background: #46A67F;
     color: #000000;
     text-shadow: none;
 }
 
 ::selection {
-    background: #feb600;
+    background: #46A67F;
     color: #a4003a;
     text-shadow: none;
 }

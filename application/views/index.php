@@ -103,14 +103,15 @@
 <!-- Services -->
 <section id="who-we-are" class="page-section light-bg border-tb">
 	<div class="container who-we-are">
-		<div class="section-heading">
-			<div class="section-title text-left">
-				<!-- Title -->
-				<h2 class="title">Who We Are</h2>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="section-heading">
+					<div class="section-title text-left">
+						<!-- Title -->
+						<h2 class="title">Who We Are</h2>
+					</div>
+				</div>
 			</div>
-			<div class="section-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec
-				odio ipsum. Suspendisse cursus malesuada facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.</div>
 		</div>
 		<div class="row">
 			<div class="col-md-8">
@@ -170,202 +171,46 @@
 <section id="works" class="page-section">
 	<div class="container general-section">
 		<div class="section-heading">
-			<div class="section-title text-left">
+			<div class="text-left">
 				<!-- Title -->
-				<h2 class="title">Featured Works</h2>
+				<h2 class="title">Dự án</h2>
 			</div>
-			<div class="section-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec
-				odio ipsum. Suspendisse cursus malesuada facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.</div>
 		</div>
-		<div id="options" class="filter-menu">
-			<ul class="option-set nav nav-pills">
-				<li class="filter active" data-filter="all">Show All</li>
-				<li class="filter" data-filter=".commercial">Commercial</li>
-				<li class="filter" data-filter=".education">Education</li>
-				<li class="filter" data-filter=".healthcare">Healthcare</li>
-				<li class="filter" data-filter=".residential">Residential</li>
-			</ul>
-		</div>
-		<!-- filter -->
 	</div>
+
 	<div class="container-fluid white general-section">
 		<div id="mix-container" class="portfolio-grid">
-			<!-- Item 1 -->
-			<div class="grids col-xs-12 col-sm-4 col-md-3 mix all commercial">
-				<div class="grid">
-					<img src="<?php echo base_url(); ?>assets/img/sections/portfolio/thumb/1.jpg" width="400" height="273" alt="Recent Work"
-						 class="img-responsive" />
-					<div class="figcaption">
-						<!-- Image Popup-->
-						<a href="img/sections/portfolio/1.jpg" data-rel="prettyPhoto[portfolio]">
-							<i class="fa fa-search"></i>
-						</a>
-						<a href="portfolio-single.html">
-							<i class="fa fa-link"></i>
-						</a></div>
-					<div class="caption-block">
-						<h4>Name Of Work</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<?php foreach ($projects as $item): ?>
+				<div class="grids col-xs-12 col-sm-4 col-md-3 mix all commercial">
+					<div class="grid">
+						<img src="<?php echo base_url(); ?><?php echo $item->image_big; ?>" width="400" height="273" alt="<?php echo $item->title; ?>"
+							 class="img-responsive" />
+						<div class="figcaption">
+							<!-- Image Popup-->
+							<a href="<?php echo base_url().$item->image_big; ?>" data-rel="prettyPhoto[portfolio]">
+								<i class="fa fa-search"></i>
+							</a>
+							<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
+								<i class="fa fa-link"></i>
+							</a></div>
+						<div class="caption-block">
+							<h4><?php echo $item->title; ?></h4>
+							<p><?php echo $item->summary; ?></p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Item 1 Ends-->
-			<!-- Item 2 -->
-			<div class="grids col-xs-12 col-sm-4 col-md-3 mix all commercial education">
-				<div class="grid">
-					<img src="<?php echo base_url(); ?>assets/img/sections/portfolio/thumb/2.jpg" width="400" height="273" alt="Recent Work"
-						 class="img-responsive" />
-					<div class="figcaption">
-						<!-- Image Popup-->
-						<a href="img/sections/portfolio/2.jpg" data-rel="prettyPhoto[portfolio]">
-							<i class="fa fa-search"></i>
-						</a>
-						<a href="portfolio-single.html">
-							<i class="fa fa-link"></i>
-						</a></div>
-					<div class="caption-block">
-						<h4>Name Of Work</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-				</div>
-			</div>
-			<!-- Item 2 Ends-->
-			<!-- Item 3 -->
-			<div class="grids col-xs-12 col-sm-4 col-md-3 mix all commercial healthcare">
-				<div class="grid">
-					<img src="<?php echo base_url(); ?>assets/img/sections/portfolio/thumb/3.jpg" width="400" height="273" alt="Recent Work"
-						 class="img-responsive" />
-					<div class="figcaption">
-						<!-- Image Popup-->
-						<a href="img/sections/portfolio/3.jpg" data-rel="prettyPhoto[portfolio]">
-							<i class="fa fa-search"></i>
-						</a>
-						<a href="portfolio-single.html">
-							<i class="fa fa-link"></i>
-						</a></div>
-					<div class="caption-block">
-						<h4>Name Of Work</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-				</div>
-			</div>
-			<!-- Item 3 Ends-->
-			<!-- Item 4 -->
-			<div class="grids col-xs-12 col-sm-4 col-md-3 mix all education residential">
-				<div class="grid">
-					<img src="<?php echo base_url(); ?>assets/img/sections/portfolio/thumb/4.jpg" width="400" height="273" alt="Recent Work"
-						 class="img-responsive" />
-					<div class="figcaption">
-						<!-- Image Popup-->
-						<a href="img/sections/portfolio/4.jpg" data-rel="prettyPhoto[portfolio]">
-							<i class="fa fa-search"></i>
-						</a>
-						<a href="portfolio-single.html">
-							<i class="fa fa-link"></i>
-						</a></div>
-					<div class="caption-block">
-						<h4>Name Of Work</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-				</div>
-			</div>
-			<!-- Item 4 Ends-->
-			<!-- Item 5 -->
-			<div class="grids col-xs-12 col-sm-4 col-md-3 mix all healthcare commercial">
-				<div class="grid">
-					<img src="<?php echo base_url(); ?>assets/img/sections/portfolio/thumb/5.jpg" width="400" height="273" alt="Recent Work"
-						 class="img-responsive" />
-					<div class="figcaption">
-						<!-- Image Popup-->
-						<a href="img/sections/portfolio/5.jpg" data-rel="prettyPhoto[portfolio]">
-							<i class="fa fa-search"></i>
-						</a>
-						<a href="portfolio-single.html">
-							<i class="fa fa-link"></i>
-						</a></div>
-					<div class="caption-block">
-						<h4>Name Of Work</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-				</div>
-			</div>
-			<!-- Item 5 Ends-->
-			<!-- Item 6 -->
-			<div class="grids col-xs-12 col-sm-4 col-md-3 mix all healthcare commercial residential">
-				<div class="grid">
-					<img src="<?php echo base_url(); ?>assets/img/sections/portfolio/thumb/6.jpg" width="400" height="273" alt="Recent Work"
-						 class="img-responsive" />
-					<div class="figcaption">
-						<!-- Image Popup-->
-						<a href="img/sections/portfolio/6.jpg" data-rel="prettyPhoto[portfolio]">
-							<i class="fa fa-search"></i>
-						</a>
-						<a href="portfolio-single.html">
-							<i class="fa fa-link"></i>
-						</a></div>
-					<div class="caption-block">
-						<h4>Name Of Work</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-				</div>
-			</div>
-			<!-- Item 6 Ends-->
-			<!-- Item 7 -->
-			<div class="grids col-xs-12 col-sm-4 col-md-3 mix all commercial healthcare education">
-				<div class="grid">
-					<img src="<?php echo base_url(); ?>assets/img/sections/portfolio/thumb/7.jpg" width="400" height="273" alt="Recent Work"
-						 class="img-responsive" />
-					<div class="figcaption">
-						<!-- Image Popup-->
-						<a href="img/sections/portfolio/7.jpg" data-rel="prettyPhoto[portfolio]">
-							<i class="fa fa-search"></i>
-						</a>
-						<a href="portfolio-single.html">
-							<i class="fa fa-link"></i>
-						</a></div>
-					<div class="caption-block">
-						<h4>Name Of Work</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-				</div>
-			</div>
-			<!-- Item 7 Ends-->
-			<!-- Item 8 -->
-			<div class="grids col-xs-12 col-sm-4 col-md-3 mix all commercial residential">
-				<div class="grid">
-					<img src="<?php echo base_url(); ?>assets/img/sections/portfolio/thumb/8.jpg" width="400" height="273" alt="Recent Work"
-						 class="img-responsive" />
-					<div class="figcaption">
-						<!-- Image Popup-->
-						<a href="img/sections/portfolio/8.jpg" data-rel="prettyPhoto[portfolio]">
-							<i class="fa fa-search"></i>
-						</a>
-						<a href="portfolio-single.html">
-							<i class="fa fa-link"></i>
-						</a></div>
-					<div class="caption-block">
-						<h4>Name Of Work</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-				</div>
-			</div>
-			<!-- Item 8 Ends-->
+			<?php endforeach; ?>
 		</div>
-		<!-- Mix Container -->
 	</div>
 </section>
 <!-- works -->
 <section id="team" class="page-section light-bg border-tb">
 	<div class="container">
 		<div class="section-heading">
-			<div class="section-title text-left">
+			<div class="text-left">
 				<!-- Title -->
-				<h2 class="title">Meet Our Team</h2>
+				<h2 class="title">Thành viên</h2>
 			</div>
-			<div class="section-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec
-				odio ipsum. Suspendisse cursus malesuada facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.</div>
 		</div>
 		<div class="row text-center">
 			<div class="owl-carousel navigation-1" data-pagination="false" data-items="4" data-autoplay="true"
@@ -543,8 +388,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Project
-					<span>Delivered</span></h3>
+				<h3>Dự án</h3>
 			</div>
 			<div class="col-sm-6 col-md-3 bottom-xs-pad-30">
 				<!-- Icon -->
@@ -552,8 +396,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Happy
-					<span>Clients</span></h3>
+				<h3>KHÁCH HÀNG</h3>
 			</div>
 			<div class="col-sm-6 col-md-3 bottom-xs-pad-30">
 				<!-- Icon -->
@@ -561,8 +404,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Winning
-					<span>Awards</span></h3>
+				<h3>GIẢI THƯỞNG</h3>
 			</div>
 			<div class="col-sm-6 col-md-3 bottom-xs-pad-30">
 				<!-- Icon -->
@@ -570,8 +412,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Country
-					<span>Covered</span></h3>
+				<h3>Thành phố</h3>
 			</div>
 		</div>
 	</div>
@@ -580,118 +421,29 @@
 <section id="latest-news" class="page-section light-bg border-tb">
 	<div class="container">
 		<div class="section-heading">
-			<div class="section-title text-left">
+			<div class="text-left">
 				<!-- Title -->
-				<h2 class="title">Our Latest News</h2>
+				<h2 class="title">Tin tức mới </h2>
 			</div>
-			<div class="section-title-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec
-				odio ipsum. Suspendisse cursus malesuada facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Vestibulum nec odio ipsum. Suspendisse cursus malesuada facilisis.</div>
 		</div>
 		<div class="row">
 			<div class="owl-carousel navigation-1 opacity text-left" data-pagination="false" data-items="3"
 				 data-autoplay="true" data-navigation="true">
-				<div class="col-sm-4 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/1.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/1.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">General Contracting</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="read-more">Read More</a>
-					<div class="right-post-meta">
-                            <span class="meta-like">
-                            <i class="icon-heart"></i> 5</span>
-						<span class="meta-comment">
-                            <i class="icon-comment"></i> 12</span></div>
-				</div>
-				<div class="col-sm-4 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/2.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/2.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">Construction Consultant</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="read-more">Read More</a>
-					<div class="pull-right">
-						<i class="icon-heart"></i> 5
-						<i class="icon-comment"></i> 12</div>
-				</div>
-				<div class="col-sm-4 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/3.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/3.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">House Renovation</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="read-more">Read More</a>
-					<div class="right-post-meta">
-                            <span class="meta-like">
-                            <i class="icon-heart"></i> 5</span>
-						<span class="meta-comment">
-                            <i class="icon-comment"></i> 12</span></div>
-				</div>
-				<div class="col-sm-4 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/4.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/4.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">Metal Roofing</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="read-more">Read More</a>
-				</div>
-				<div class="col-sm-4 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/5.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/5.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">Green House</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="read-more">Read More</a>
-					<div class="right-post-meta">
-                            <span class="meta-like">
-                            <i class="icon-heart"></i> 5</span>
-						<span class="meta-comment">
-                            <i class="icon-comment"></i> 12</span></div>
-				</div>
-				<div class="col-sm-4 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/6.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/6.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">Tiling and Painting</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="read-more">Read More</a>
-					<div class="right-post-meta">
-                            <span class="meta-like">
-                            <i class="icon-heart"></i> 5</span>
-						<span class="meta-comment">
-                            <i class="icon-comment"></i> 12</span></div>
-				</div>
+				<?php foreach ($popular_posts as $item): ?>
+					<div class="col-sm-4 col-md-4 col-xs-12">
+						<p class="text-center">
+							<a href="img/sections/services/1.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
+								<img src="<?php echo base_url().$item->image_mid; ?>" width="420" height="280" alt="" />
+							</a>
+						</p>
+						<h3>
+							<a href="<?php echo base_url().'post/'.html_escape($item->title_slug); ?>"><?php echo $item->title; ?></a>
+						</h3>
+						<p><?php echo $item->summary; ?></p>
+						<a href="<?php echo base_url().'post/'.html_escape($item->title_slug); ?>" class="read-more">Xem thêm</a>
+					</div>
+				<?php endforeach; ?>
+
 			</div>
 		</div>
 	</div>

@@ -5,51 +5,23 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
-					<div class="widget-title">
-						<!-- Title -->
-						<h3 class="title">Địa chỉ</h3>
-					</div>
-					<!-- Address -->
-					<p>
-						<strong>Văn phòng:</strong> <?php echo html_escape($settings->contact_address); ?>
-					</p>
-					<!-- Email -->
-					<a class="text-color" href="mailto:<?php echo html_escape($settings->contact_email); ?>">
-						<?php echo html_escape($settings->contact_email); ?>
-					</a>
-					<!-- Phone -->
-					<p>
-						<strong>Gọi cho chúng tôi:</strong> +<a href="tel:<?php echo html_escape($settings->contact_phone); ?>"><?php echo html_escape($settings->contact_phone); ?></a>
-					</p>
+
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
 					<div class="widget-title">
-						<!-- Title -->
-						<h3 class="title">Dịch vụ</h3>
+						<h3 class="title">Địa chỉ</h3>
 					</div>
-					<nav>
-						<ul>
-							<!-- List Items -->
-							<li>
-								<a href="#">General Contracting</a>
-							</li>
-							<li>
-								<a href="#">Construction Consultant</a>
-							</li>
-							<li>
-								<a href="#">House Renovation</a>
-							</li>
-							<li>
-								<a href="#">Metal Roofing</a>
-							</li>
-							<li>
-								<a href="#">Green House</a>
-							</li>
-							<li>
-								<a href="#">Tiling and Painting</a>
-							</li>
-						</ul>
-					</nav>
+					<p>
+						<strong>Văn phòng:</strong> <?php echo html_escape($settings->contact_address); ?>
+					</p>
+					<p>
+						<strong>Email liên hệ:</strong> <a class="text-color" href="mailto:<?php echo html_escape($settings->contact_email); ?>">
+							<?php echo html_escape($settings->contact_email); ?>
+						</a>
+					</p>
+					<p>
+						<strong>Gọi cho chúng tôi:</strong> +<a href="tel:<?php echo html_escape($settings->contact_phone); ?>"><?php echo html_escape($settings->contact_phone); ?></a>
+					</p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3 widget">
 					<div class="widget-title">

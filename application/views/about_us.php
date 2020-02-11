@@ -5,7 +5,7 @@
 	#moreOne {display: none;}
 	#moreTwo {display: none;}
 	#moreThree {display: none;}
-	.readMore { cursor: pointer; color: #FDB734 !important;}
+	.readMore { cursor: pointer; color: #46A67F !important;}
 </style>
 <section id="who-we-are" class="page-section border-tb">
 	<div class="container who-we-are">
@@ -39,10 +39,6 @@
 						</ul>
 					</div>
 				</div>
-				<h3>
-					<a href="#" class="hover">Download Our Brochure -
-						<i class="icon-file-pdf red"></i></a>
-				</h3>
 			</div>
 			<script>
 
@@ -69,8 +65,10 @@
 						<h4>CHÚNG TA LÀM GÌ?</h4>
 						<p>Trải qua hơn 13 năm, nỗ lực không ngừng. Chúng tôi tự hào là đơn vị có kinh nghiệm trong lĩnh vực Thi công biển, bảng quảng cáo
 							<span id="dotOne">...</span>
-							<span id="moreOne">Cùng rất nhiều chất liệu khác nhau để mang đến những sản phẩm chất lương, tinh tế và đẹp mắt. Bên cạnh đó, giá cả từng sản phẩm của Chúng tôi phù hợp với từng quy mô, lĩnh vực kinh doanh và nhu cầu của quý khách hàng. Với tiêu chí “NÓI KHÔNG VỚI SẢN PHẨM KÉM CHẤT LƯỢNG” Luôn được đặt lên hàng đầu..</span>
-							<a class="readMore" id="moreBtnOne" onclick="readMore('moreOne', 'moreBtnOne', 'dotOne')">Xem thêm</a></p>
+							<span id="moreOne">Cùng rất nhiều chất liệu khác nhau để mang đến những sản phẩm chất lương, tinh tế và đẹp mắt. Bên cạnh đó, giá cả từng sản phẩm của Chúng tôi phù hợp với từng quy mô, lĩnh vực kinh doanh và nhu cầu của quý khách hàng. Với tiêu chí “NÓI KHÔNG VỚI SẢN PHẨM KÉM CHẤT LƯỢNG” Luôn được đặt lên hàng đầu..
+							<a class="readMore" id="moreBtnOne" onclick="readMore('moreOne', 'moreBtnOne', 'dotOne')">Xem thêm</a>
+							</span>
+						</p>
 
 
 					</a>
@@ -80,8 +78,10 @@
 						<p>Trên chặng đường đã qua, Chúng tôi không ngừng mở rộng quy mô phát triển và củng cố hệ thống cơ sở vật chất. Bên cạnh đó, chúng tôi
 							<span id="dotTwo">...</span>
 							<span id="moreTwo">hội tụ đội ngũ nhân viên trẻ nhiệt huyết, sáng tạo. Đến nay, trở thành doanh nghiệp hàng đầu trong lĩnh vực dịch vụ quảng cáo.
-							Chúng tôi đã và đang là đối tác tin cậy, thường xuyên của nhiều tập đoàn, thương hiệu hàng đầu Việt Nam như: Tập đoàn Viettel, Công ty Xi măng Cẩm Phả, Đài truyền hình VTV, Tập đoàn Vingroup… Và rất nhiều đối tác khác.</span>
-							<a class="readMore" id="moreBtnTwo" onclick="readMore('moreTwo', 'moreBtnTwo', 'dotTwo')">Xem thêm</a></p>
+							Chúng tôi đã và đang là đối tác tin cậy, thường xuyên của nhiều tập đoàn, thương hiệu hàng đầu Việt Nam như: Tập đoàn Viettel, Công ty Xi măng Cẩm Phả, Đài truyền hình VTV, Tập đoàn Vingroup… Và rất nhiều đối tác khác.
+							<a class="readMore" id="moreBtnTwo" onclick="readMore('moreTwo', 'moreBtnTwo', 'dotTwo')">Xem thêm</a>
+							</span>
+							</p>
 
 					</a>
 					<a>
@@ -89,8 +89,10 @@
 						<h4>CHÚNG TÔI CUNG CẤP GÌ?</h4>
 						<p>Tập trung hoạt động trong lĩnh vực kinh doanh các sản phẩm Biển Hiệu, Biển Quảng Cáo với công nghệ sản xuất hiện đại, tiên tiến
 							<span id="dotThree">...</span>
-							<span id="moreThree">Hệ thống máy móc được nhập khẩu được nhập khẩu từ nhiều quốc gia trên thế giới. Chúng tôi không ngừng cập nhật hệ thống trang thiết bị hiện đại, máy móc, kỹ thuật tiên tiến. Nhằm mang đến những sản phẩm tốt nhất, chất lượng cao nhất đến với quý khách hàng.</span>
-							<a class="readMore" id="moreBtnThree" onclick="readMore('moreThree', 'moreBtnThree', 'dotThree')">Xem thêm</a></p>
+							<span id="moreThree">Hệ thống máy móc được nhập khẩu được nhập khẩu từ nhiều quốc gia trên thế giới. Chúng tôi không ngừng cập nhật hệ thống trang thiết bị hiện đại, máy móc, kỹ thuật tiên tiến. Nhằm mang đến những sản phẩm tốt nhất, chất lượng cao nhất đến với quý khách hàng.
+							<a class="readMore" id="moreBtnThree" onclick="readMore('moreThree', 'moreBtnThree', 'dotThree')">Xem thêm</a>
+							</span>
+							</p>
 					</a></div>
 			</div>
 		</div>
@@ -106,8 +108,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Project
-					<span>Delivered</span></h3>
+				<h3>Dự án</h3>
 			</div>
 			<div class="col-sm-6 col-md-3 bottom-xs-pad-30">
 				<!-- Icon -->
@@ -115,8 +116,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Happy
-					<span>Clients</span></h3>
+				<h3>KHÁCH HÀNG</h3>
 			</div>
 			<div class="col-sm-6 col-md-3 bottom-xs-pad-30">
 				<!-- Icon -->
@@ -124,8 +124,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Winning
-					<span>Awards</span></h3>
+				<h3>GIẢI THƯỞNG</h3>
 			</div>
 			<div class="col-sm-6 col-md-3 bottom-xs-pad-30">
 				<!-- Icon -->
@@ -133,185 +132,11 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Country
-					<span>Covered</span></h3>
+				<h3>Thành phố</h3>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- fun-factor -->
-<section id="team-scroll" class="page-section">
-	<div class="container text-center">
-		<div class="section-title">
-			<h2 class="title">Meet the Team</h2>
-		</div>
-		<div class="row">
-			<div class="owl-carousel navigation-1" data-pagination="false" data-items="4" data-autoplay="true"
-				 data-navigation="true">
-				<div class="col-sm-6 col-md-3 bottom-xs-pad-20">
-					<div class="team-item dark-bg">
-						<div class="image">
-							<!-- Image -->
-							<img src="<?php echo base_url(); ?>assets/img/sections/team/1.jpg" alt="" title="" width="270" height="270" />
-						</div>
-						<div class="description">
-							<!-- Name -->
-							<h4 class="name">Phillip Parisis</h4>
-							<!-- Designation -->
-							<div class="role">Project Manager</div>
-							<!-- Text -->
-							<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-								intereste.</p>
-						</div>
-						<div class="social-icon">
-							<!-- Social Icons -->
-							<a href="#">
-								<i class="fa fa-facebook"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-twitter"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-google"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-pinterest"></i>
-							</a></div>
-					</div>
-				</div>
-				<!-- .employee  -->
-				<div class="col-sm-6 col-md-3 bottom-xs-pad-20">
-					<div class="team-item dark-bg">
-						<div class="image">
-							<!-- Image -->
-							<img src="<?php echo base_url(); ?>assets/img/sections/team/2.jpg" alt="" title="" width="270" height="270" />
-						</div>
-						<div class="description">
-							<!-- Name -->
-							<h4 class="name">Simo Kruyt</h4>
-							<!-- Designation -->
-							<div class="role">Construction Manager</div>
-							<!-- Text -->
-							<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-								intereste.</p>
-						</div>
-						<div class="social-icon">
-							<!-- Social Icons -->
-							<a href="#">
-								<i class="fa fa-facebook"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-twitter"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-google"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-pinterest"></i>
-							</a></div>
-					</div>
-				</div>
-				<!-- .employee -->
-				<div class="col-sm-6 col-md-3 bottom-xs-pad-20">
-					<div class="team-item dark-bg">
-						<div class="image">
-							<!-- Image -->
-							<img src="<?php echo base_url(); ?>assets/img/sections/team/3.jpg" alt="" title="" width="270" height="270" />
-						</div>
-						<div class="description">
-							<!-- Name -->
-							<h4 class="name">Jorge Canaveral</h4>
-							<!-- Designation -->
-							<div class="role">Architect</div>
-							<!-- Text -->
-							<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-								intereste.</p>
-						</div>
-						<div class="social-icon">
-							<!-- Social Icons -->
-							<a href="#">
-								<i class="fa fa-facebook"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-twitter"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-google"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-pinterest"></i>
-							</a></div>
-					</div>
-				</div>
-				<!-- .employee -->
-				<div class="col-sm-6 col-md-3 bottom-xs-pad-20">
-					<div class="team-item dark-bg">
-						<div class="image">
-							<!-- Image -->
-							<img src="<?php echo base_url(); ?>assets/img/sections/team/4.jpg" alt="" title="" width="270" height="270" />
-						</div>
-						<div class="description">
-							<!-- Name -->
-							<h4 class="name">Aimee Devlin</h4>
-							<!-- Designation -->
-							<div class="role">Sales Manager</div>
-							<!-- Text -->
-							<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-								intereste.</p>
-						</div>
-						<div class="social-icon">
-							<!-- Social Icons -->
-							<a href="#">
-								<i class="fa fa-facebook"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-twitter"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-google"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-pinterest"></i>
-							</a></div>
-					</div>
-				</div>
-				<!-- .employee -->
-				<div class="col-sm-6 col-md-3 bottom-xs-pad-20">
-					<div class="team-item dark-bg">
-						<div class="image">
-							<!-- Image -->
-							<img src="<?php echo base_url(); ?>assets/img/sections/team/5.jpg" alt="" title="" width="270" height="270" />
-						</div>
-						<div class="description">
-							<!-- Name -->
-							<h4 class="name">Phillip Parisis</h4>
-							<!-- Designation -->
-							<div class="role">Resource Head</div>
-							<!-- Text -->
-							<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-								intereste.</p>
-						</div>
-						<div class="social-icon">
-							<!-- Social Icons -->
-							<a href="#">
-								<i class="fa fa-facebook"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-twitter"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-google"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-pinterest"></i>
-							</a></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- team -->
 <section id="clients" class="page-section tb-pad-20 border-t">
 	<div class="container">
 		<div class="row">

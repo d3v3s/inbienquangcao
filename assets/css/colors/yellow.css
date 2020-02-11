@@ -2,7 +2,7 @@
 
 Template Color CSS File
 
-Color code: #f2d438
+Color code: #182333
 
 Author: Codingest
 Template Name: Infinite
@@ -10,35 +10,35 @@ Template Name: Infinite
 
 /*a tag*/
 a:hover {
-    color: #f2d438;
+    color: #182333;
 }
 
 a:focus, a:active {
-    color: #f2d438;
+    color: #182333;
 }
 
 #infinity-outline {
-    stroke: #f2d438;
+    stroke: #182333;
 }
 
 /*navigation*/
 .navbar-toggle {
-    background-color: #f2d438 !important;
+    background-color: #182333 !important;
 }
 
 .navbar-inverse .navbar-toggle {
-    border-color: #f2d438 !important;
+    border-color: #182333 !important;
 }
 
 /*button color style*/
 .btn-action {
-    background-color: #f2d438;
-    border-color: #f2d438;
+    background-color: #182333;
+    border-color: #182333;
 }
 
 .btn-action {
-    background-color: #f2d438;
-    border-color: #f2d438;
+    background-color: #182333;
+    border-color: #182333;
 }
 
 .btn-action:hover {
@@ -57,8 +57,8 @@ a:focus, a:active {
 }
 
 .btn-error-back {
-    background-color: #f2d438 !important;
-    border-color: #f2d438 !important;
+    background-color: #182333 !important;
+    border-color: #182333 !important;
 }
 
 ::selection {
@@ -72,16 +72,16 @@ a:focus, a:active {
 }
 
 .text-category {
-    color: #f2d438;
+    color: #182333;
 }
 
 /*navbar color style*/
 .navbar-inverse .navbar-nav .active a::after {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    color: #f2d438;
+    color: #182333;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
@@ -90,153 +90,153 @@ a:focus, a:active {
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #f2d438 !important;
+    color: #182333 !important;
     background-color: transparent;
 }
 
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
     background-color: transparent;
-    color: #f2d438;
+    color: #182333;
 }
 
 .navbar-inverse .navbar-nav .dropdown-menu > li:hover > a,
 .navbar-inverse .navbar-nav .dropdown-menu > li:focus > a,
 .navbar-inverse .navbar-nav .dropdown-menu > li.active > a {
-    color: #f2d438;
+    color: #182333;
 }
 
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
-    color: #f2d438;
+    color: #182333;
 }
 
 .home-slider-item .item-info .label-slider-category {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 
 .label-post-category label {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 
 .read-more {
-    color: #f2d438;
+    color: #182333;
 }
 
 .widget-title {
-    border-color: #f2d438;
+    border-color: #182333;
 }
 
 .ramdom-post-slider .item-info .label-slider-category {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 
 .w-tag-list li a:hover {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 
 .page-breadcrumb .breadcrumb .breadcrumb-item a {
-    color: #f2d438;
+    color: #182333;
 }
 
 .post-content .post-meta a:hover {
-    color: #f2d438;
+    color: #182333;
 }
 
 .post-content .post-tags .tag-list li a:hover {
-    border-color: #f2d438;
-    background-color: #f2d438;
+    border-color: #182333;
+    background-color: #182333;
 }
 
 .related-posts .related-post-title {
-    border-bottom: 2px solid #f2d438;
+    border-bottom: 2px solid #182333;
 }
 
 .comments .comments-title {
-    border-bottom: 2px solid #f2d438;
+    border-bottom: 2px solid #182333;
 }
 
 .comment-lists li .btn-comment-reply {
-    color: #f2d438;
+    color: #182333;
 }
 
 .comment-loader-container .loader {
-    border-top: 5px solid #f2d438;
+    border-top: 5px solid #182333;
 }
 
 .sub-comment-loader-container .loader {
-    border-top: 5px solid #f2d438;
+    border-top: 5px solid #182333;
 }
 
 .pagination .active a {
-    border: 1px solid #f2d438 !important;
-    background-color: #f2d438 !important;
+    border: 1px solid #182333 !important;
+    background-color: #182333 !important;
     color: #fff !important;
 }
 
 .f-random-list li .title a:hover {
-    color: #f2d438;
+    color: #182333;
 }
 
 .newsletter button {
-    background: #f2d438;
+    background: #182333;
 }
 
 .label-slider-category {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 
 .random-post-slider .owl-prev:hover .random-arrow-prev {
-    color: #f2d438;
+    color: #182333;
 }
 
 .random-post-slider .owl-next:hover .random-arrow-next {
-    color: #f2d438;
+    color: #182333;
 }
 
 .post-detail-slider .owl-prev:hover .post-detail-arrow-prev {
-    color: #f2d438;
+    color: #182333;
 }
 
 .post-detail-slider .owl-next:hover .post-detail-arrow-next {
-    color: #f2d438;
+    color: #182333;
 }
 
 .leave-reply .form-control:focus {
-    border-color: #f2d438;
+    border-color: #182333;
 }
 
 .page-contact .form-control:focus {
-    border-color: #f2d438;
+    border-color: #182333;
 }
 
 .link-forget {
-    color: #f2d438;
+    color: #182333;
 }
 
 .filters .btn:hover {
-    background-color: #f2d438 !important;
-    border-color: #f2d438 !important;
+    background-color: #182333 !important;
+    border-color: #182333 !important;
     color: #fff !important;
 }
 
 .filters .active {
-    background-color: #f2d438 !important;
-    border-color: #f2d438 !important;
+    background-color: #182333 !important;
+    border-color: #182333 !important;
     color: #fff !important;
 }
 
 .captcha-refresh {
-    color: #f2d438;
+    color: #182333;
 }
 
 .gallery-categories ul li a:hover, .gallery-categories ul li a:focus, .gallery-categories ul li a:active {
-    background-color: #f2d438 !important;
-    border-color: #f2d438 !important;
+    background-color: #182333 !important;
+    border-color: #182333 !important;
     color: #fff !important;
 }
 
 .newsletter .newsletter-button {
-    background-color: #f2d438;
-    border: 1px solid #f2d438;
+    background-color: #182333;
+    border: 1px solid #182333;
 }
 
 .newsletter .newsletter-button:hover {
@@ -245,53 +245,53 @@ a:focus, a:active {
 }
 
 .switcher-box .open-switcher {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 
 .nav-footer li a:hover {
-    color: #f2d438;
+    color: #182333;
 }
 
 .btn-load-more-comments:hover {
-    color: #f2d438 !important;
+    color: #182333 !important;
 }
 
 .widget-list li .w-meta a:hover {
-    color: #f2d438;
+    color: #182333;
 }
 
 .comment-tabs .active {
-    border-bottom: 2px solid #f2d438;
+    border-bottom: 2px solid #182333;
 }
 .reactions .col-reaction:hover .btn-reaction {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 .reactions .progress-bar-vertical .progress-bar {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 .reactions .btn-reaction-voted {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 .poll .result .progress .progress-bar {
-    background-color: #f2d438;
+    background-color: #182333;
 }
 @media (max-width: 768px) {
 
     .pagination .page-previous a {
-        border: 1px solid #f2d438 !important;
-        color: #f2d438 !important;
+        border: 1px solid #182333 !important;
+        color: #182333 !important;
         background-color: transparent !important;
     }
 
     .pagination .page-next a {
-        border: 1px solid #f2d438 !important;
-        color: #f2d438 !important;
+        border: 1px solid #182333 !important;
+        color: #182333 !important;
         background-color: transparent !important;
     }
 
     .pagination > li > a, .pagination > li > span {
-        background-color: #f2d438 !important;
-        border: 1px solid #f2d438 !important;
+        background-color: #182333 !important;
+        border: 1px solid #182333 !important;
         color: #fff !important;
     }
 }

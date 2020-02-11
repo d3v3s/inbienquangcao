@@ -19,16 +19,71 @@ class Admin_service extends Admin_Core_Controller
      */
     public function services()
     {
-        prevent_author();
+		$data['title'] = trans('services');
 
-        $data['title'] = trans("services");
-        $data['services'] = $this->service_model->get_all_services();
-        $data['lang_search_column'] = 2;
+		$data['form_action'] = "admin_service/services";
+		$data['list_type'] = "services";
+		//get paginated services
+		$pagination = $this->paginate(base_url() . 'admin_service/services', $this->service_model->get_paginated_services_count('services'));
+		$data['services'] = $this->service_model->get_paginated_services($pagination['per_page'], $pagination['offset'], 'services');
 
         $this->load->view('admin/includes/_header', $data);
         $this->load->view('admin/service/services', $data);
         $this->load->view('admin/includes/_footer');
     }
+
+	/**
+	 * service Options Post
+	 */
+	public function service_options_post()
+	{
+		$option = $this->input->post('option', true);
+		$id = $this->input->post('id', true);
+
+		$data["service"] = $this->service_model->get_service($id);
+
+		//check if exists
+		if (empty($data['service'])) {
+			redirect($this->agent->referrer());
+		}
+
+		//if option publish
+		if ($option == 'publish') {
+
+			if ($this->post_admin_model->publish_post($id)) {
+				$this->session->set_flashdata('success', trans("msg_published"));
+			} else {
+				$this->session->set_flashdata('error', trans("msg_error"));
+			}
+
+			redirect($this->agent->referrer());
+		}
+
+		//if option delete
+		if ($option == 'delete') {
+
+			if ($this->project_admin_model->delete_project($id)) {
+				$this->session->set_flashdata('success', trans("services") . " " . trans("msg_suc_deleted"));
+				redirect($this->agent->referrer());
+			} else {
+				$this->session->set_flashdata('error', trans("msg_error"));
+				redirect($this->agent->referrer());
+			}
+
+		}
+	}
+
+	/**
+	 * Add service
+	 */
+	public function add_service()
+	{
+		$data['title'] = trans("add_service");
+
+		$this->load->view('admin/includes/_header', $data);
+		$this->load->view('admin/service/add_service', $data);
+		$this->load->view('admin/includes/_footer');
+	}
 
 
     /**

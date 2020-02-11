@@ -10,6 +10,8 @@ class Project_admin_model extends CI_Model
         $data = array(
             'lang_id' => $this->input->post('lang_id', true),
             'title' => $this->input->post('title', true),
+			'customer' => $this->input->post('customer', true),
+			'estimation' => $this->input->post('estimation', true),
             'summary' => $this->input->post('summary', true),
             'keywords' => $this->input->post('keywords', true),
             'content' => $this->input->post('content', false),
@@ -26,6 +28,10 @@ class Project_admin_model extends CI_Model
         if (!empty($date_published)) {
             $data["created_at"] = $date_published;
         }
+
+        if(empty($data["summary"])){
+			$data["summary"] = $data["title"];
+		}
 
         $data['user_id'] = user()->id;
         $data['status'] = $this->input->post('status', true);
@@ -113,14 +119,6 @@ class Project_admin_model extends CI_Model
         );
 
         $data['q'] = trim($data['q']);
-        //check if author
-//        if (user()->role == "author"):
-//            $data['user_id'] = user()->id;
-//        else:
-//            if (!empty($data['author'])) {
-//                $data['user_id'] = $data['author'];
-//            }
-//        endif;
 
         if (!empty($data['lang_id'])) {
             $this->db->where('projects.lang_id', $data['lang_id']);
@@ -128,9 +126,6 @@ class Project_admin_model extends CI_Model
         if (!empty($data['q'])) {
             $this->db->like('projects.title', $data['q']);
         }
-//        if (!empty($data['user_id'])) {
-//            $this->db->where('projects.user_id', $data['user_id']);
-//        }
     }
 
     //get paginated projects
@@ -150,6 +145,17 @@ class Project_admin_model extends CI_Model
 		$this->filter_projects();
 		$this->db->where('projects.status', 1);
 		$this->db->where('projects.project_type', 1);
+		$this->db->order_by('projects.created_at', 'DESC');
+		$this->db->limit($per_page, $offset);
+		$query = $this->db->get('projects');
+		return $query->result();
+	}
+
+	//get paginated projects
+	public function get_projects_recent($per_page, $offset, $list)
+	{
+		$this->filter_projects();
+		$this->db->where('projects.status', 1);
 		$this->db->order_by('projects.created_at', 'DESC');
 		$this->db->limit($per_page, $offset);
 		$query = $this->db->get('projects');

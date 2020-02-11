@@ -80,12 +80,6 @@ if ($language->id == $site_lang->id):?>
 	<!-- Color Scheme -->
 	<link href="<?php echo base_url(); ?>assets/css/color.css" rel="stylesheet" />
 
-	<!-- Custom Style -->
-<?php if ($general_settings->site_color == '') : ?>
-<?php else : ?>
-    <link href="<?php echo base_url(); ?>assets/css/colors/<?php echo html_escape($general_settings->site_color); ?>.min.css" rel="stylesheet"/>
-<?php endif; ?>
-    <!-- Responsive CSS -->
 <?php if ($selected_lang->text_direction == "rtl"): ?>
     <!-- RTL -->
     <link href="<?php echo base_url(); ?>assets/css/rtl.min.css" rel="stylesheet"/>
