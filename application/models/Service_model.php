@@ -220,6 +220,17 @@ class Service_model extends CI_Model
 		return $query->result();
 	}
 
+	//get services recent
+	public function get_services_recent($per_page, $offset, $list)
+	{
+		$this->filter_services();
+		$this->db->where('services.status', 1);
+		$this->db->order_by('services.created_at', 'DESC');
+		$this->db->limit($per_page, $offset);
+		$query = $this->db->get('services');
+		return $query->result();
+	}
+
 	//get paginated services count
 	public function get_paginated_services_count($list)
 	{

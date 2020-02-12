@@ -1,11 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!-- Start Footer Section -->
 	<footer id="footer">
+		<div class="zalo-chat-widget" data-oaid="845074579225437173" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
+
+		<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0&appId=564841624086506&autoLogAppEvents=1"></script>
 	<div class="footer-widget">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
-
+					<div class="fb-page" data-href="https://www.facebook.com/InAnQuangCao" data-tabs="timeline" data-width="" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/InAnQuangCao" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/InAnQuangCao">In Ấn - Làm Biển Quảng Cáo Đông Anh, Sóc Sơn, Mê Linh</a></blockquote></div>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
 					<div class="widget-title">
@@ -123,8 +127,6 @@
 </footer>
 </div>
 <!-- End Footer Section -->
-<a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
-
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 <!-- Menu jQuery plugin -->

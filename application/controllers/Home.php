@@ -38,6 +38,7 @@ class Home extends Home_Core_Controller
         if ($page != 0) {
             $page = $page - 1;
         }
+
         $config['base_url'] = lang_base_url();
         $config['total_rows'] = $this->post_model->get_post_count();
         $config['per_page'] = $this->general_settings->pagination_per_page;
@@ -53,6 +54,8 @@ class Home extends Home_Core_Controller
         $data['keywords'] = $this->settings->keywords;
         $data['home_title'] = $this->settings->home_title;
 		$data['projects'] = $this->project_admin_model->get_projects_recent(8, 0, 'projects');
+		$data['services'] = $this->service_model->get_services_recent(10, 0, 'services');
+		$data['members'] = $this->member_model->get_members_recent(10, 0, 'services');
 		$data['banners'] = $this->gallery_model->get_banners();
         $this->load->view('partials/_header', $data);
         $this->load->view('index', $data);
