@@ -20,7 +20,7 @@
 					<b>Thời gian thi công:</b>
 					<span>4 ngày</span></p>
 				<div class="icon-3 static-color-icons hover-color">
-					<div class="fb-like" data-href="<?php echo base_url().'chi-tiet-du-an/'.$item->id; ?>" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+					<div class="fb-like" data-href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
 					<div class="fb-like" data-href="http://inquangcao.herokuapp.com/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
 				</div>
 			</div>
