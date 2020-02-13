@@ -21,14 +21,7 @@
 					<span>4 ngày</span></p>
 			</div>
 			<div class="col-md-7">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis
-					vitae temporibus enim sed. Optio, reprehenderit, ex.</p>
-				<ul class="list-style">
-					<li>Photoshop 4</li>
-					<li>Creative Design</li>
-					<li>Layered Files</li>
-					<li>PSD Attached</li>
-				</ul>
+				<?php echo $project->content; ?>
 			</div>
 			<div class="col-md-12">
 				<div style="float: left">
