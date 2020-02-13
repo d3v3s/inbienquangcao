@@ -19,9 +19,6 @@
 				<p>
 					<b>Thời gian thi công:</b>
 					<span>4 ngày</span></p>
-				<div class="icon-3 static-color-icons hover-color">
-					<div class="fb-like" data-href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
-				</div>
 			</div>
 			<div class="col-md-4">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis
@@ -38,6 +35,11 @@
 					vitae temporibus enim sed. Optio, reprehenderit, ex.</p>
 				<p>Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.</p>
 				<a href="#" class="btn btn-default">Contact Us</a>
+			</div>
+			<div class="col-md-12">
+				<div style="float: left">
+					<div class="fb-like"data-href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+				</div>
 			</div>
 		</div>
 	</div>
