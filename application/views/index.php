@@ -208,7 +208,7 @@
 								</div>
 								<div class="description">
 									<!-- Name -->
-									<h4 class="name"><?php echo $item->name; ?></h4>
+									<h4><?php echo $item->name; ?></h4>
 									<!-- Designation -->
 									<div class="role"><?php echo $item->position; ?></div>
 									<!-- Text -->
@@ -339,40 +339,40 @@
 	</div>
 </section>
 <!-- testimonials -->
-<section id="clients" class="page-section tb-pad-20 light-bg border-tb">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<div class="owl-carousel" data-pagination="false" data-items="6" data-autoplay="true"
-					 data-navigation="false">
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a></div>
-			</div>
-		</div>
-	</div>
-</section>
+<!--<section id="clients" class="page-section tb-pad-20 light-bg border-tb">-->
+<!--	<div class="container">-->
+<!--		<div class="row">-->
+<!--			<div class="col-md-12 text-center">-->
+<!--				<div class="owl-carousel" data-pagination="false" data-items="6" data-autoplay="true"-->
+<!--					 data-navigation="false">-->
+<!--					<a href="#">-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/1.png" width="170" height="90" alt="" />-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>-->
+<!--					<a href="#">-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/2.png" width="170" height="90" alt="" />-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a>-->
+<!--					<a href="#">-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/1.png" width="170" height="90" alt="" />-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>-->
+<!--					<a href="#">-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/2.png" width="170" height="90" alt="" />-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a>-->
+<!--					<a href="#">-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/1.png" width="170" height="90" alt="" />-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>-->
+<!--					<a href="#">-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/2.png" width="170" height="90" alt="" />-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a>-->
+<!--					<a href="#">-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/1.png" width="170" height="90" alt="" />-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>-->
+<!--					<a href="#">-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/2.png" width="170" height="90" alt="" />-->
+<!--						<img src="--><?php //echo base_url(); ?><!--assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a></div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</section>-->
 <!-- clients -->
 <div id="get-quote" class="bg-color black text-center">
 	<div class="container">
