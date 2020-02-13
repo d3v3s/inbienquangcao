@@ -1,4 +1,24 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<div class="page-header page-title-left page-title-pattern">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="title"><?php echo $post->title; ?></h3>
+				<ul class="breadcrumb">
+					<li>
+						<a href="<?php echo base_url(); ?>">Trang chủ</a>
+					</li>
+					<li>
+						<a href="<?php echo base_url().'du-an'; ?>">Dự án</a>
+					</li>
+					<li>
+						<a href="<?php echo base_url().'chi-tiet-du-an'.$project->id; ?>">Dự án</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
 <section id="works" class="page-section">
 	<div class="container">
 		<div class="text-left" style="width: 100%">
