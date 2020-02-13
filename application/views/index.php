@@ -73,7 +73,7 @@
 		</div>
 	</div>
 </section>
-<section class="service-home" style="background-color: #F7F7F7 !important; padding-bottom: 20px !important; padding-top: 20px !important">
+<section id="services" class="page-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -84,30 +84,30 @@
 				</div>
 			</div>
 		</div>
-		<div class="row mt-4">
-			<div class="col-lg-12">
-				<div class="owl-carousel navigation-1 opacity text-left" data-pagination="false" data-items="4"
-					 data-autoplay="true" data-navigation="true">
-					<?php foreach ($services as $item): ?>
-						<div class="col-sm-4 col-md-4 col-xs-12" data-animation="fadeInLeft">
-							<p class="text-center">
-								<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>" class="opacity" data-rel="prettyPhoto[portfolio]">
-									<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="" />
-								</a>
-							</p>
-							<h4>
-								<a href="#"><?php echo $item->title; ?></a>
-							</h4>
-							<p><?php echo $item->summary; ?></p>
-							<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>" class="btn btn-default">Xem thêm</a>
+		<div class="row">
+			<div class="owl-carousel navigation-1 text-left" data-pagination="false" data-items="4"
+				 data-autoplay="true" data-navigation="true">
+				<?php foreach ($services as $item): ?>
+					<div class="col-sm-4 col-md-4 col-xs-12 service-item" data-animation="fadeInLeft">
+						<div class="grid-item">
+							<div class="grid">
+								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>"
+									 class="img-responsive" />
+								<div class="figcaption">
+									<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>"></a>
+									<a >
+										<i class="fa"><?php echo $item->title; ?></i>
+									</a>
+								</div>
+							</div>
 						</div>
-					<?php endforeach; ?>
-				</div>
-				<div class="owl-dots disabled"></div>
+					</div>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</div>
 </section>
+<!-- Services -->
 <section class="product-home" style="background-color: #FFFFFF !important; padding-bottom: 20px !important; padding-top: 20px !important">
 	<div class="container">
 		<div class="row">
@@ -125,7 +125,7 @@
 					 data-autoplay="true" data-navigation="true">
 					<div class="col-sm-6 col-md-4 col-xs-12">
 						<p class="text-center">
-							<a href="img/sections/services/1.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
+							<a href="<?php echo base_url(); ?>assets/img/sections/services/1.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
 								<img s src="<?php echo base_url(); ?>assets/img/sections/services/1.jpg" width="420" height="280" alt="" />
 							</a>
 						</p>
@@ -135,9 +135,6 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
 							deserunt a enim harum eaque fugit.</p>
 						<a href="#" class="read-more">Xem thêm</a>
-						<div class="right-post-meta">
-							<div class="fb-like" data-href="http://inquangcao.herokuapp.com/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -182,47 +179,41 @@
 </section>
 <!-- works -->
 
-<section class="member-home" style="background-color: #FFFFFF !important; padding-bottom: 20px !important; padding-top: 20px !important">
+<section id="team" class="page-section light-bg border-tb">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="tb-title-home text-center">
 					<div class="tb-title-home-header" >
-						<h2 class="tb-headding-two title-index">Thành viên</h2>
+						<h2 class="tb-headding-two title-index">THÀNH VIÊN</h2>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="row mt-4">
-			<div class="col-lg-12">
-				<div class="owl-carousel navigation-1" data-pagination="false" data-items="5" data-autoplay="true"
-					 data-navigation="true">
-
-
-					<?php foreach ($members as $item): ?>
-						<div class="col-sm-6 col-md-3 bottom-xs-pad-20">
-							<div class="team-item dark-bg">
-								<div class="image">
-									<!-- Image -->
-									<img src="<?php echo base_url().$item->avatar; ?>" alt="" title="" width="270" height="270" />
-								</div>
-								<div class="description">
-									<!-- Name -->
-									<h4><?php echo $item->name; ?></h4>
-									<!-- Designation -->
-									<div class="role"><?php echo $item->position; ?></div>
-									<!-- Text -->
-									<p><?php echo $item->description ; ?></p>
-								</div>
+		<div class="row text-center">
+			<div class="owl-carousel navigation-1" data-pagination="false" data-items="5" data-autoplay="true"
+				 data-navigation="true">
+				<?php foreach ($members as $item): ?>
+					<div class="col-sm-6 col-md-3 bottom-xs-pad-20">
+						<div class="team-item dark-bg">
+							<div class="image">
+								<!-- Image -->
+								<img src="<?php echo base_url().$item->avatar; ?>" alt="<?php echo $item->name; ?> <?php echo $item->position; ?>" title="<?php echo $item->name; ?>" width="270" height="270" />
+							</div>
+							<div class="description">
+								<h4 class="name"><?php echo $item->name; ?></h4>
+								<div class="role"><?php echo $item->position; ?></div>
+								<p><?php echo $item->description ; ?></p>
 							</div>
 						</div>
-					<?php endforeach; ?>
-				</div>
+					</div>
+				<?php endforeach; ?>
+
 			</div>
 		</div>
 	</div>
 </section>
-<!-- team -->
+
 <section class="news-home" style="background-color: #F7F7F7 !important; padding-bottom: 20px !important; padding-top: 20px !important">
 	<div class="container">
 		<div class="row">
@@ -241,7 +232,7 @@
 					<?php foreach ($popular_posts as $item): ?>
 						<div class="col-sm-4 col-md-4 col-xs-12">
 							<p class="text-center">
-								<a href="img/sections/services/1.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
+								<a href="<?php echo base_url(); ?>assets/img/sections/services/1.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
 									<img src="<?php echo base_url().$item->image_mid; ?>" width="420" height="280" alt="" />
 								</a>
 							</p>
