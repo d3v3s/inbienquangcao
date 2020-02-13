@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<hr />
-				<?php echo $settings->contact_text; ?>,
+				<?php echo $settings->contact_text; ?>
 			</div>
 			<div class="col-md-6 col-md-6">
 				<h3 class="title"><?php echo trans("leave_message"); ?></h3>
@@ -51,14 +51,6 @@
 											  minlength="5"
 											  required <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>></textarea>
 					</div>
-					<?php if ($recaptcha_status): ?>
-						<div class="recaptcha-cnt m-b-15">
-							<?php
-							echo $recaptcha_widget;
-							echo $recaptcha_script;
-							?>
-						</div>
-					<?php endif; ?>
 					<div class="form-group">
 						<button class="btn btn-default" type="submit">
 							<?php echo html_escape(trans("submit")); ?><i class="icon-paper-plane"></i>
