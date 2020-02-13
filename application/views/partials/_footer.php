@@ -5,7 +5,7 @@
 <!--		<script src="https://sp.zalo.me/plugins/sdk.js"></script>-->
 <!--		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0&appId=564841624086506&autoLogAppEvents=1"></script>-->
 <!--		<script>var boxchatId="5e44c973ec9427f927304d2a";</script><script src="https://reg.boxchat.net/boxchat.js"></script>-->
-<!--		<div class="footer-widget">-->
+		<div class="footer-widget">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
