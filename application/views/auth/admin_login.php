@@ -35,20 +35,17 @@
 <div class="login-box">
     <div class="login-logo">
         <a href="<?php echo base_url(); ?>admin/login"><b><?php echo trans("admin_panel"); ?></a>
-    </div><!-- /.login-logo -->
+    </div>
     <div class="login-box-body">
         <h4 class="login-box-msg"><?php echo trans("login"); ?></h4>
 
-        <!-- include message block -->
         <?php $this->load->view('partials/_messages'); ?>
 
-        <!-- form start -->
 		<?php echo form_open('auth/login_post'); ?>
 		<input type="hidden" name="redirect_url" value="<?php echo lang_base_url().'admin'; ?>">
 		<div class="form-group has-feedback">
 			<input type="text" name="username" class="form-control"
 				   placeholder="<?php echo html_escape(trans("username")); ?>"
-				   value="<?php echo html_escape($this->session->flashdata('form_data')['username']); ?>"
 				   required <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
 			<span class="glyphicon glyphicon-user form-control-feedback"></span>
 		</div>
@@ -56,7 +53,6 @@
 		<div class="form-group has-feedback">
 			<input type="password" name="password" class="form-control"
 				   placeholder="<?php echo html_escape(trans("password")); ?>"
-				   value="<?php echo html_escape($this->session->flashdata('form_data')['password']); ?>"
 				   required <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
 			<span class=" glyphicon glyphicon-lock form-control-feedback"></span>
 		</div>
@@ -67,19 +63,14 @@
 					<?php echo html_escape(trans("forgot_password")); ?>
 				</a>
 			</div>
-			<!-- /.col -->
 			<div class="col-sm-4 col-xs-12 col-login">
 				<button type="submit" class="btn btn-primary btn-action pull-right">
 					<?php echo html_escape(trans("login")); ?>
 				</button>
 			</div>
-			<!-- /.col -->
 		</div>
-
-		<?php echo form_close(); ?><!-- form end -->
-
-    </div><!-- /.login-box-body -->
-
-</div><!-- /.login-box -->
+		<?php echo form_close(); ?>
+    </div>
+</div>
 </body>
 </html>
