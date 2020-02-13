@@ -9,10 +9,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
-						<div class="fb-page"
+						<div class="fb-page" style="margin-bottom: 20px"
 							 data-href="https://www.facebook.com/InAnQuangCao"
 							 data-hide-cover="false"
-							 data-show-facepile="false"></div>
+							 data-show-facepile="false">
+						</div>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
 						<div class="widget-title">
@@ -37,7 +38,6 @@
 						</div>
 						<nav>
 							<ul>
-								<!-- List Items -->
 								<li>
 									<a href="#">Thứ 2-Thứ 7: 8h sáng đến 5h chiều</a>
 								</li>
@@ -45,7 +45,6 @@
 									<a href="#">Chủ nhật: nghỉ</a>
 								</li>
 							</ul>
-							<!-- Count -->
 							<div class="footer-count">
 								<p class="count-number" data-count="3550">Dự án hoàn thành:
 									<span class="counter"></span></p>
@@ -79,23 +78,6 @@
 								</button>
 							</div>
 							<?php echo form_close(); ?>
-						</div>
-<!--						<div class="social-icon gray-bg icons-circle i-3x">-->
-<!--							--><?php //if (!empty($settings->facebook_url)) : ?>
-<!--								<a target="_blank" title="Facebook" href="--><?php //echo html_escape($settings->facebook_url); ?><!--">-->
-<!--									<i class="fa fa-facebook"></i>-->
-<!--								</a>-->
-<!--							--><?php //endif; ?>
-<!--							--><?php //if (!empty($settings->twitter_url)) : ?>
-<!--								<a target="_blank title="Twitter"" href="--><?php //echo html_escape($settings->twitter_url); ?><!--">-->
-<!--									<i class="fa fa-twitter"></i>-->
-<!--								</a>-->
-<!--							--><?php //endif; ?>
-<!--							--><?php //if (!empty($settings->youtube_url)) : ?>
-<!--								<a target="_blank" title="Youtube" href="--><?php //echo html_escape($settings->youtube_url); ?><!--">-->
-<!--									<i class="fa fa-youtube"></i>-->
-<!--								</a>-->
-<!--							--><?php //endif; ?>
 						</div>
 					</div>
 				</div>
