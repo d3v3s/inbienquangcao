@@ -119,7 +119,7 @@ if ($language->id == $site_lang->id):?>
     }(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Your customer chat code -->
-<div class="fb-customerchat" style="position: fixed; bottom: 0px; right: 100px"
+<div class="fb-customerchat"
 	 attribution=setup_tool
 	 page_id="106181070965479">
 </div>
