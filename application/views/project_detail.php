@@ -6,7 +6,7 @@
 			<h2 class="title">Chi tiết dự án</h2>
 		</div>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-5">
 				<p>
 					<b>Tên dự án:</b>
 					<span><?php echo $project->title; ?></span></p>
@@ -20,7 +20,7 @@
 					<b>Thời gian thi công:</b>
 					<span>4 ngày</span></p>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-7">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis
 					vitae temporibus enim sed. Optio, reprehenderit, ex.</p>
 				<ul class="list-style">
@@ -29,12 +29,6 @@
 					<li>Layered Files</li>
 					<li>PSD Attached</li>
 				</ul>
-			</div>
-			<div class="col-md-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis
-					vitae temporibus enim sed. Optio, reprehenderit, ex.</p>
-				<p>Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed. Optio, reprehenderit, ex.</p>
-				<a href="#" class="btn btn-default">Contact Us</a>
 			</div>
 			<div class="col-md-12">
 				<div style="float: left">
