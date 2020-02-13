@@ -20,21 +20,9 @@
 					<b>Thời gian thi công:</b>
 					<span>4 ngày</span></p>
 				<div class="icon-3 static-color-icons hover-color">
-					<a href="#">
-						<span class="pe-so-facebook"></span>
-					</a>
-					<a href="#">
-						<span class="pe-so-twitter"></span>
-					</a>
-					<a href="#">
-						<span class="pe-so-google-plus"></span>
-					</a>
-					<a href="#">
-						<span class="pe-so-pinterest"></span>
-					</a>
-					<a href="#">
-						<span class="pe-so-linkedin"></span>
-					</a></div>
+					<div class="fb-like" data-href="<?php echo base_url().'chi-tiet-du-an/'.$item->id; ?>" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+					<div class="fb-like" data-href="http://inquangcao.herokuapp.com/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+				</div>
 			</div>
 			<div class="col-md-4">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis
