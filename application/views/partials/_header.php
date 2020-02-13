@@ -100,6 +100,7 @@ if ($language->id == $site_lang->id):?>
     </script>
 </head>
 <body>
+<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
     window.fbAsyncInit = function() {
@@ -117,7 +118,7 @@ if ($language->id == $site_lang->id):?>
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-<!-- Your customer chat code m.me/106181070965479-->
+<!-- Your customer chat code -->
 <div class="fb-customerchat"
 	 attribution=setup_tool
 	 page_id="106181070965479">
