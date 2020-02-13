@@ -58,11 +58,11 @@
 		</div>
 
 		<div class="row">
-			<div class="col-sm-8 col-xs-12 col-login">
-				<a href="<?php echo lang_base_url(); ?>reset-password" class="link-forget">
-					<?php echo html_escape(trans("forgot_password")); ?>
-				</a>
-			</div>
+<!--			<div class="col-sm-8 col-xs-12 col-login">-->
+<!--				<a href="--><?php //echo lang_base_url(); ?><!--reset-password" class="link-forget">-->
+<!--					--><?php //echo html_escape(trans("forgot_password")); ?>
+<!--				</a>-->
+<!--			</div>-->
 			<div class="col-sm-4 col-xs-12 col-login">
 				<button type="submit" class="btn btn-primary btn-action pull-right">
 					<?php echo html_escape(trans("login")); ?>
