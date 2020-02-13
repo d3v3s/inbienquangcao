@@ -16,7 +16,7 @@
 <style type="text/css">
 	.title-index{
 		line-height: 1.5;
-		font-size: 30px;
+		font-size: 22px;
 		font-weight: 600;
 		margin: 0px;
 		padding: 0px;
@@ -134,95 +134,10 @@
 						</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
 							deserunt a enim harum eaque fugit.</p>
-						<a href="#" class="read-more">Read More</a>
+						<a href="#" class="read-more">Xem thêm</a>
 						<div class="right-post-meta">
-                            <span class="meta-like">
-                            <i class="icon-heart"></i> 5</span>
-							<span class="meta-comment">
-                            <i class="icon-comment"></i> 12</span></div>
-					</div>
-					<div class="col-sm-6 col-md-4 col-xs-12">
-						<p class="text-center">
-							<a href="img/sections/services/2.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-								<img s src="<?php echo base_url(); ?>assets/img/sections/services/2.jpg" width="420" height="280" alt="" />
-							</a>
-						</p>
-						<h4>
-							<a href="#">Construction Consultant</a>
-						</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-							deserunt a enim harum eaque fugit.</p>
-						<a href="#" class="read-more">Read More</a>
-						<div class="pull-right">
-							<i class="icon-heart"></i> 5
-							<i class="icon-comment"></i> 12</div>
-					</div>
-					<div class="col-sm-6 col-md-4 col-xs-12">
-						<p class="text-center">
-							<a href="img/sections/services/3.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-								<img s src="<?php echo base_url(); ?>assets/img/sections/services/3.jpg" width="420" height="280" alt="" />
-							</a>
-						</p>
-						<h4>
-							<a href="#">House Renovation</a>
-						</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-							deserunt a enim harum eaque fugit.</p>
-						<a href="#" class="read-more">Read More</a>
-						<div class="right-post-meta">
-                            <span class="meta-like">
-                            <i class="icon-heart"></i> 5</span>
-							<span class="meta-comment">
-                            <i class="icon-comment"></i> 12</span></div>
-					</div>
-					<div class="col-sm-6 col-md-4 col-xs-12">
-						<p class="text-center">
-							<a href="img/sections/services/4.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-								<img s src="<?php echo base_url(); ?>assets/img/sections/services/4.jpg" width="420" height="280" alt="" />
-							</a>
-						</p>
-						<h4>
-							<a href="#">Metal Roofing</a>
-						</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-							deserunt a enim harum eaque fugit.</p>
-						<a href="#" class="read-more">Read More</a>
-					</div>
-					<div class="col-sm-6 col-md-4 col-xs-12">
-						<p class="text-center">
-							<a href="img/sections/services/5.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-								<img s src="<?php echo base_url(); ?>assets/img/sections/services/5.jpg" width="420" height="280" alt="" />
-							</a>
-						</p>
-						<h4>
-							<a href="#">Green House</a>
-						</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-							deserunt a enim harum eaque fugit.</p>
-						<a href="#" class="read-more">Read More</a>
-						<div class="right-post-meta">
-                            <span class="meta-like">
-                            <i class="icon-heart"></i> 5</span>
-							<span class="meta-comment">
-                            <i class="icon-comment"></i> 12</span></div>
-					</div>
-					<div class="col-sm-6 col-md-4 col-xs-12">
-						<p class="text-center">
-							<a href="img/sections/services/6.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-								<img s src="<?php echo base_url(); ?>assets/img/sections/services/6.jpg" width="420" height="280" alt="" />
-							</a>
-						</p>
-						<h4>
-							<a href="#">Tiling and Painting</a>
-						</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-							deserunt a enim harum eaque fugit.</p>
-						<a href="#" class="read-more">Read More</a>
-						<div class="right-post-meta">
-                            <span class="meta-like">
-                            <i class="icon-heart"></i> 5</span>
-							<span class="meta-comment">
-                            <i class="icon-comment"></i> 12</span></div>
+							<div class="fb-like" data-href="http://inquangcao.herokuapp.com/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -345,6 +260,15 @@
 </section>
 <section id="testimonials" class="page-section">
 	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="tb-title-home text-center">
+					<div class="tb-title-home-header" >
+						<h2 class="tb-headding-two title-index">Nhận xét của khách hàng</h2>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-12 testimonials">
 				<div class="owl-carousel pagination-2 text-center color-switch" data-pagination="true" data-autoplay="true"

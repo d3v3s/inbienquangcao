@@ -5,7 +5,7 @@
 		<div class="mixed-grid pad general-section">
 			<div class="filter-menu">
 				<ul class="nav black works-filters text-center" id="filters">
-					<li class="filter active" data-filter=".all">Hiển thị tất cả</li>
+					<li class="filter active" data-filter=".all">Một số dự án nổi bật</li>
 				</ul>
 			</div>
 			<div class="clearfix"></div>
