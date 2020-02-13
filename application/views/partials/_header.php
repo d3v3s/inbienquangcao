@@ -123,7 +123,6 @@ if ($language->id == $site_lang->id):?>
 	 attribution=setup_tool
 	 page_id="106181070965479">
 </div>
-<script defer > window.onload = function(){ setTimeout(function(){var chatJsElement = document.createElement("script"); chatJsElement.src = "https://app.ohchat.net/clients/44069/code.php"; chatJsElement.setAttribute("defer", "defer"); document.getElementsByTagName("body")[0].appendChild(chatJsElement);}, 300) }; </script>
 <div id="page" class="page-wrap">
 	<!-- header -->
 	<!-- Page Loader -->
