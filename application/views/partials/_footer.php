@@ -51,11 +51,7 @@
 									<span class="counter"></span></p>
 							</div>
 							<div class="footer-count">
-								<p class="count-number" data-count="2550">Khách Hàng Lựa Chọn:
-									<span class="counter"></span></p>
-							</div>
-							<div class="footer-count">
-								<p class="count-number" data-count="50">Nhân viên:
+								<p class="count-number" data-count="2550">Khách Hàng:
 									<span class="counter"></span></p>
 							</div>
 						</nav>
@@ -84,29 +80,24 @@
 							</div>
 							<?php echo form_close(); ?>
 						</div>
-						<!-- Social Links -->
-						<div class="social-icon gray-bg icons-circle i-3x">
-							<!--if facebook url exists-->
-							<?php if (!empty($settings->facebook_url)) : ?>
-								<a target="_blank" title="Facebook" href="<?php echo html_escape($settings->facebook_url); ?>">
-									<i class="fa fa-facebook"></i>
-								</a>
-							<?php endif; ?>
-							<!--if twitter url exists-->
-							<?php if (!empty($settings->twitter_url)) : ?>
-								<a target="_blank title="Twitter"" href="<?php echo html_escape($settings->twitter_url); ?>">
-									<i class="fa fa-twitter"></i>
-								</a>
-							<?php endif; ?>
-							<!--if youtube url exists-->
-							<?php if (!empty($settings->youtube_url)) : ?>
-								<a target="_blank" title="Youtube" href="<?php echo html_escape($settings->youtube_url); ?>">
-									<i class="fa fa-youtube"></i>
-								</a>
-							<?php endif; ?>
+<!--						<div class="social-icon gray-bg icons-circle i-3x">-->
+<!--							--><?php //if (!empty($settings->facebook_url)) : ?>
+<!--								<a target="_blank" title="Facebook" href="--><?php //echo html_escape($settings->facebook_url); ?><!--">-->
+<!--									<i class="fa fa-facebook"></i>-->
+<!--								</a>-->
+<!--							--><?php //endif; ?>
+<!--							--><?php //if (!empty($settings->twitter_url)) : ?>
+<!--								<a target="_blank title="Twitter"" href="--><?php //echo html_escape($settings->twitter_url); ?><!--">-->
+<!--									<i class="fa fa-twitter"></i>-->
+<!--								</a>-->
+<!--							--><?php //endif; ?>
+<!--							--><?php //if (!empty($settings->youtube_url)) : ?>
+<!--								<a target="_blank" title="Youtube" href="--><?php //echo html_escape($settings->youtube_url); ?><!--">-->
+<!--									<i class="fa fa-youtube"></i>-->
+<!--								</a>-->
+<!--							--><?php //endif; ?>
 						</div>
 					</div>
-					<!-- .newsletter -->
 				</div>
 			</div>
 		</div>
