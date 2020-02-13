@@ -2724,7 +2724,7 @@ class my_upload {
      */
     function getsize($size) {
         if ($size === null) return null;
-        $last = strtolower($size{strlen($size)-1});
+        $last = strtolower($size[strlen($size)-1]);
         $size = (int) $size;
         switch($last) {
             case 'g':
