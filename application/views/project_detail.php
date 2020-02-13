@@ -28,9 +28,8 @@
 					<div class="fb-like"data-href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
 				</div>
 			</div>
-			<div class="col-md-12">
-				<div class="fb-comments" data-href="http://inquangcao.herokuapp.com/" data-width="" data-numposts="5"></div>
-			</div>
+			<div class="fb-comments col-md-12" data-href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>" data-width="" data-numposts="5"></div>
+
 		</div>
 	</div>
 </section>
