@@ -106,7 +106,7 @@
 			<div class="container">
 				<div class="row">
 					<!-- Copyrights -->
-					<div class="col-xs-12 col-sm-6 col-md-6">Copyright &copy; Quảng cáo Tân Thái Dương
+					<div class="col-xs-12 col-sm-6 col-md-6">Copyright &copy; <script> document.write(new Date().getFullYear()) </script>Đã đăng ký Bản quyền. Quảng cáo Tân Thái Dương
 						<br />
 					<div class="col-xs-12 text-center visible-xs-block page-scroll gray-bg icons-circle i-3x">
 						<!-- Goto Top -->
