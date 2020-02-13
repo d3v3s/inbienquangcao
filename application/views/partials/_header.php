@@ -142,24 +142,30 @@ if ($language->id == $site_lang->id):?>
 							<i class="fa fa-envelope"></i><?php echo html_escape($settings->contact_email); ?></a></div>
 					<!-- Top Social Icon -->
 					<div class="top-social-icon icons-hover-black">
-						<!--if facebook url exists-->
-						<?php if (!empty($settings->facebook_url)) : ?>
-							<a target="_blank" title="Facebook" href="<?php echo html_escape($settings->facebook_url); ?>">
-								<i class="fa fa-facebook"></i>
-							</a>
-						<?php endif; ?>
-						<!--if twitter url exists-->
-						<?php if (!empty($settings->twitter_url)) : ?>
-							<a target="_blank title="Twitter"" href="<?php echo html_escape($settings->twitter_url); ?>">
+<!--						--><?php //if (!empty($settings->facebook_url)) : ?>
+<!--							<a target="_blank" title="Facebook" href="--><?php //echo html_escape($settings->facebook_url); ?><!--">-->
+<!--								<i class="fa fa-facebook"></i>-->
+<!--							</a>-->
+<!--						--><?php //endif; ?>
+<!--						--><?php //if (!empty($settings->twitter_url)) : ?>
+<!--							<a target="_blank title="Twitter"" href="--><?php //echo html_escape($settings->twitter_url); ?><!--">-->
+<!--								<i class="fa fa-twitter"></i>-->
+<!--							</a>-->
+<!--						--><?php //endif; ?>
+<!--						--><?php //if (!empty($settings->youtube_url)) : ?>
+<!--							<a target="_blank" title="Youtube" href="--><?php //echo html_escape($settings->youtube_url); ?><!--">-->
+<!--								<i class="fa fa-youtube"></i>-->
+<!--							</a>-->
+<!--						--><?php //endif; ?>
+						<a target="_blank" title="Facebook" href="https://www.facebook.com/">
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a target="_blank" title="Twitter" href="https://twitter.com">
 							<i class="fa fa-twitter"></i>
-							</a>
-						<?php endif; ?>
-						<!--if youtube url exists-->
-						<?php if (!empty($settings->youtube_url)) : ?>
-							<a target="_blank" title="Youtube" href="<?php echo html_escape($settings->youtube_url); ?>">
-								<i class="fa fa-youtube"></i>
-							</a>
-						<?php endif; ?>
+						</a>
+						<a target="_blank" title="Youtube" href="https://www.youtube.com/">
+							<i class="fa fa-youtube"></i>
+						</a>
 					</div>
 				</div>
 			</div>

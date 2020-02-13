@@ -284,6 +284,7 @@ class Home extends Home_Core_Controller
 			$data['title'] = get_page_title($data['page']);
 			$data['description'] = get_page_description($data['page']);
 			$data['keywords'] = get_page_keywords($data['page']);
+			$data['services'] = $this->service_model->get_services_recent(10, 0, 'services');
 
 			$this->load->view('partials/_header', $data);
 			$this->load->view('service', $data);
@@ -553,7 +554,7 @@ class Home extends Home_Core_Controller
 
         //get posts
         $data['posts'] = $this->post_model->get_paginated_search_posts($q, $config['per_page'], $page * $config['per_page']);
-
+		$data['tags'] = $this->tag_model->get_tags();
         $this->load->view('partials/_header', $data);
         $this->load->view('search', $data);
         $this->load->view('partials/_footer');

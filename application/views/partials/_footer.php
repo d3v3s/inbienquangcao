@@ -8,11 +8,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
-						<div class="fb-page" style="margin-bottom: 20px"
+						<div class="fb-page"
 							 data-href="https://www.facebook.com/InAnQuangCao"
+							 data-width="250"
 							 data-hide-cover="false"
-							 data-show-facepile="false">
-						</div>
+							 data-show-facepile="false"></div>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
 						<div class="widget-title">

@@ -94,8 +94,7 @@
 								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>"
 									 class="img-responsive" />
 								<div class="figcaption">
-									<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>"></a>
-									<a >
+									<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
 										<i class="fa"><?php echo $item->title; ?></i>
 									</a>
 								</div>
