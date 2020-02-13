@@ -12,7 +12,7 @@
 						<a href="<?php echo base_url().'du-an'; ?>">Dự án</a>
 					</li>
 					<li>
-						<a href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>">Dự án</a>
+						<a href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>">Chi tiết dự án</a>
 					</li>
 				</ul>
 			</div>
@@ -44,7 +44,7 @@
 				<?php echo $project->content; ?>
 			</div>
 			<div class="col-md-12">
-				<div style="float: left">
+				<div style="float: right">
 					<div class="fb-like"data-href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
 				</div>
 			</div>
