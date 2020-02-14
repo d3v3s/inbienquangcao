@@ -3,15 +3,54 @@
 
 <!-- Mirrored from zozothemes.com/html/metal/demo-light/index-onepage.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Aug 2015 13:30:46 GMT -->
 <head>
-	<meta charset="utf-8" />
-	<title>Home \ Metal — A Construction Company Template</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="keywords" content="HTML5 Template" />
-	<meta name="description" content="Metal — A Construction Company Template" />
-	<meta name="author" content="zozothemes.com" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php echo html_escape($title); ?> - <?php echo html_escape($settings->site_title); ?></title>
+	<meta name="description" content="<?php echo html_escape($description); ?>"/>
+	<meta name="keywords" content="<?php echo html_escape($keywords); ?>"/>
+	<meta name="author" content="Codingest"/>
+	<meta name="robots" content="all"/>
+	<meta name="revisit-after" content="1 Days"/>
+	<meta property="og:locale" content="en_US"/>
+	<meta property="og:site_name" content="<?php echo $settings->application_name; ?>"/>
+	<?php if (isset($page_type)): ?>
+		<meta property="og:type" content="<?php echo $og_type; ?>"/>
+		<meta property="og:title" content="<?php echo html_escape($post->title); ?>"/>
+		<meta property="og:description" content="<?php echo html_escape($post->summary); ?>"/>
+		<meta property="og:url" content="<?php echo $og_url; ?>"/>
+		<meta property="og:image" content="<?php echo $og_image; ?>"/>
+		<meta property="og:image:width" content="750"/>
+		<meta property="og:image:height" content="415"/>
+		<meta name="twitter:card" content=summary/>
+		<meta name="twitter:title" content="<?php echo html_escape($post->title); ?>"/>
+		<meta name="twitter:description" content="<?php echo html_escape($post->summary); ?>"/>
+		<meta name="twitter:image" content="<?php echo $og_image; ?>"/>
+		<?php foreach ($og_tags as $tag): ?>
+			<meta property="article:tag" content="<?php echo $tag->tag; ?>"/>
+		<?php endforeach; ?>
+	<?php else: ?>
+		<meta property="og:type" content=website/>
+		<meta property="og:title" content="<?php echo html_escape($title); ?> - <?php echo html_escape($settings->site_title); ?>"/>
+		<meta property="og:description" content="<?php echo html_escape($description); ?>"/>
+		<meta property="og:url" content="<?php echo base_url(); ?>"/>
+		<meta name="twitter:card" content=summary/>
+		<meta name="twitter:title" content="<?php echo html_escape($title); ?> - <?php echo html_escape($settings->site_title); ?>"/>
+		<meta name="twitter:description" content="<?php echo html_escape($description); ?>"/>
+	<?php endif; ?>
+	<link rel="canonical" href="<?php echo base_url(); ?>"/>
+	<?php if ($general_settings->multilingual_system == 1):
+		foreach ($languages as $language):
+			if ($language->id == $site_lang->id):?>
+				<link rel="alternate" href="<?php echo base_url(); ?>" hreflang="<?php echo $language->language_code ?>"/>
+			<?php else: ?>
+				<link rel="alternate" href="<?php echo base_url() . $language->short_form . "/"; ?>" hreflang="<?php echo $language->language_code ?>"/>
+			<?php endif; endforeach; endif; ?>
+	<?php if (empty($general_settings->favicon_path)): ?>
+		<link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.png"/>
+	<?php else: ?>
+		<link rel="shortcut icon" type="image/png" href="<?php echo base_url() . html_escape($general_settings->favicon_path); ?>"/>
+	<?php endif; ?>
 	<!-- Font -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo:300,400,500,700,400italic,700italic" />
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css" />
