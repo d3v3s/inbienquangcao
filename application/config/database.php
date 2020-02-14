@@ -33,8 +33,8 @@ $db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
 $db['default']['cache_on'] = FALSE;
 $db['default']['cachedir'] = "application/cache/db";
-$db['default']['char_set'] = "utf8";
-$db['default']['dbcollat'] = "utf8_general_ci";
+$db['default']['char_set'] = "utf8mb4";
+$db['default']['dbcollat'] = "utf8mb4_unicode_ci";
 
 $active_group = "default";
 $active_record = TRUE;
