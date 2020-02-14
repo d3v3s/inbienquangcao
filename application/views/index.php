@@ -170,6 +170,33 @@
 		<!-- Mix Container -->
 	</div>
 </section>
+<section id="typographys" class="page-section">
+	<div class="container text-center">
+		<div class="section-title">
+			<h2 class="title">Mẫu Chữ Thường Dùng Trong Quảng Cáo</h2>
+		</div>
+		<div class="row">
+			<div class="owl-carousel navigation-1 text-left" data-pagination="false" data-items="4"
+				 data-autoplay="true" data-navigation="true">
+				<?php foreach ($typographys as $item): ?>
+					<div class="col-sm-4 col-md-4 col-xs-12 service-item" data-animation="fadeInLeft">
+						<div class="grid-item">
+							<div class="grid">
+								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>"
+									 class="img-responsive" />
+								<div class="figcaption">
+									<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
+										<i class="fa"><?php echo $item->title; ?></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</div>
+</section>
 <!-- works -->
 <section id="team" class="page-section light-bg border-tb">
 	<div class="container text-center">
@@ -362,28 +389,37 @@
 					 data-navigation="false">
 					<a href="#">
 						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" />
+					</a>
 					<a href="#">
 						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a>
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" />
+					</a>
+					<a href="#">
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/3.png" width="170" height="90" alt="" />
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" />
+					</a>
+					<a href="#">
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/4.png" width="170" height="90" alt="" />
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" />
+					</a>
+					<a href="#">
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/5.png" width="170" height="90" alt="" />
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" />
+					</a>
+					<a href="#">
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/6.png" width="170" height="90" alt="" />
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" />
+					</a>
 					<a href="#">
 						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" />
+					</a>
 					<a href="#">
 						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" /></a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" /></a></div>
+						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" />
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -392,37 +428,40 @@
 <section id="contact-us" class="page-section light-bg border-tb">
 	<div class="container">
 		<div class="row">
+			<?php $this->load->view('partials/_messages'); ?>
 			<div class="col-md-4 opacity">
-				<h3>Chúng tôi là Tân Thái Dương!</h3>
 				<img src="<?php echo base_url(); ?>assets/img/sections/about/tan_thai_duong.jpg" width="500" height="250" alt="" />
 			</div>
 			<div class="col-md-4">
 				<p class="form-message"></p>
 				<div class="contact-form">
 					<!-- Form Begins -->
-					<form role="form" name="contactform" id="contactform" method="post" action="http://zozothemes.com/html/metal/demo-light/php/contact-form.php">
+					<?php echo form_open('home/contact_post'); ?>
 						<!-- Field 1 -->
 						<div class="input-text form-group">
-							<input type="text" name="contact_name" class="input-name form-control"
-								   placeholder="Full Name" />
+							<input type="text" class="form-control form-input" name="name"
+								   placeholder="<?php echo trans("name"); ?>" maxlength="199" minlength="1" required <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
 						</div>
 						<!-- Field 2 -->
 						<div class="input-email form-group">
-							<input type="email" name="contact_email" class="input-email form-control"
-								   placeholder="Email" />
+							<input type="email" class="form-control form-input" name="email" maxlength="199"
+								   placeholder="<?php echo trans("email"); ?>" required <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
 						</div>
 						<!-- Field 3 -->
 						<div class="input-email form-group">
-							<input type="text" name="contact_phone" class="input-phone form-control" placeholder="Phone" />
+							<input type="text" name="contact_phone" class="input-phone form-control" placeholder="Số điện thoại" />
 						</div>
 						<!-- Field 4 -->
 						<div class="textarea-message form-group">
-                                    <textarea name="contact_message" class="textarea-message hight-82 form-control"
-											  placeholder="Message" rows="2"></textarea>
+                                    <textarea class="form-control form-input form-textarea" name="message"
+											  placeholder="<?php echo trans("message"); ?>" maxlength="4970"
+											  minlength="5"
+											  required <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>></textarea>
 						</div>
 						<!-- Button -->
-						<button class="btn btn-default btn-block" type="submit">Send Now
-							<i class="icon-paper-plane"></i></button>
+						<button class="btn btn-default btn-block" type="submit">
+							<?php echo html_escape(trans("submit")); ?><i class="icon-paper-plane"></i>
+						</button>
 					</form>
 					<!-- Form Ends -->
 				</div>
