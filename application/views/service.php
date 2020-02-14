@@ -1,29 +1,34 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php $this->load->view('partials/_breadcrumb'); ?>
-<section id="services" class="page-section">
+<section id="works" class="page-section">
 	<div class="container">
-		<div class="row">
-			<?php foreach ($services as $item): ?>
-				<div class="col-sm-6 col-md-4 col-xs-12">
-					<div class="grid-item">
+		<div class="mixed-grid pad general-section">
+			<div class="filter-menu">
+				<ul class="nav black works-filters text-center" id="filters">
+					<li class="filter active">Danh sách dịch vụ</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+			<div class="masonry-grid grid-col-3 black">
+				<div class="grid-sizer"></div>
+				<?php foreach ($services as $item): ?>
+					<div class="col-md-3 col-sm-6 col-xs-12 grid-item">
 						<div class="grid">
-							<p class="text-center">
-								<a href="<?php echo base_url().$item->image_big; ?>"" class="opacity" data-rel="prettyPhoto[portfolio]">
-								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>" title="<?php echo $item->title; ?>" />
-								</a>
-							</p>
+							<img src="<?php echo base_url(); ?><?php echo $item->image_big; ?>" width="400" height="273" alt="Recent Work"
+								 class="img-responsive" />
 							<div class="figcaption">
-								<a href="<?php echo base_url(); ?>chi-tiet-dich-vu/<?php echo $item->slug; ?>">
-									<i class="fa"><?php echo $item->title; ?></i>
+								<h4><?php echo $item->title; ?></h4>
+								<!-- Image Popup-->
+								<a href="<?php echo base_url(); ?><?php echo $item->image_big; ?>" data-rel="prettyPhoto[portfolio]">
+									<i class="fa fa-search"></i>
 								</a>
-							</div>
+								<a href="<?php echo base_url(); ?>chi-tiet-dich-vu/<?php echo $item->id; ?>">
+									<i class="fa fa-link"></i>
+								</a></div>
 						</div>
 					</div>
-
-				</div>
-			<?php endforeach; ?>
-
+				<?php endforeach; ?>
+			</div>
 		</div>
-		<hr class="tb-margin-30" />
 	</div>
 </section>
