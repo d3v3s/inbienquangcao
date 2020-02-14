@@ -153,6 +153,10 @@ class Home extends Home_Core_Controller
 		//get project
 		$data['project'] = $this->project_admin_model->get_project($id);
 		$data['page'] = $this->page_model->get_page('du-an');
+		//check project exists
+		if (empty($data['project'])) {
+			redirect(lang_base_url());
+		}
 
 		if ($data['page']->page_active == 0) {
 			$this->error_404();
