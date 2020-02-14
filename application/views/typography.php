@@ -2,33 +2,28 @@
 <?php $this->load->view('partials/_breadcrumb'); ?>
 <section id="services" class="page-section">
 	<div class="container">
-		<div class="mixed-grid pad general-section">
-			<div class="filter-menu">
-				<ul class="nav black works-filters text-center" id="filters">
-					<li class="filter active" data-filter=".all">Những dịch vụ chúng tôi cung cấp</li>
-				</ul>
-			</div>
-			<div class="clearfix"></div>
-			<div class="masonry-grid grid-col-3 black">
-				<div class="grid-sizer"></div>
-				<?php foreach ($typographys as $item): ?>
-					<div class="grid-item all">
+		<div class="row">
+			<?php foreach ($typographys as $item): ?>
+				<div class="col-sm-6 col-md-4 col-xs-12">
+					<div class="grid-item">
 						<div class="grid">
-							<img src="<?php echo base_url(); ?><?php echo $item->image_big; ?>" width="400" height="273" alt="Recent Work"
-								 class="img-responsive" />
-							<div class="figcaption">
-								<h4><?php echo $item->title; ?></h4>
-								<!-- Image Popup-->
-								<a href="<?php echo base_url(); ?><?php echo $item->image_big; ?>" data-rel="prettyPhoto[portfolio]">
-									<i class="fa fa-search"></i>
+							<p class="text-center">
+								<a href="<?php echo base_url().$item->image_big; ?>"" class="opacity" data-rel="prettyPhoto[portfolio]">
+								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>" title="<?php echo $item->title; ?>" />
 								</a>
-								<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
-									<i class="fa fa-link"></i>
-								</a></div>
+							</p>
+							<div class="figcaption">
+								<a href="<?php echo base_url(); ?>chi-tiet-dich-vu/<?php echo $item->slug; ?>">
+									<i class="fa"><?php echo $item->title; ?></i>
+								</a>
+							</div>
 						</div>
 					</div>
-				<?php endforeach; ?>
-			</div>
+
+				</div>
+			<?php endforeach; ?>
+
 		</div>
+		<hr class="tb-margin-30" />
 	</div>
 </section>

@@ -9,12 +9,8 @@
 					<!-- Title -->
 					<h2 class="title">CHÚNG TÔi LÀ AI?</h2>
 				</div>
-				<p class="description upper">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio
-					ipsum. Suspendisse cursus malesuada facilisis.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus
-					malesuada facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum.
-					Suspendisse cursus malesuada facilisis. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed
-					dolor tincidunt porttitor.</p>
+				<p class="description upper">Lời đầu tiên xin gửi tới Quý Khách hàng lời chào trân trọng cùng lời chúc sức khỏe và thành công.</p>
+				<p>Công ty chúng tôi là đơn vị chuyên sản xuất và cung ứng các sản phẩm biển hiệu, biển quảng cáo các loại với công nghệ hiện đại nhập khẩu từ Đài Loan, Hàn Quốc. Chúng tôi đã và là đối tác cung cấp các sản phẩm. dịch vụ quảng cáo cho nhiều công ty, đối tác Công ty cổ phần xi măng cẩm Phả, Tập đoàn Viettel.</p>
 				<div class="row">
 					<div class="col-md-6">
 						<ul class="arrow-style">

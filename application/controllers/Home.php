@@ -222,7 +222,7 @@ class Home extends Home_Core_Controller
 			$data['title'] = get_page_title($data['page']);
 			$data['description'] = get_page_description($data['page']);
 			$data['keywords'] = get_page_keywords($data['page']);
-
+			$data['typographys'] = $this->typography_model->get_typography_recent(10, 0, 'services');
 			$this->load->view('partials/_header', $data);
 			$this->load->view('typography', $data);
 			$this->load->view('partials/_footer');
