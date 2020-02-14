@@ -59,7 +59,7 @@ class Home extends Home_Core_Controller
 		$data['members'] = $this->member_model->get_members_recent(10, 0, 'services');
 		$data['banners'] = $this->gallery_model->get_banners();
         $this->load->view('partials/_header', $data);
-        $this->load->view('index', $data);
+        $this->load->view('index1', $data);
         $this->load->view('partials/_footer');
     }
 
