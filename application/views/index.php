@@ -448,10 +448,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 opacity">
-				<h3>We are Go Green!</h3>
-				<img src="<?php echo base_url(); ?>assets/img/sections/about/go-green.jpg" width="500" height="250" alt="" />
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae odit iste exercitationem
-					praesentium deleniti nostrum laborum rem id nihil tempora.</p>
+				<h3>Chúng tôi là Tân Thái Dương!</h3>
+				<img src="<?php echo base_url(); ?>assets/img/sections/about/tan_thai_duong.jpg" width="500" height="250" alt="" />
 			</div>
 			<div class="col-md-4">
 				<p class="form-message"></p>
