@@ -1,12 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php $this->load->view('partials/_breadcrumb'); ?>
 <!-- page-header -->
-<style>
-	#moreOne {display: none;}
-	#moreTwo {display: none;}
-	#moreThree {display: none;}
-	.readMore { cursor: pointer; color: #46A67F !important;}
-</style>
 <section id="who-we-are" class="page-section border-tb">
 	<div class="container who-we-are">
 		<div class="row">

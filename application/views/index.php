@@ -15,107 +15,45 @@
 </section>
 <!-- about-us -->
 <section id="services" class="page-section transparent">
-	<div class="container">
+	<div class="container text-center">
+		<div class="section-title">
+			<h2 class="title">Dịch Vụ Chúng Tôi Cung Cấp Đến Khách Hàng</h2>
+		</div>
 		<div class="row">
 			<div class="owl-carousel navigation-1 opacity text-left" data-pagination="false" data-items="3"
 				 data-autoplay="true" data-navigation="true">
-				<div class="col-sm-6 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/1.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/1.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">General Contracting</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="btn btn-default">Read More</a>
-				</div>
-				<div class="col-sm-6 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/2.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/2.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">Construction Consultant</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="btn btn-default">Read More</a>
-				</div>
-				<div class="col-sm-6 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/3.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/3.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">House Renovation</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="btn btn-default">Read More</a>
-				</div>
-				<div class="col-sm-6 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/4.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/4.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">Metal Roofing</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="btn btn-default">Read More</a>
-				</div>
-				<div class="col-sm-6 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/5.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/5.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">Green House</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="btn btn-default">Read More</a>
-				</div>
-				<div class="col-sm-6 col-md-4 col-xs-12">
-					<p class="text-center">
-						<a href="img/sections/services/6.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-							<img src="<?php echo base_url(); ?>assets/img/sections/services/6.jpg" width="420" height="280" alt="" />
-						</a>
-					</p>
-					<h3>
-						<a href="#">Tiling and Painting</a>
-					</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-						deserunt a enim harum eaque fugit.</p>
-					<a href="#" class="btn btn-default">Read More</a>
-				</div>
+				<?php foreach ($services as $item): ?>
+					<div class="col-sm-6 col-md-4 col-xs-12">
+						<p class="text-center">
+							<a href="<?php echo base_url().$item->image_big; ?>" class="opacity" data-rel="prettyPhoto[portfolio]">
+								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>" title="<?php echo $item->title; ?>"/>
+							</a>
+						</p>
+						<h3>
+							<a href="<?php echo base_url(); ?>chi-tiet-dich-vu/<?php echo $item->slug; ?>"><?php echo $item->title; ?></a>
+						</h3>
+						<p><?php echo $item->summary; ?></p>
+						<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->slug; ?>" class="read-more">Xem thêm</a>
+					</div>
+				<?php endforeach; ?>
+
+
+
 			</div>
 		</div>
 	</div>
 </section>
 <!-- Services -->
-<section id="about-us" class="page-section light-bg border-tb">
+<section id="who-we-are" class="page-section border-tb">
 	<div class="container who-we-are">
-		<div class="section-title text-left">
-			<!-- Title -->
-			<h2 class="title">Who We Are</h2>
-		</div>
 		<div class="row">
 			<div class="col-md-8">
-				<p class="description upper">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio
-					ipsum. Suspendisse cursus malesuada facilisis.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum. Suspendisse cursus
-					malesuada facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec odio ipsum.
-					Suspendisse cursus malesuada facilisis. Suspendisse cursus malesuada facilisis. Nunc consectetur odio sed
-					dolor tincidunt porttitor.</p>
+				<div class="section-title text-left">
+					<!-- Title -->
+					<h2 class="title">CHÚNG TÔi LÀ AI?</h2>
+				</div>
+				<p class="description upper">Lời đầu tiên xin gửi tới Quý Khách hàng lời chào trân trọng cùng lời chúc sức khỏe và thành công.</p>
+				<p>Công ty chúng tôi là đơn vị chuyên sản xuất và cung ứng các sản phẩm biển hiệu, biển quảng cáo các loại với công nghệ hiện đại nhập khẩu từ Đài Loan, Hàn Quốc. Chúng tôi đã và là đối tác cung cấp các sản phẩm. dịch vụ quảng cáo cho nhiều công ty, đối tác Công ty cổ phần xi măng cẩm Phả, Tập đoàn Viettel.</p>
 				<div class="row">
 					<div class="col-md-6">
 						<ul class="arrow-style">
@@ -134,29 +72,59 @@
 						</ul>
 					</div>
 				</div>
-				<h3>
-					<a href="#" class="hover">Download Our Brochure -
-						<i class="icon-file-pdf red"></i></a>
-				</h3>
 			</div>
+			<script>
+
+				function readMore(moreId, moreBtn, dotId) {
+					var dots = document.getElementById(dotId);
+					var moreText = document.getElementById(moreId);
+					var btnText = document.getElementById(moreBtn);
+
+					if (dots.style.display === "none") {
+						dots.style.display = "inline";
+						btnText.innerHTML = "Xem thêm";
+						moreText.style.display = "none";
+					} else {
+						dots.style.display = "none";
+						btnText.innerHTML = "Đóng";
+						moreText.style.display = "inline";
+					}
+				}
+			</script>
 			<div class="col-md-4">
 				<div class="item-box bottom-pad-10">
 					<a>
 						<i class="icon-star13 i-5x bg-color"></i>
-						<h4>What We Do?</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur elit. Vestibulum nec odio ipsum. Suspendisse cursus
-							malesuada facilisis.</p>
+						<h4>CHÚNG TA LÀM GÌ?</h4>
+						<p>Trải qua hơn 13 năm, nỗ lực không ngừng. Chúng tôi tự hào là đơn vị có kinh nghiệm trong lĩnh vực Thi công biển, bảng quảng cáo
+							<span id="dotOne">...</span>
+							<span id="moreOne">Cùng rất nhiều chất liệu khác nhau để mang đến những sản phẩm chất lương, tinh tế và đẹp mắt. Bên cạnh đó, giá cả từng sản phẩm của Chúng tôi phù hợp với từng quy mô, lĩnh vực kinh doanh và nhu cầu của quý khách hàng. Với tiêu chí “NÓI KHÔNG VỚI SẢN PHẨM KÉM CHẤT LƯỢNG” Luôn được đặt lên hàng đầu..
+							<a class="readMore" id="moreBtnOne" onclick="readMore('moreOne', 'moreBtnOne', 'dotOne')">Xem thêm</a>
+							</span>
+						</p>
+
+
 					</a>
 					<a>
 						<i class="icon-heart18 i-5x bg-color"></i>
-						<h4>Why People Like Us?</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur elit. Vestibulum nec odio ipsum. Suspendisse cursus
-							malesuada facilisis.</p>
+						<h4>TẠI SAO MỌI NGƯỜI THÍCH CHÚNG TÔI?</h4>
+						<p>Trên chặng đường đã qua, Chúng tôi không ngừng mở rộng quy mô phát triển và củng cố hệ thống cơ sở vật chất. Bên cạnh đó, chúng tôi
+							<span id="dotTwo">...</span>
+							<span id="moreTwo">hội tụ đội ngũ nhân viên trẻ nhiệt huyết, sáng tạo. Đến nay, trở thành doanh nghiệp hàng đầu trong lĩnh vực dịch vụ quảng cáo.
+							Chúng tôi đã và đang là đối tác tin cậy, thường xuyên của nhiều tập đoàn, thương hiệu hàng đầu Việt Nam như: Tập đoàn Viettel, Công ty Xi măng Cẩm Phả, Đài truyền hình VTV, Tập đoàn Vingroup… Và rất nhiều đối tác khác.<a class="readMore" id="moreBtnTwo" onclick="readMore('moreTwo', 'moreBtnTwo', 'dotTwo')">Xem thêm</a>
+							</span>
+						</p>
+
 					</a>
 					<a>
 						<i class="icon-gift6 i-5x bg-color"></i>
-						<h4>What We Offer?</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur elit. Vestibulum nec odio ipsum.</p>
+						<h4>CHÚNG TÔI CUNG CẤP GÌ?</h4>
+						<p>Tập trung hoạt động trong lĩnh vực kinh doanh các sản phẩm Biển Hiệu, Biển Quảng Cáo với công nghệ sản xuất hiện đại, tiên tiến
+							<span id="dotThree">...</span>
+							<span id="moreThree">Hệ thống máy móc được nhập khẩu được nhập khẩu từ nhiều quốc gia trên thế giới. Chúng tôi không ngừng cập nhật hệ thống trang thiết bị hiện đại, máy móc, kỹ thuật tiên tiến. Nhằm mang đến những sản phẩm tốt nhất, chất lượng cao nhất đến với quý khách hàng.
+							<a class="readMore" id="moreBtnThree" onclick="readMore('moreThree', 'moreBtnThree', 'dotThree')">Xem thêm</a>
+							</span>
+						</p>
 					</a></div>
 			</div>
 		</div>
@@ -241,8 +209,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Project
-					<span>Delivered</span></h3>
+				<h3>Dự án</h3>
 			</div>
 			<div class="col-sm-6 col-md-3 bottom-xs-pad-30">
 				<!-- Icon -->
@@ -250,8 +217,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Happy
-					<span>Clients</span></h3>
+				<h3>Khách hàng</h3>
 			</div>
 			<div class="col-sm-6 col-md-3 bottom-xs-pad-30">
 				<!-- Icon -->
@@ -259,8 +225,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Winning
-					<span>Awards</span></h3>
+				<h3>Giải thưởng</h3>
 			</div>
 			<div class="col-sm-6 col-md-3 bottom-xs-pad-30">
 				<!-- Icon -->
@@ -268,8 +233,7 @@
 					<span class="counter"></span>
 				</div>
 				<!-- Title -->
-				<h3>Country
-					<span>Covered</span></h3>
+				<h3>Tỉnh thành</h3>
 			</div>
 		</div>
 	</div>
@@ -425,25 +389,6 @@
 	</div>
 </section>
 <!-- clients -->
-<section id="twitter" class="page-section transparent">
-	<div class="image-bg content-in fixed" data-background="img/sections/bg/5.jpg"><div class="overlay-dark"></div></div>
-	<div class="twitter-feed">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center icons-circle icons-bg-color fa-1x">
-					<h2 class="section-title white">Follow us on Twitter</h2>
-					<!-- Icon -->
-					<i class="fa fa-twitter white-border border2-white"></i>
-					<div class="tweet">
-						<!-- Twitter Slider -->
-						<div class="tweets_feed"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- twitter -->
 <section id="contact-us" class="page-section light-bg border-tb">
 	<div class="container">
 		<div class="row">
