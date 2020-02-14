@@ -21,8 +21,7 @@
 	 attribution=setup_tool
 	 page_id="106181070965479"
 	 theme_color="#0084ff"
-	 logged_in_greeting="Xin chào, bạn cần tư vấn về mẫu biển quảng cáo nào?"
-	 logged_out_greeting="Xin chào, bạn cần tư vấn về mẫu biển quảng cáo nào?">
+	 logged_in_greeting="Xin chào, bạn cần tư vấn về mẫu biển quảng cáo nào?">
 </div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0&appId=564841624086506&autoLogAppEvents=1"></script>
 <footer id="footer">
