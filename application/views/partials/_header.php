@@ -79,6 +79,31 @@
 	<link href="<?php echo base_url(); ?>assets/css/color.css" rel="stylesheet" />
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			xfbml            : true,
+			version          : 'v6.0'
+		});
+	};
+
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+	 attribution=setup_tool
+	 page_id="106181070965479"
+	 theme_color="#0084ff"
+	 logged_in_greeting="Xin chào, bạn cần tư vấn về mẫu biển quảng cáo nào?"
+	 logged_out_greeting="Xin chào, bạn cần tư vấn về mẫu biển quảng cáo nào?">
+</div>
 <div id="page" class="one-page">
 	<!-- Page Loader -->
 	<div id="pageloader">
