@@ -102,7 +102,7 @@
 								<!-- nav -->
 								<ul class="nav navbar-nav">
 									<li>
-										<a class="<?php echo ($request_uri == '') ? 'active' : '' ?>" href="<?php echo lang_base_url(); ?>">Trang chủ</a>
+										<a class="<?php echo ($request_uri == '') ? 'active' : '' ?>" href="<?php echo lang_base_url(); ?>">Trang chủ <?php echo base_url().$item->image_big; ?></a>
 									</li>
 									<li>
 										<a class="<?php echo ($request_uri == 'gioi-thieu') ? 'active' : '' ?>" href="<?php echo lang_base_url().'gioi-thieu'; ?>">Giới thiệu</a>
