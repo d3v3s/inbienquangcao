@@ -21,43 +21,30 @@
 		<div class="row">
 			<div class="page-content">
 				<div class="col-xs-12 col-sm-12 col-md-8">
-
 					<div class="content">
-						<h1 class="page-title"> <?php echo html_escape(trans("post")); ?>
-							: <?php echo html_escape($title); ?></h1>
-
+						<h2 class="page-title">
+							Kết quả tìm kiếm</h2>
 						<!-- posts -->
 						<div class="col-xs-12 col-sm-12 posts <?php echo ($layout == "layout_3" || $layout == "layout_6") ? 'p-0 posts-boxed' : ''; ?>">
 							<div class="row">
 								<?php $count = 0; ?>
-
 								<?php foreach ($posts as $item): ?>
-
 									<?php if ($count != 0 && $count % 2 == 0): ?>
 										<div class="col-sm-12 col-xs-12"></div>
 									<?php endif; ?>
-
-									<!-- post item -->
 									<?php $this->load->view('partials/_post_item', ['item' => $item]); ?>
-									<!-- /.post item -->
-
 									<?php $count++; ?>
 								<?php endforeach; ?>
 							</div>
-
 						</div><!-- /.posts -->
 						<!-- Pagination -->
-						<div class="col-xs-12 col-sm-12 col-xs-12">
-							<div class="row">
-								<?php echo $this->pagination->create_links_client(); ?>
-							</div>
-						</div>
-
+<!--						<div class="col-xs-12 col-sm-12 col-xs-12">-->
+<!--							<div class="row">-->
+<!--								--><?php //echo $this->pagination->create_links_client(); ?>
+<!--							</div>-->
+<!--						</div>-->
 					</div>
-
 				</div>
-
-
 				<div class="sidebar col-sm-12 col-md-3">
 					<div class="widget">
 						<div class="widget-title">
@@ -86,7 +73,7 @@
 							<h3 class="title">Tags</h3>
 						</div>
 						<ul class="tags">
-							<?php foreach ($postss as $item): ?>
+							<?php foreach ($tags as $item): ?>
 								<?php $this->load->view('partials/post_tag_item', ['item' => $item]); ?>
 							<?php endforeach; ?>
 						</ul>

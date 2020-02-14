@@ -1,63 +1,22 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo html_escape($title); ?> - <?php echo html_escape($settings->site_title); ?></title>
-    <meta name="description" content="<?php echo html_escape($description); ?>"/>
-    <meta name="keywords" content="<?php echo html_escape($keywords); ?>"/>
-    <meta name="author" content="Codingest"/>
-    <meta name="robots" content="all"/>
-    <meta name="revisit-after" content="1 Days"/>
-    <meta property="og:locale" content="en_US"/>
-    <meta property="og:site_name" content="<?php echo $settings->application_name; ?>"/>
-<?php if (isset($page_type)): ?>
-    <meta property="og:type" content="<?php echo $og_type; ?>"/>
-    <meta property="og:title" content="<?php echo html_escape($post->title); ?>"/>
-    <meta property="og:description" content="<?php echo html_escape($post->summary); ?>"/>
-    <meta property="og:url" content="<?php echo $og_url; ?>"/>
-    <meta property="og:image" content="<?php echo $og_image; ?>"/>
-    <meta property="og:image:width" content="750"/>
-    <meta property="og:image:height" content="415"/>
-    <meta name="twitter:card" content=summary/>
-    <meta name="twitter:title" content="<?php echo html_escape($post->title); ?>"/>
-    <meta name="twitter:description" content="<?php echo html_escape($post->summary); ?>"/>
-    <meta name="twitter:image" content="<?php echo $og_image; ?>"/>
-<?php foreach ($og_tags as $tag): ?>
-    <meta property="article:tag" content="<?php echo $tag->tag; ?>"/>
-<?php endforeach; ?>
-<?php else: ?>
-    <meta property="og:type" content=website/>
-    <meta property="og:title" content="<?php echo html_escape($title); ?> - <?php echo html_escape($settings->site_title); ?>"/>
-    <meta property="og:description" content="<?php echo html_escape($description); ?>"/>
-    <meta property="og:url" content="<?php echo base_url(); ?>"/>
-    <meta name="twitter:card" content=summary/>
-    <meta name="twitter:title" content="<?php echo html_escape($title); ?> - <?php echo html_escape($settings->site_title); ?>"/>
-    <meta name="twitter:description" content="<?php echo html_escape($description); ?>"/>
-<?php endif; ?>
-    <link rel="canonical" href="<?php echo base_url(); ?>"/>
-<?php if ($general_settings->multilingual_system == 1):
-foreach ($languages as $language):
-if ($language->id == $site_lang->id):?>
-    <link rel="alternate" href="<?php echo base_url(); ?>" hreflang="<?php echo $language->language_code ?>"/>
-<?php else: ?>
-    <link rel="alternate" href="<?php echo base_url() . $language->short_form . "/"; ?>" hreflang="<?php echo $language->language_code ?>"/>
-<?php endif; endforeach; endif; ?>
-<?php if (empty($general_settings->favicon_path)): ?>
-    <link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.png"/>
-<?php else: ?>
-    <link rel="shortcut icon" type="image/png" href="<?php echo base_url() . html_escape($general_settings->favicon_path); ?>"/>
-<?php endif; ?>
-    <?php echo $primary_font_url; ?>
-    <?php echo $secondary_font_url; ?>
-    <?php echo $tertiary_font_url; ?>
+<html lang="en">
 
+<!-- Mirrored from zozothemes.com/html/metal/demo-light/index-onepage.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Aug 2015 13:30:46 GMT -->
+<head>
+	<meta charset="utf-8" />
+	<title>Home \ Metal — A Construction Company Template</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="HTML5 Template" />
+	<meta name="description" content="Metal — A Construction Company Template" />
+	<meta name="author" content="zozothemes.com" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico" />
+	<!-- Font -->
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Arimo:300,400,500,700,400italic,700italic' />
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css' />
 	<!-- Font Awesome Icons -->
-	<link href='<?php echo base_url(); ?>assets/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
+	<link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css" rel='stylesheet' type='text/css' />
 	<!-- Bootstrap core CSS -->
 	<link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="<?php echo base_url(); ?>assets/css/hover-dropdown-menu.css" rel="stylesheet" />
@@ -75,59 +34,13 @@ if ($language->id == $site_lang->id):?>
 	<!-- PrettyPhoto Popup -->
 	<link href="<?php echo base_url(); ?>assets/css/prettyPhoto.css" rel="stylesheet" />
 	<!-- Custom Style -->
-	<link href="<?php echo base_url(); ?>assets/css/style1.css" rel="stylesheet" />
-	<link href="<?php echo base_url(); ?>assets/css/responsive.min.css" rel="stylesheet"/>
+	<link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" />
+	<link href="<?php echo base_url(); ?>assets/css/responsive.css" rel="stylesheet" />
 	<!-- Color Scheme -->
 	<link href="<?php echo base_url(); ?>assets/css/color.css" rel="stylesheet" />
-
-<?php if ($selected_lang->text_direction == "rtl"): ?>
-    <!-- RTL -->
-    <link href="<?php echo base_url(); ?>assets/css/rtl.min.css" rel="stylesheet"/>
-<?php endif; ?>
-
-<?php echo $general_settings->google_analytics; ?>
-<?php echo $general_settings->head_code; ?>
-<?php $this->load->view('partials/_font_style'); ?>
-<?php if ($selected_lang->text_direction == "rtl"): ?>
-    <script>var rtl = true;</script>
-<?php else: ?>
-    <script>var rtl = false;</script>
-<?php endif; ?>
-    <script>
-        var csfr_token_name = '<?php echo $this->security->get_csrf_token_name(); ?>';
-        var csfr_cookie_name = '<?php echo $this->config->item('csrf_cookie_name'); ?>';
-        var base_url = '<?php echo base_url(); ?>';
-    </script>
 </head>
 <body>
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml            : true,
-            version          : 'v6.0'
-        });
-    };
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Your customer chat code -->
-<div class="fb-customerchat"
-	 attribution=setup_tool
-	 page_id="106181070965479"
-	 theme_color="#0084ff"
-	 logged_in_greeting="Xin chào, bạn cần tư vấn về mẫu biển quảng cáo nào?"
-	 logged_out_greeting="Xin chào, bạn cần tư vấn về mẫu biển quảng cáo nào?">
-</div>
-<div id="page" class="page-wrap">
-	<!-- header -->
+<div id="page" class="one-page">
 	<!-- Page Loader -->
 	<div id="pageloader">
 		<div class="loader-item fa fa-spin text-color"></div>
@@ -145,29 +58,17 @@ if ($language->id == $site_lang->id):?>
 							<i class="fa fa-envelope"></i><?php echo html_escape($settings->contact_email); ?></a></div>
 					<!-- Top Social Icon -->
 					<div class="top-social-icon icons-hover-black">
-<!--						--><?php //if (!empty($settings->facebook_url)) : ?>
-<!--							<a target="_blank" title="Facebook" href="--><?php //echo html_escape($settings->facebook_url); ?><!--">-->
-<!--								<i class="fa fa-facebook"></i>-->
-<!--							</a>-->
-<!--						--><?php //endif; ?>
-<!--						--><?php //if (!empty($settings->twitter_url)) : ?>
-<!--							<a target="_blank title="Twitter"" href="--><?php //echo html_escape($settings->twitter_url); ?><!--">-->
-<!--								<i class="fa fa-twitter"></i>-->
-<!--							</a>-->
-<!--						--><?php //endif; ?>
-<!--						--><?php //if (!empty($settings->youtube_url)) : ?>
-<!--							<a target="_blank" title="Youtube" href="--><?php //echo html_escape($settings->youtube_url); ?><!--">-->
-<!--								<i class="fa fa-youtube"></i>-->
-<!--							</a>-->
-<!--						--><?php //endif; ?>
-						<a target="_blank" title="Facebook" href="https://www.facebook.com/">
+						<a href="#">
 							<i class="fa fa-facebook"></i>
 						</a>
-						<a target="_blank" title="Twitter" href="https://twitter.com">
+						<a href="#">
 							<i class="fa fa-twitter"></i>
 						</a>
-						<a target="_blank" title="Youtube" href="https://www.youtube.com/">
+						<a href="#">
 							<i class="fa fa-youtube"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-linkedin"></i>
 						</a>
 					</div>
 				</div>
@@ -192,10 +93,10 @@ if ($language->id == $site_lang->id):?>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span></button>
 								<!-- Logo -->
-
 								<a class="navbar-brand" href="<?php echo lang_base_url(); ?>">
-									<img class="site_logo" height="70px" alt="Site Logo" src="<?php echo base_url(); ?><?php echo html_escape($general_settings->logo_path); ?>" />
-								</a></div>
+									<img class="site_logo img-responsive" alt="Trang chủ Tân Thái Dương" src="<?php echo base_url(); ?><?php echo html_escape($general_settings->logo_path); ?>" />
+								</a>
+							</div>
 							<!-- Navbar Collapse -->
 							<div class="navbar-collapse collapse">
 								<!-- nav -->
@@ -218,9 +119,9 @@ if ($language->id == $site_lang->id):?>
 									<li>
 										<a class="<?php echo ($request_uri == 'tin-tuc') ? 'active' : '' ?>" href="<?php echo lang_base_url().'tin-tuc'; ?>">Tin tức</a>
 									</li>
-<!--									<li>-->
-<!--										<a href="--><?php //echo lang_base_url().'hinh-anh'; ?><!--">Hình ảnh</a>-->
-<!--									</li>-->
+									<!--									<li>-->
+									<!--										<a href="--><?php //echo lang_base_url().'hinh-anh'; ?><!--">Hình ảnh</a>-->
+									<!--									</li>-->
 									<li>
 										<a class="<?php echo ($request_uri == 'lien-he') ? 'active' : '' ?>" href="<?php echo lang_base_url().'lien-he'; ?>">Liên hệ </a>
 									</li>
@@ -259,8 +160,3 @@ if ($language->id == $site_lang->id):?>
 		</div>
 		<!-- Sticky Menu -->
 	</header>
-	<!-- /.header-->
-
-
-
-

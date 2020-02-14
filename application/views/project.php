@@ -5,14 +5,14 @@
 		<div class="mixed-grid pad general-section">
 			<div class="filter-menu">
 				<ul class="nav black works-filters text-center" id="filters">
-					<li class="filter active" data-filter=".all">Một số dự án nổi bật</li>
+					<li class="filter active">Một số dự án nổi bật</li>
 				</ul>
 			</div>
 			<div class="clearfix"></div>
 			<div class="masonry-grid grid-col-3 black">
 				<div class="grid-sizer"></div>
 				<?php foreach ($projects as $item): ?>
-					<div class="grid-item all <?php echo $item->project_type; ?>">
+					<div class="col-md-3 col-sm-6 col-xs-12 grid-item <?php echo $item->project_type; ?>">
 						<div class="grid">
 							<img src="<?php echo base_url(); ?><?php echo $item->image_big; ?>" width="400" height="273" alt="Recent Work"
 								 class="img-responsive" />
