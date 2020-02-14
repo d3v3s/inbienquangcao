@@ -1,7 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php $this->load->view('partials/_breadcrumb'); ?>
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-<?php $this->load->view('partials/_breadcrumb'); ?>
 <section id="services" class="page-section">
 	<div class="container">
 		<div class="mixed-grid pad general-section">

@@ -54,6 +54,7 @@ class Home extends Home_Core_Controller
         $data['keywords'] = $this->settings->keywords;
         $data['home_title'] = $this->settings->home_title;
 		$data['projects'] = $this->project_admin_model->get_projects_recent(8, 0, 'projects');
+		$data['typographys'] = $this->typography_model->get_typography_recent(10, 0, 'services');
 		$data['services'] = $this->service_model->get_services_recent(10, 0, 'services');
 		$data['members'] = $this->member_model->get_members_recent(10, 0, 'services');
 		$data['banners'] = $this->gallery_model->get_banners();

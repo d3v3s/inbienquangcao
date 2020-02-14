@@ -73,47 +73,15 @@
 		</div>
 	</div>
 </section>
-<section id="services" class="page-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="tb-title-home text-center">
-					<div class="tb-title-home-header" >
-						<h2 class="tb-headding-two title-index">Dịch Vụ Chúng Tôi Cung Cấp Đến Khách Hàng</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="owl-carousel navigation-1 text-left" data-pagination="false" data-items="4"
-				 data-autoplay="true" data-navigation="true">
-				<?php foreach ($services as $item): ?>
-					<div class="col-sm-4 col-md-4 col-xs-12 service-item" data-animation="fadeInLeft">
-						<div class="grid-item">
-							<div class="grid">
-								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>"
-									 class="img-responsive" />
-								<div class="figcaption">
-									<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
-										<i class="fa"><?php echo $item->title; ?></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php endforeach; ?>
-			</div>
-		</div>
-	</div>
-</section>
+
 <!-- Services -->
-<section class="product-home" style="background-color: #FFFFFF !important; padding-bottom: 20px !important; padding-top: 20px !important">
+<section id="services" class="page-section" style="background-color: #FFFFFF !important; padding-bottom: 20px !important; padding-top: 20px !important">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="tb-title-home text-center">
 					<div class="tb-title-home-header">
-						<h2 class="tb-headding-two text-light title-index">Mẫu Chữ Thường Dùng Trong Quảng Cáo</h2>
+						<h2 class="tb-headding-two text-light title-index">Dịch Vụ Chúng Tôi Cung Cấp Đến Khách Hàng</h2>
 					</div>
 				</div>
 			</div>
@@ -122,19 +90,20 @@
 			<div class="col-lg-12">
 				<div class="owl-carousel navigation-1 opacity text-left" data-pagination="false" data-items="4"
 					 data-autoplay="true" data-navigation="true">
-					<div class="col-sm-6 col-md-4 col-xs-12">
-						<p class="text-center">
-							<a href="<?php echo base_url(); ?>assets/img/sections/services/1.jpg" class="opacity" data-rel="prettyPhoto[portfolio]">
-								<img s src="<?php echo base_url(); ?>assets/img/sections/services/1.jpg" width="420" height="280" alt="" />
-							</a>
-						</p>
-						<h4>
-							<a href="#">General Contracting</a>
-						</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id pariatur molestiae illum cum facere
-							deserunt a enim harum eaque fugit.</p>
-						<a href="#" class="read-more">Xem thêm</a>
-					</div>
+					<?php foreach ($services as $item): ?>
+						<div class="col-sm-6 col-md-4 col-xs-12">
+							<p class="text-center">
+								<a href="">
+									<img s src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="" />
+								</a>
+							</p>
+							<h4>
+								<a href="#"><?php echo $item->title; ?></a>
+							</h4>
+							<p><?php echo $item->summary; ?></p>
+							<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->slug; ?>" class="read-more">Xem thêm</a>
+						</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
@@ -177,6 +146,132 @@
 	</div>
 </section>
 <!-- works -->
+<section id="typographys" class="page-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="tb-title-home text-center">
+					<div class="tb-title-home-header" >
+						<h2 class="tb-headding-two title-index">Mẫu Chữ Thường Dùng Trong Quảng Cáo</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="owl-carousel navigation-1 text-left" data-pagination="false" data-items="4"
+				 data-autoplay="true" data-navigation="true">
+				<?php foreach ($typographys as $item): ?>
+					<div class="col-sm-4 col-md-4 col-xs-12 service-item" data-animation="fadeInLeft">
+						<div class="grid-item">
+							<div class="grid">
+								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>"
+									 class="img-responsive" />
+								<div class="figcaption">
+									<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
+										<i class="fa"><?php echo $item->title; ?></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="page-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="tb-title-home text-center">
+					<div class="tb-title-home-header" >
+						<h4>uy tín là số 1</h4>
+						<h2 class="tb-headding-two title-index">Mẫu Chữ Thường Dùng Trong Quảng Cáo</h2>
+					</div>
+				</div>
+				<div class="wrap-title d-flex justify-content-center mt-3">
+					<div class="tb-dec-home text-center d-none d-sm-block">
+						<p style="color: #797f84 !important;">Chúng tôi luôn nổ lực tối ưu quy trình làm việc để tối đa lợi ích cho khách hàng và đạt hiệu quả cao, tránh những rủi ro phát sinh.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-3">
+				<div class="wrap-work-step ">
+					<div class="tb-work-image position-relative d-inline-block">
+						<img alt="step one" data-src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/doi-ngu-nhan-su.jpg" class=" lazyloaded" src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/doi-ngu-nhan-su.jpg"><noscript><img src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/doi-ngu-nhan-su.jpg" alt="step one"></noscript>
+						<div class="work-step-one position-absolute">
+							<span>01</span>
+						</div>
+					</div>
+					<div class="tb-work-content text-center mt-4">
+						<div class="tb-work-content-title">
+							<h5>Đội Ngũ Nhân Sự</h5>
+						</div>
+						<div class="tb-work-content-dec mt-2">
+							Với hơn 36 nhân viên kinh ngiệm thi công thực tế  trên 12 năm
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="wrap-work-step mt-4 mt-lg-0">
+					<div class="tb-work-image position-relative d-inline-block">
+						<img alt="step one" data-src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/he-thong-may-moc.jpg" class=" lazyloaded" src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/he-thong-may-moc.jpg"><noscript><img src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/he-thong-may-moc.jpg" alt="step one"></noscript>
+						<div class="work-step-one position-absolute">
+							<span>02</span>
+						</div>
+					</div>
+					<div class="tb-work-content text-center mt-4">
+						<div class="tb-work-content-title">
+							<h5>Hệ Thống Máy Móc</h5>
+						</div>
+						<div class="tb-work-content-dec mt-2">
+							Sử dụng 100% máy móc trong sản xuất đảm bảo độ tinh xảo của sản phẩm tới từng milimet
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="wrap-work-step mt-4 mt-lg-0">
+					<div class="tb-work-image position-relative d-inline-block">
+						<img alt="step one" data-src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/quang-cao-tay-bac-uy-tin-chat-luong.jpg" class=" lazyloaded" src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/quang-cao-tay-bac-uy-tin-chat-luong.jpg"><noscript><img src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/quang-cao-tay-bac-uy-tin-chat-luong.jpg" alt="step one"></noscript>
+						<div class="work-step-one position-absolute">
+							<span>03</span>
+						</div>
+					</div>
+					<div class="tb-work-content text-center mt-4">
+						<div class="tb-work-content-title">
+							<h5>Uy Tín</h5>
+						</div>
+						<div class="tb-work-content-dec mt-2">
+							Đảm bảo tiến độ và chất lượng cho từng công trình, chế độ bảo hành số 1 trên thị trường
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="wrap-work-step mt-4 mt-lg-0">
+					<div class="tb-work-image position-relative d-inline-block">
+						<img alt="step one" data-src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/step-4.jpg" class=" ls-is-cached lazyloaded" src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/step-4.jpg"><noscript><img src="https://quangcaotaybac.vn/wp-content/themes/qctaybac/image/step-4.jpg" alt="step one"></noscript>
+						<div class="work-step-one position-absolute">
+							<span>04</span>
+						</div>
+					</div>
+					<div class="tb-work-content text-center mt-4">
+						<div class="tb-work-content-title">
+							<h5>Giá Thành Hợp Lý</h5>
+						</div>
+						<div class="tb-work-content-dec mt-2">
+							Sản xuất trực tiếp không qua trung gian, tối ưu lợi nhuận cho khách hàng là tiêu chí của Chúng tôi
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section id="team" class="page-section light-bg border-tb">
 	<div class="container">

@@ -201,28 +201,28 @@ if ($language->id == $site_lang->id):?>
 								<!-- nav -->
 								<ul class="nav navbar-nav">
 									<li>
-										<a class="active" href="<?php echo lang_base_url(); ?>">Trang chủ</a>
+										<a class="<?php echo ($request_uri == '') ? 'active' : '' ?>" href="<?php echo lang_base_url(); ?>">Trang chủ</a>
 									</li>
 									<li>
-										<a href="<?php echo lang_base_url().'gioi-thieu'; ?>">Giới thiệu</a>
+										<a class="<?php echo ($request_uri == 'gioi-thieu') ? 'active' : '' ?>" href="<?php echo lang_base_url().'gioi-thieu'; ?>">Giới thiệu</a>
 									</li>
 									<li>
-										<a href="<?php echo lang_base_url().'du-an'; ?>">Dự án</a>
+										<a class="<?php echo ($request_uri == 'du-an') ? 'active' : '' ?>" href="<?php echo lang_base_url().'du-an'; ?>">Dự án</a>
 									</li>
 									<li>
-										<a href="<?php echo lang_base_url().'dich-vu'; ?>">Dịch vụ</a>
+										<a class="<?php echo ($request_uri == 'dich-vu') ? 'active' : '' ?>" href="<?php echo lang_base_url().'dich-vu'; ?>">Dịch vụ</a>
 									</li>
 									<li>
-										<a href="<?php echo lang_base_url().'mau-chu'; ?>">Mẫu chữ</a>
+										<a class="<?php echo ($request_uri == 'mau-chu') ? 'active' : '' ?>" href="<?php echo lang_base_url().'mau-chu'; ?>">Mẫu chữ</a>
 									</li>
 									<li>
-										<a href="<?php echo lang_base_url().'tin-tuc'; ?>">Tin tức</a>
+										<a class="<?php echo ($request_uri == 'tin-tuc') ? 'active' : '' ?>" href="<?php echo lang_base_url().'tin-tuc'; ?>">Tin tức</a>
 									</li>
 <!--									<li>-->
 <!--										<a href="--><?php //echo lang_base_url().'hinh-anh'; ?><!--">Hình ảnh</a>-->
 <!--									</li>-->
 									<li>
-										<a href="<?php echo lang_base_url().'lien-he'; ?>">Liên hệ</a>
+										<a class="<?php echo ($request_uri == 'lien-he') ? 'active' : '' ?>" href="<?php echo lang_base_url().'lien-he'; ?>">Liên hệ </a>
 									</li>
 									<li class="hidden-767">
 										<a href="#" class="header-search">

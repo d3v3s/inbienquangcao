@@ -127,6 +127,7 @@ class Home_Core_Controller extends Core_Controller
         $global_data['tags'] = $this->tag_model->get_random_tags();
         $global_data['footer_random_posts'] = $this->post_model->get_footer_random_posts(3);
         $global_data['polls'] = $this->poll_model->get_polls();
+		$global_data['request_uri'] = $_SERVER['REQUEST_URI'];
 
         //Social Login
         $global_data['fb_login_state'] = 0;
