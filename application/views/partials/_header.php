@@ -39,13 +39,6 @@
 		<meta name="twitter:description" content="<?php echo html_escape($description); ?>"/>
 	<?php endif; ?>
 	<link rel="canonical" href="<?php echo base_url(); ?>"/>
-	<?php if ($general_settings->multilingual_system == 1):
-		foreach ($languages as $language):
-			if ($language->id == $site_lang->id):?>
-				<link rel="alternate" href="<?php echo base_url(); ?>" hreflang="<?php echo $language->language_code ?>"/>
-			<?php else: ?>
-				<link rel="alternate" href="<?php echo base_url() . $language->short_form . "/"; ?>" hreflang="<?php echo $language->language_code ?>"/>
-			<?php endif; endforeach; endif; ?>
 	<?php if (empty($general_settings->favicon_path)): ?>
 		<link rel="shortcut icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.png"/>
 	<?php else: ?>
