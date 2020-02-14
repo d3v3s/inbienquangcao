@@ -3,12 +3,6 @@
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
 | -------------------------------------------------------------------
-| This file will contain the settings needed to access your database.
-|
-| For complete instructions please consult the "Database Connection"
-| page of the User Guide.
-|
-| -------------------------------------------------------------------
 | EXPLANATION OF VARIABLES
 | -------------------------------------------------------------------
 |
@@ -26,15 +20,7 @@
 |	['cachedir'] The path to the folder where cache files should be stored
 |	['char_set'] The character set used in communicating with the database
 |	['dbcollat'] The character collation used in communicating with the database
-|
-| The $active_group variable lets you choose which connection group to
-| make active.  By default there is only one group (the "default" group).
-|
-| The $active_record variables lets you determine whether or not to load
-| the active record class
 */
-
-// The following values will probably need to be changed.
 $db['default']['username'] = "uyhct61c92mhbxyy";
 $db['default']['password'] = "ar786gvodwm4fhbs";
 $db['default']['database'] = "u5bt0sg4yh2640yy";
@@ -52,6 +38,3 @@ $db['default']['dbcollat'] = "utf8_general_ci";
 
 $active_group = "default";
 $active_record = TRUE;
-
-/* End of file database.php */
-/* Location: ./application/config/database.php */
