@@ -152,6 +152,7 @@ class Home extends Home_Core_Controller
 
 		//get project
 		$data['project'] = $this->project_admin_model->get_project($id);
+		$data['project_images'] = $this->project_file_model->get_project_additional_images($id);
 		$data['page'] = $this->page_model->get_page('du-an');
 		//check project exists
 		if (empty($data['project'])) {

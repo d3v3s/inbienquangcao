@@ -6,9 +6,9 @@
 			<h3 class="box-title"><?php echo $title; ?></h3>
 		</div>
 		<div class="right">
-			<a href="<?php echo base_url(); ?>admin_project/add_project" class="btn btn-sm btn-success btn-add-new pull-right">
+			<a href="<?php echo base_url(); ?>admin_service/add_service" class="btn btn-sm btn-success btn-add-new pull-right">
 				<i class="fa fa-plus"></i>
-				<?php echo trans('add_project'); ?>
+				<?php echo trans('add_service'); ?>
 			</a>
 		</div>
 	</div><!-- /.box-header -->
@@ -30,6 +30,7 @@
 							<th width="20"><input type="checkbox" class="checkbox-table" id="checkAll"></th>
 							<th width="20"><?php echo trans('id'); ?></th>
 							<th>Tên dịch vụ</th>
+							<th><?php echo trans('author'); ?></th>
 							<th><?php echo trans('status'); ?></th>
 							<th><?php echo trans('date'); ?></th>
 							<th class="max-width-120"><?php echo trans('options'); ?></th>
@@ -41,9 +42,17 @@
 							<tr>
 								<td><input type="checkbox" name="checkbox-table" class="checkbox-table" value="<?php echo $item->id; ?>"></td>
 								<td><?php echo html_escape($item->id); ?></td>
-								<td class="td-project">
+								<td class="td-service">
 									<img style="max-height: 100px !important; max-width: 150px !important;" src="<?php echo base_url(); ?><?php echo $item->image_big; ?>" alt="" class="img-responsive"/>
 									<?php echo html_escape($item->title); ?>
+								</td>
+								<td>
+									<?php $author = get_user($item->user_id);
+									if (!empty($author)): ?>
+										<a href="<?php echo base_url(); ?>admin/update_profile/<?php echo html_escape($author->id); ?>" target="_blank">
+											<strong><?php echo html_escape($author->username); ?></strong>
+										</a>
+									<?php endif; ?>
 								</td>
 								<td><?php echo $item->status; ?></td>
 								<td><?php echo $item->created_at; ?></td>
@@ -58,14 +67,14 @@
 										</button>
 										<ul class="dropdown-menu pull-right options-list">
 											<li>
-												<a href="<?php echo base_url(); ?>admin_project/update_project/<?php echo html_escape($item->id); ?>">
+												<a href="<?php echo base_url(); ?>admin_service/update_service/<?php echo html_escape($item->id); ?>">
 													<i class="fa fa-edit i-edit"></i><?php echo trans('edit'); ?></a>
 											</li>
 											<li>
 												<a class="p0">
 													<button type="submit" name="option" value="delete"
 															class="btn-list-button"
-															onclick="return confirm('<?php echo trans("confirm_project"); ?>');">
+															onclick="return confirm('<?php echo trans("confirm_service"); ?>');">
 														<i class="fa fa-trash i-delete"></i><?php echo trans('delete'); ?>
 													</button>
 												</a>
@@ -90,7 +99,7 @@
 
 							<?php if (count($services) > 0): ?>
 								<div class="pull-left">
-									<button class="btn btn-sm btn-danger btn-table-delete" onclick="delete_selected_projects('<?php echo trans("confirm_projects"); ?>');"><?php echo trans('delete'); ?></button>
+									<button class="btn btn-sm btn-danger btn-table-delete" onclick="delete_selected_services('<?php echo trans("confirm_services"); ?>');"><?php echo trans('delete'); ?></button>
 								</div>
 							<?php endif; ?>
 						</div>

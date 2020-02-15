@@ -31,7 +31,7 @@
                             <th width="20"><?php echo trans('id'); ?></th>
                             <th><?php echo trans('project'); ?></th>
                             <th><?php echo trans('language'); ?></th>
-                            <th><?php echo trans('author'); ?></th>
+                            <th><?php echo trans('author'); ?></th>aut
 							<th><?php echo trans('summary'); ?></th>
 							<th><?php echo trans('content'); ?></th>
 							<th><?php echo trans('status'); ?></th>

@@ -47,6 +47,8 @@ class Admin_project extends Admin_Core_Controller
 				//last id
 				$last_id = $this->db->insert_id();
 
+				$this->project_file_model->add_project_additional_images($last_id);
+
 				$this->session->set_flashdata('success', trans("project") . " " . trans("msg_suc_added"));
 
 				redirect($this->agent->referrer());
