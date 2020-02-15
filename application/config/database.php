@@ -21,12 +21,10 @@
 |	['char_set'] The character set used in communicating with the database
 |	['dbcollat'] The character collation used in communicating with the database
 */
-$db['default']['username'] = "uyhct61c92mhbxyy";
-$db['default']['password'] = "ar786gvodwm4fhbs";
-$db['default']['database'] = "u5bt0sg4yh2640yy";
-
-// The following values can probably stay the same.
-$db['default']['hostname'] = "h2cwrn74535xdazj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$db['default']['username'] = "devskill_quanghoa1993";
+$db['default']['password'] = "Quanghoa1993";
+$db['default']['database'] = "devskill_quangcaotanthaiduong";
+$db['default']['hostname'] = "localhost";
 $db['default']['dbdriver'] = "mysqli"; //Updated to latest driver.
 $db['default']['dbprefix'] = "";
 $db['default']['pconnect'] = FALSE;
