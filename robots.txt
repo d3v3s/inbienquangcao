@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /uploads/
+Disallow: /admin/
+Sitemap: http://quangcaotanthaiduong.com/sitemap.xml
