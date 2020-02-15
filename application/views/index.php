@@ -36,15 +36,12 @@
 						<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->slug; ?>" class="read-more">Xem thêm</a>
 					</div>
 				<?php endforeach; ?>
-
-
-
 			</div>
 		</div>
 	</div>
 </section>
 <!-- Services -->
-<section id="who-we-are" class="page-section border-tb">
+<section id="who-we-are" class="page-section border-tb" style="background-color: #F7F7F7 !important;">
 	<div class="container who-we-are">
 		<div class="row">
 			<div class="col-md-8">
@@ -139,11 +136,7 @@
 		</div>
 		<div id="options" class="filter-menu">
 			<ul class="option-set nav nav-pills">
-				<li class="filter active" data-filter="all">Show All</li>
-				<li class="filter" data-filter=".commercial">Commercial</li>
-				<li class="filter" data-filter=".education">Education</li>
-				<li class="filter" data-filter=".healthcare">Healthcare</li>
-				<li class="filter" data-filter=".residential">Residential</li>
+				<li class="filter active" data-filter="all"> Một số dự án nổi bật</li>
 			</ul>
 		</div>
 		<!-- filter -->
@@ -170,7 +163,7 @@
 		<!-- Mix Container -->
 	</div>
 </section>
-<section id="typographys" class="page-section">
+<section id="typographys" class="page-section" style="background-color: #F7F7F7 !important;">
 	<div class="container text-center">
 		<div class="section-title">
 			<h2 class="title">Mẫu Chữ Thường Dùng Trong Quảng Cáo</h2>
@@ -198,34 +191,34 @@
 	</div>
 </section>
 <!-- works -->
-<section id="team" class="page-section light-bg border-tb">
-	<div class="container text-center">
-		<div class="section-title">
-			<h2 class="title">Đội chúng tôi</h2>
-		</div>
-		<div class="row">
-			<div class="owl-carousel navigation-1" data-pagination="false" data-items="4" data-autoplay="true"
-				 data-navigation="true">
-				<?php foreach ($members as $item): ?>
-					<div class="col-sm-6 col-md-3 bottom-xs-pad-20">
-						<div class="team-item dark-bg">
-							<div class="image">
-								<img src="<?php echo base_url().$item->avatar; ?>" alt="<?php echo $item->name; ?> <?php echo $item->position; ?>" title="<?php echo $item->name; ?>" width="270" height="270" />
-							</div>
-							<div class="description">
-								<h4 class="name"><?php echo $item->name; ?></h4>
-								<div class="role"><?php echo $item->position; ?></div>
-								<p><?php echo $item->description ; ?></p>
-							</div>
-						</div>
-					</div>
-				<?php endforeach; ?>
-
-
-			</div>
-		</div>
-	</div>
-</section>
+<!--<section id="team" class="page-section light-bg border-tb">-->
+<!--	<div class="container text-center">-->
+<!--		<div class="section-title">-->
+<!--			<h2 class="title">Đội chúng tôi</h2>-->
+<!--		</div>-->
+<!--		<div class="row">-->
+<!--			<div class="owl-carousel navigation-1" data-pagination="false" data-items="4" data-autoplay="true"-->
+<!--				 data-navigation="true">-->
+<!--				--><?php //foreach ($members as $item): ?>
+<!--					<div class="col-sm-6 col-md-3 bottom-xs-pad-20">-->
+<!--						<div class="team-item dark-bg">-->
+<!--							<div class="image">-->
+<!--								<img src="--><?php //echo base_url().$item->avatar; ?><!--" alt="--><?php //echo $item->name; ?><!-- --><?php //echo $item->position; ?><!--" title="--><?php //echo $item->name; ?><!--" width="270" height="270" />-->
+<!--							</div>-->
+<!--							<div class="description">-->
+<!--								<h4 class="name">--><?php //echo $item->name; ?><!--</h4>-->
+<!--								<div class="role">--><?php //echo $item->position; ?><!--</div>-->
+<!--								<p>--><?php //echo $item->description ; ?><!--</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				--><?php //endforeach; ?>
+<!---->
+<!---->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</section>-->
 <!-- team -->
 <section id="fun-factor" class="page-section transparent">
 	<div class="container">
@@ -455,50 +448,6 @@
 							Sản xuất trực tiếp không qua trung gian, tối ưu lợi nhuận cho khách hàng là tiêu chí của Chúng tôi
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- testimonials -->
-<section id="clients" class="page-section tb-pad-20 light-bg border-tb">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<div class="owl-carousel" data-pagination="false" data-items="6" data-autoplay="true"
-					 data-navigation="false">
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" />
-					</a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" />
-					</a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/3.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" />
-					</a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/4.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" />
-					</a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/5.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" />
-					</a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/6.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" />
-					</a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/1.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/11.png" width="170" height="90" alt="" />
-					</a>
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/2.png" width="170" height="90" alt="" />
-						<img src="<?php echo base_url(); ?>assets/img/sections/clients/22.png" width="170" height="90" alt="" />
-					</a>
 				</div>
 			</div>
 		</div>
