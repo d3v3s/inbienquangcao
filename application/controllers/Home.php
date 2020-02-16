@@ -584,7 +584,7 @@ class Home extends Home_Core_Controller
 
         if (!auth_check() && $data['post']->need_auth == 1) {
             $this->session->set_flashdata('error', trans("message_post_auth"));
-            redirect(lang_base_url() . 'login');
+            redirect(lang_base_url());
         }
 
         //check visibility

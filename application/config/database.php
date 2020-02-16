@@ -21,9 +21,9 @@
 |	['char_set'] The character set used in communicating with the database
 |	['dbcollat'] The character collation used in communicating with the database
 */
-$db['default']['username'] = "devskill_quanghoa1993";
+$db['default']['username'] = "root";
 $db['default']['password'] = "Quanghoa1993";
-$db['default']['database'] = "devskill_quangcaotanthaiduong";
+$db['default']['database'] = "infinite";
 $db['default']['hostname'] = "localhost";
 $db['default']['dbdriver'] = "mysqli"; //Updated to latest driver.
 $db['default']['dbprefix'] = "";

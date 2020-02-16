@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!-- Sticky Navbar -->
-<section class="slider border-bottom line tp-banner-fullscreen-container">
+<section class="slider border-bottom line tp-banner-fullscreen-container hidden-xs">
 	<div class="tp-banner">
 		<ul>
 			<?php foreach ($banners as $item): ?>
@@ -472,14 +472,8 @@
 					<!-- Form Ends -->
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="map-section">
-					<div class="map-canvas" data-zoom="12" data-lat="-35.2835" data-lng="149.128" data-type="roadmap"
-						 data-title="Austin"
-						 data-content="Hanoi, VietNam"
-                            style="height: 350px;">
-					</div>
-				</div>
+			<div class="col-md-4 text-center">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.432940760009!2d105.84665155089593!3d21.174953688077252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135016bd0000001%3A0x2637b9f2deff99d8!2zQ8O0bmcgVHkgVE5ISCBUaMawxqFuZyBN4bqhaSBWw6AgWMOieSBE4buxbmcgSMO5bmcgU8ahbg!5e0!3m2!1svi!2s!4v1581838836433!5m2!1svi!2s" width="350" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 			</div>
 			<!-- map -->
 		</div>
