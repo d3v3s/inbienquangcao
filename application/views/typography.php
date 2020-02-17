@@ -22,14 +22,13 @@
 								<a href="<?php echo base_url(); ?><?php echo $item->image_big; ?>" data-rel="prettyPhoto[portfolio]">
 									<i class="fa fa-search"></i>
 								</a>
-								<a href="<?php echo base_url(); ?>chi-tiet-dich-vu/<?php echo $item->id; ?>">
+								<a href="<?php echo base_url().'mau-chu/'.$item->id; ?>">
 									<i class="fa fa-link"></i>
 								</a></div>
 						</div>
 					</div>
 				<?php endforeach; ?>
 			</div>
-			<a href="" class="btn btn-add-new">Xem thêm mẫu chữ</a>
 		</div>
 	</div>
 </section>

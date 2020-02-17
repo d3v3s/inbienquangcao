@@ -3,7 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_project extends Admin_Core_Controller
 {
-
     public function __construct()
     {
         parent::__construct();
@@ -46,7 +45,7 @@ class Admin_project extends Admin_Core_Controller
 			if ($this->project_admin_model->add_project()) {
 				//last id
 				$last_id = $this->db->insert_id();
-
+				$this->project_admin_model->update_slug($last_id);
 				$this->project_file_model->add_project_additional_images($last_id);
 
 				$this->session->set_flashdata('success', trans("project") . " " . trans("msg_suc_added"));

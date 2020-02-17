@@ -48,7 +48,7 @@ class Admin_post extends Admin_Core_Controller
             if ($this->post_admin_model->add_post()) {
                 //last id
                 $last_id = $this->db->insert_id();
-                //update slug
+                //update ug
                 $this->post_admin_model->update_slug($last_id);
                 //insert post tags
                 $this->tag_model->add_post_tags($last_id);

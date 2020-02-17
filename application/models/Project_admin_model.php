@@ -96,6 +96,14 @@ class Project_admin_model extends CI_Model
         return $query->row();
     }
 
+	//get project
+	public function get_project_by_slug($slug)
+	{
+		$this->db->where('projects.title_slug', $slug);
+		$query = $this->db->get('projects');
+		return $query->row();
+	}
+
     //get projects count
     public function get_projects_count()
     {
@@ -170,6 +178,42 @@ class Project_admin_model extends CI_Model
         $query = $this->db->get('projects');
         return $query->num_rows();
     }
+
+	//update slug
+	public function update_slug($id)
+	{
+		$project = $this->get_project($id);
+
+		if (empty($project->title_slug) || $project->title_slug == "-") {
+			$data = array(
+				'title_slug' => $project->id
+			);
+			$this->db->where('id', $id);
+			return $this->db->update('projects', $data);
+		} else {
+			if ($this->check_is_slug_unique($project->title_slug, $id) == true) {
+				$data = array(
+					'title_slug' => $project->title_slug . "-" . $project->id
+				);
+
+				$this->db->where('id', $id);
+				return $this->db->update('projects', $data);
+			}
+		}
+	}
+
+	//check slug
+	public function check_is_slug_unique($slug, $id)
+	{
+		$this->db->where('projects.title_slug', $slug);
+		$this->db->where('projects.id !=', $id);
+		$query = $this->db->get('projects');
+		if ($query->num_rows() > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
     //delete project
     public function delete_project($id)

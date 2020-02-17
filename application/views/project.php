@@ -22,7 +22,7 @@
 								<a href="<?php echo base_url(); ?><?php echo $item->image_big; ?>" data-rel="prettyPhoto[portfolio]">
 									<i class="fa fa-search"></i>
 								</a>
-								<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
+								<a href="<?php echo base_url(); ?>du-an/<?php echo $item->title_slug; ?>">
 									<i class="fa fa-link"></i>
 								</a></div>
 						</div>

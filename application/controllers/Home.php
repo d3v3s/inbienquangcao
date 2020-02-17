@@ -147,12 +147,11 @@ class Home extends Home_Core_Controller
 	/**
 	 * project detail
 	 */
-	public function duan($id)
+	public function duan($slug)
 	{
-
 		//get project
-		$data['project'] = $this->project_admin_model->get_project($id);
-		$data['project_images'] = $this->project_file_model->get_project_additional_images($id);
+		$data['project'] = $this->project_admin_model->get_project_by_slug($slug);
+		$data['project_images'] = $this->project_file_model->get_project_additional_images($data['project']->id);
 		$data['page'] = $this->page_model->get_page('du-an');
 		//check project exists
 		if (empty($data['project'])) {
@@ -172,6 +171,69 @@ class Home extends Home_Core_Controller
 			$data['keywords'] = get_page_keywords($data['page']);
 			$this->load->view('partials/_header', $data);
 			$this->load->view('project_detail', $data);
+			$this->load->view('partials/_footer', $data);
+		}
+	}
+
+	/**
+	 * Service detail
+	 */
+	public function dichvu($slug)
+	{
+		//get project
+		$data['service'] = $this->service_admin_model->get_service_by_slug($slug);
+		$data['services'] = $this->service_model->get_services_recent(10, 0, 'services');
+		$data['page'] = $this->page_model->get_page('dich-vu');
+		//check project exists
+		if (empty($data['service'])) {
+			redirect(lang_base_url());
+		}
+
+		if ($data['page']->page_active == 0) {
+			$this->error_404();
+		} else {
+			if ($this->recaptcha_status) {
+				$this->load->library('recaptcha');
+				$data['recaptcha_widget'] = $this->recaptcha->getWidget();
+				$data['recaptcha_script'] = $this->recaptcha->getScriptTag();
+			}
+			$data['title'] = get_page_title($data['page']);
+			$data['description'] = get_page_description($data['page']);
+			$data['keywords'] = get_page_keywords($data['page']);
+			$this->load->view('partials/_header', $data);
+			$this->load->view('service_detail', $data);
+			$this->load->view('partials/_footer', $data);
+		}
+	}
+
+	/**
+	 * Mau chu detail
+	 */
+	public function mauchu($slug)
+	{
+		//get typography
+		$data['typography'] = $this->typography_model->get_typography($slug);
+		$data['typographys'] = $this->typography_model->get_typography_recent(10, 0, 'services');
+		//$data['typography_images'] = $this->project_file_model->get_project_additional_images($data['project']->id);
+		$data['page'] = $this->page_model->get_page('mau-chu');
+		//check project exists
+		if (empty($data['typography'])) {
+			redirect(lang_base_url());
+		}
+
+		if ($data['page']->page_active == 0) {
+			$this->error_404();
+		} else {
+			if ($this->recaptcha_status) {
+				$this->load->library('recaptcha');
+				$data['recaptcha_widget'] = $this->recaptcha->getWidget();
+				$data['recaptcha_script'] = $this->recaptcha->getScriptTag();
+			}
+			$data['title'] = get_page_title($data['page']);
+			$data['description'] = get_page_description($data['page']);
+			$data['keywords'] = get_page_keywords($data['page']);
+			$this->load->view('partials/_header', $data);
+			$this->load->view('typography_detail', $data);
 			$this->load->view('partials/_footer', $data);
 		}
 	}

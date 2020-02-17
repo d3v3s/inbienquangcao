@@ -30,10 +30,10 @@
 							</a>
 						</p>
 						<h3>
-							<a href="<?php echo base_url(); ?>chi-tiet-dich-vu/<?php echo $item->slug; ?>"><?php echo $item->title; ?></a>
+							<a href="<?php echo base_url().'dich-vu/'.$item->slug; ?>"><?php echo $item->title; ?></a>
 						</h3>
 						<p><?php echo $item->summary; ?></p>
-						<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->slug; ?>" class="read-more">Xem thêm</a>
+						<a href="<?php echo base_url().'dich-vu/'.$item->slug; ?>" class="read-more">Xem thêm</a>
 					</div>
 				<?php endforeach; ?>
 			</div>
@@ -125,7 +125,7 @@
 						<img src="<?php echo base_url(); ?><?php echo $item->image_big; ?>" width="400" height="273" alt="<?php echo $item->title; ?>"
 							 class="img-responsive" />
 						<div class="figcaption">
-							<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
+							<a href="<?php echo base_url(); ?>du-an/<?php echo $item->id; ?>">
 								<i>Xem chi tiết</i>
 							</a></div>
 						<div class="caption-block">
@@ -155,7 +155,7 @@
 								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>"
 									 class="img-responsive" />
 								<div class="figcaption">
-									<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
+									<a href="<?php echo base_url(); ?>du-an/<?php echo $item->id; ?>">
 										<i class="fa"><?php echo $item->title; ?></i>
 									</a>
 								</div>
@@ -272,14 +272,8 @@
 <!-- news -->
 <section id="testimonials" class="page-section">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="tb-title-home text-center">
-					<div class="tb-title-home-header" >
-						<h2 class="tb-headding-two title-index">Nhận xét của khách hàng</h2>
-					</div>
-				</div>
-			</div>
+		<div class="section-title">
+			<h2 class="title">Nhận xét của khách hàng</h2>
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-12 testimonials">
@@ -354,10 +348,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="tb-title-home text-center">
-					<div class="tb-title-home-header" >
-						<h2 class="tb-headding-two title-index">Uy tín là số 1</h2>
-					</div>
+				<div class="section-title">
+					<h2 class="title">Uy tín là số 1</h2>
 				</div>
 				<div class="wrap-title d-flex justify-content-center mt-3">
 					<div class="tb-dec-home text-center d-none d-sm-block">
@@ -473,7 +465,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 text-center">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.432940760009!2d105.84665155089593!3d21.174953688077252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135016bd0000001%3A0x2637b9f2deff99d8!2zQ8O0bmcgVHkgVE5ISCBUaMawxqFuZyBN4bqhaSBWw6AgWMOieSBE4buxbmcgSMO5bmcgU8ahbg!5e0!3m2!1svi!2s!4v1581838836433!5m2!1svi!2s" width="350" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.496228497142!2d105.84449345107676!3d21.172437485851624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s7PH75RCW%2BXM!5e0!3m2!1svi!2s!4v1581947006285!5m2!1svi!2s" width="350" height="350" frameborder="0" style="border:0;" style="border:0;" allowfullscreen=""></iframe>
 			</div>
 			<!-- map -->
 		</div>

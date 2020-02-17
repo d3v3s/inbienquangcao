@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h3 class="title"><?php echo $project->title; ?></h3>
+				<h3 class="title text-center"><?php echo $project->title; ?></h3>
 			</div>
 		</div>
 	</div>
@@ -52,10 +52,10 @@
 				<hr class="top-margin-0" />
 				<div class="col-md-12">
 					<div style="float: right">
-						<div class="fb-like"data-href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+						<div class="fb-like"data-href="<?php echo base_url().'du-an/'.$project->id; ?>" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
 					</div>
 				</div>
-				<div class="fb-comments" data-href="<?php echo base_url().'chi-tiet-du-an/'.$project->id; ?>" data-width="100%" data-numposts="5"></div>
+				<div class="fb-comments" data-href="<?php echo base_url().'du-an/'.$project->id; ?>" data-width="100%" data-numposts="5"></div>
 			</div>
 			<div class="sidebar col-sm-12 col-md-3 col-md-pull-9">
 				<div class="widget list-border">
@@ -69,18 +69,18 @@
 						</div>
 					</div>
 				</div>
-				<div class="widget">
-					<div class="widget">
-						<div class="widget-title">
-							<h3 class="title">Tags</h3>
-						</div>
-						<ul class="tags">
-							<?php foreach ($tags as $item): ?>
-								<?php $this->load->view('partials/post_tag_item', ['item' => $item]); ?>
-							<?php endforeach; ?>
-						</ul>
-					</div>
-				</div>
+<!--				<div class="widget">-->
+<!--					<div class="widget">-->
+<!--						<div class="widget-title">-->
+<!--							<h3 class="title">Tags</h3>-->
+<!--						</div>-->
+<!--						<ul class="tags">-->
+<!--							--><?php //foreach ($tags as $item): ?>
+<!--								--><?php //$this->load->view('partials/post_tag_item', ['item' => $item]); ?>
+<!--							--><?php //endforeach; ?>
+<!--						</ul>-->
+<!--					</div>-->
+<!--				</div>-->
 			</div>
 		</div>
 	</div>

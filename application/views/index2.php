@@ -101,7 +101,7 @@
 								<a href="#"><?php echo $item->title; ?></a>
 							</h4>
 							<p><?php echo $item->summary; ?></p>
-							<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->slug; ?>" class="read-more">Xem thêm</a>
+							<a href="<?php echo base_url(); ?>du-an/<?php echo $item->slug; ?>" class="read-more">Xem thêm</a>
 						</div>
 					<?php endforeach; ?>
 				</div>
@@ -305,7 +305,7 @@
 						<img src="<?php echo base_url(); ?><?php echo $item->image_big; ?>" width="400" height="273" alt="<?php echo $item->title; ?>"
 							 class="img-responsive" />
 						<div class="figcaption">
-							<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
+							<a href="<?php echo base_url(); ?>du-an/<?php echo $item->id; ?>">
 								<i>Xem chi tiết</i>
 							</a></div>
 						<div class="caption-block">
@@ -340,7 +340,7 @@
 								<img src="<?php echo base_url().$item->image_big; ?>" width="420" height="280" alt="<?php echo $item->title; ?>"
 									 class="img-responsive" />
 								<div class="figcaption">
-									<a href="<?php echo base_url(); ?>chi-tiet-du-an/<?php echo $item->id; ?>">
+									<a href="<?php echo base_url(); ?>du-an/<?php echo $item->id; ?>">
 										<i class="fa"><?php echo $item->title; ?></i>
 									</a>
 								</div>

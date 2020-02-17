@@ -14,6 +14,13 @@
             <input type="text" class="form-control" name="title" placeholder="<?php echo trans('title'); ?>"
                    value="<?php echo old('title'); ?>" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?> required>
         </div>
+		<div class="form-group">
+			<label class="control-label"><?php echo trans('slug'); ?>
+				<small>(<?php echo trans('slug_exp'); ?>)</small>
+			</label>
+			<input type="text" class="form-control" name="title_slug" placeholder="<?php echo trans('slug'); ?>"
+				   value="<?php echo old('title_slug'); ?>" <?php echo ($rtl == true) ? 'dir="rtl"' : ''; ?>>
+		</div>
 
 		<div class="form-group">
 			<label class="control-label"> Khách hàng</label>

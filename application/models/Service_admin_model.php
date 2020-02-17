@@ -93,6 +93,14 @@ class Service_admin_model extends CI_Model
         return $query->row();
     }
 
+	//get service
+	public function get_service_by_slug($slug)
+	{
+		$this->db->where('services.slug', $slug);
+		$query = $this->db->get('services');
+		return $query->row();
+	}
+
     //get services count
     public function get_services_count()
     {
