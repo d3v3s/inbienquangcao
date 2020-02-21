@@ -246,7 +246,7 @@
 								<a href="<?php echo base_url(); ?>admin_typography/add_typography"> <i class="fa fa-circle-o"></i> <?php echo trans("add_typography"); ?></a>
 							</li>
 							<li>
-								<a href="<?php echo base_url(); ?>admin_typography/typography"><i class="fa fa-circle-o"></i> <?php echo trans("typography"); ?></a>
+								<a href="<?php echo base_url(); ?>admin_typography/typographys"><i class="fa fa-circle-o"></i> <?php echo trans("typography"); ?></a>
 							</li>
 						</ul>
 					</li>

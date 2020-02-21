@@ -23,7 +23,7 @@
 */
 $db['default']['username'] = "root";
 $db['default']['password'] = "Quanghoa1993";
-$db['default']['database'] = "infinite";
+$db['default']['database'] = "inbienquangcao";
 $db['default']['hostname'] = "localhost";
 $db['default']['dbdriver'] = "mysqli"; //Updated to latest driver.
 $db['default']['dbprefix'] = "";

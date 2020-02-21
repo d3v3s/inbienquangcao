@@ -63,7 +63,17 @@ class Admin_typography extends Admin_Core_Controller
      */
     public function typographys()
     {
-        echo 'hahahaha';
+		$data['title'] = trans('typographys');
+
+		$data['form_action'] = "admin_typography/typographys";
+		$data['list_type'] = "typographys";
+		//get paginated typographys
+		$pagination = $this->paginate(base_url() . 'admin_typography/typographys', $this->typography_admin_model->get_paginated_typography_count('typographys'));
+		$data['typographys'] = $this->typography_admin_model->get_paginated_typography($pagination['per_page'], $pagination['offset'], 'typographys');
+
+		$this->load->view('admin/includes/_header', $data);
+		$this->load->view('admin/typography/typographys', $data);
+		$this->load->view('admin/includes/_footer');
     }
 
     /**

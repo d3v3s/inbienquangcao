@@ -398,6 +398,7 @@ $lang["date_publish"] = "Ngày xuất bản";
 $lang["post_details"] = "Chi tiết bài viết";
 $lang["project_details"] = "Chi tiết dự án";
 $lang["service_details"] = "Chi tiết dịch vụ";
+$lang["typography_details"] = "Chi tiết mẫu chữ";
 $lang["save_draft"] = "Lưu dưới dạng bản nháp";
 $lang["slider_posts"] = "Slider Posts";
 $lang["drafts"] = "Dự thảo";
